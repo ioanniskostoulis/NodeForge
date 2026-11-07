@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.1
+
+- Circuit files dragged from Finder or File Explorer onto the sheet open as tabs, as File › Open does: `.nfg`, CircuitJS text and CircuitJS XML. Other files are refused with a note in Messages and the status bar.
+- The interface uses forge-shell 3.1.1: option chips look like a button group, a disabled primary button keeps a legible label, panel buttons show a keyboard focus ring, and editable readouts end their tooltips with a period.
+
 ## 2.7.0
 
 - NodeForge simulates circuits on macOS, Windows and in the browser with two engines: CircuitJS mode reproduces CircuitJS1 step for step, and the NodeForge engine, the default, controls each time step by its error estimate, places steps on source edges and solves with Newton iteration and a sparse factorization.

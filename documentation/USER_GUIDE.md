@@ -8,6 +8,7 @@ NodeForge opens on a welcome screen with New and Open. Circuits open as tabs of 
 |---|---|---|
 | New | ⌘N | Creates `Untitled n`, with the lowest number not used by an open tab |
 | Open | ⌘O | Opens `.nfg`, CircuitJS text and CircuitJS XML; a sole untouched blank tab is replaced |
+| Drop | Drag files onto the sheet | Opens dropped `.nfg`, `.txt`, `.xml` and `.circuitjs` files as tabs; other files are refused in Messages |
 | Save | ⌘S | Writes a `.nfg` file ([FILE_FORMAT.md](FILE_FORMAT.md)); a circuit opened from `.txt` or `.xml` is saved beside it as `.nfg` |
 | Close | ⌘W | Closes the tab; a circuit with unsaved edits offers Save, Discard and Cancel |
 | Next tab | ⌃Tab | Selects the next tab |

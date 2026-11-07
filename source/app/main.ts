@@ -50,6 +50,7 @@ import { createBottomTabs } from "forge-shell/app/bottom-tabs";
 import { shellPreferenceCommand } from "forge-shell/app/shell-preferences";
 import { saveDocument } from "forge-shell/app/file-save";
 import { openBrowserFiles } from "forge-shell/app/file-open";
+import { attachFileDrop } from "forge-shell/app/file-drop";
 import { closeDocumentTab, confirmWindowClose, documentWindowTitle, initialDocumentFiles, insertDocument, openDocumentFiles } from "forge-shell/app/documents";
 import { createEmptyState } from "forge-shell/app/empty-state";
 import { helpAlias } from "forge-shell/app/command-help";
@@ -1262,6 +1263,21 @@ async function main(): Promise<void> {
   const toolstrip = buildToolStrip($("toolstrip"), draw, run);
   desktop?.onCommand(run);
   desktop?.onOpenFiles(openFiles);
+  // circuit files dropped from the system open as tabs, as File › Open does
+  attachFileDrop($("center"), {
+    accept: [".nfg", ".txt", ".xml", ".circuitjs"],
+    label: "Drop circuit files to open them.",
+    pathFor: desktop ? desktop.pathForFile : undefined,
+    onRefused: (message) => note(message, "error"),
+    onFiles: (files) => {
+      for (const { name, path, file } of files) void (async () => {
+        try {
+          if (desktop && path) openFiles([await desktop.openCircuit(path)]);
+          else openDocument(new CircuitDocument(await file.text(), { name, title: library.titles.get(name) ?? null }));
+        } catch { note(`Couldn't open ${name}.`, "error"); }
+      })();
+    },
+  });
   window.addEventListener("focus", () => refreshMenus(true));
   onSettingsChange(() => {
     refreshMenus(true);
