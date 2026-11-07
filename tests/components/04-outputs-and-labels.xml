@@ -1,0 +1,72 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Outputs and Labels"/>
+  <x x="32 40 48 40" f="0" si="12" te="Analog Output"/>
+  <O x="64 112 128 112" f="0" sc="0"/>
+  <O x="192 112 192 176" f="0" sc="0"/>
+  <x x="288 40 304 40" f="0" si="12" te="LED"/>
+  <LED x="320 112 384 112" f="0" mo="default-led" cr="1" cg="0" cb="0" mbc="0.01"/>
+  <LED x="448 112 448 176" f="0" mo="default-led" cr="1" cg="0" cb="0" mbc="0.01"/>
+  <x x="544 40 560 40" f="0" si="12" te="Lamp"/>
+  <Lamp x="576 112 640 112" f="0" te="300" np="100" nv="120" wa="0.4" co="0.4"/>
+  <Lamp x="704 112 704 176" f="0" te="300" np="100" nv="120" wa="0.4" co="0.4"/>
+  <x x="800 40 816 40" f="0" si="12" te="Text"/>
+  <x x="832 112 896 112" f="0" si="24" te="hello"/>
+  <x x="960 112 960 176" f="0" si="24" te="hello"/>
+  <x x="1056 40 1072 40" f="0" si="12" te="Box"/>
+  <b x="1088 112 1152 176" f="0"/>
+  <b x="1216 112 1280 176" f="0"/>
+  <x x="1312 40 1328 40" f="0" si="12" te="Line"/>
+  <Line x="1344 112 1408 112" f="0"/>
+  <Line x="1472 112 1472 176" f="0"/>
+  <x x="32 232 48 232" f="0" si="12" te="Labeled Node"/>
+  <ln x="64 304 128 304" f="0" te="label"/>
+  <ln x="192 304 192 368" f="0" te="label"/>
+  <x x="288 232 304 232" f="0" si="12" te="Voltmeter/Scope Probe"/>
+  <p x="320 304 384 304" f="3" me="0" sc="0" re="10000000"/>
+  <p x="448 304 448 368" f="3" me="0" sc="0" re="10000000"/>
+  <x x="544 232 560 232" f="0" si="12" te="Ohmmeter"/>
+  <OhmMeter x="576 304 640 304" f="0" cu="0.01"/>
+  <OhmMeter x="704 304 704 368" f="0" cu="0.01"/>
+  <x x="800 232 816 232" f="0" si="12" te="Ammeter"/>
+  <Ammeter x="832 304 896 304" f="3" me="0" sc="0"/>
+  <Ammeter x="960 304 960 368" f="3" me="0" sc="0"/>
+  <x x="1056 232 1072 232" f="0" si="12" te="Wattmeter"/>
+  <WattmeterTrue x="1088 304 1152 304" f="0" w="32" meter="0"/>
+  <WattmeterTrue x="1216 304 1216 368" f="0" w="32" meter="0"/>
+  <x x="1312 232 1328 232" f="0" si="12" te="Test Point"/>
+  <TestPoint x="1344 304 1408 304" f="0" me="0"/>
+  <TestPoint x="1472 304 1472 368" f="0" me="0"/>
+  <x x="32 424 48 424" f="0" si="12" te="Decimal Display"/>
+  <dd x="64 496 128 496" f="0" bc="4" dm="0"/>
+  <dd x="192 496 192 560" f="0" bc="4" dm="0"/>
+  <x x="288 424 304 424" f="0" si="12" te="Instruction Display"/>
+  <ins x="320 496 384 496" f="0" bw="4">0=text0
+1=text1
+0x2-0xF=other ({a})
+</ins>
+  <ins x="448 496 448 560" f="0" bw="4">0=text0
+1=text1
+0x2-0xF=other ({a})
+</ins>
+  <x x="544 424 560 424" f="0" si="12" te="LED Array"/>
+  <LEDArray x="576 496 640 496" f="0" sx="8" sy="8"/>
+  <LEDArray x="864 496 864 560" f="0" sx="8" sy="8"/>
+  <x x="800 424 816 424" f="0" si="12" te="Data Export"/>
+  <DataRecorder x="832 496 896 496" f="0" dc="10240"/>
+  <DataRecorder x="960 496 960 560" f="0" dc="10240"/>
+  <x x="1056 424 1072 424" f="0" si="12" te="Audio Output"/>
+  <aout x="1088 496 1152 496" f="0" du="1" sa="8000" la="1"/>
+  <aout x="1216 496 1216 560" f="0" du="1" sa="8000" la="1"/>
+  <x x="1312 424 1328 424" f="0" si="12" te="Stop Trigger"/>
+  <StopTrigger x="1344 496 1408 496" f="0" tv="1" tp="0" dl="0" ct="1" rd="0"/>
+  <StopTrigger x="1472 496 1472 560" f="0" tv="1" tp="0" dl="0" ct="1" rd="0"/>
+  <x x="32 616 48 616" f="0" si="12" te="DC Motor"/>
+  <DCMotor x="64 688 128 688" f="0" in="0.5" rs="1" k="0.15" kb="0.15" j="0.02" b="0.05" gr="1" ta="0"/>
+  <DCMotor x="192 688 192 752" f="0" in="0.5" rs="1" k="0.15" kb="0.15" j="0.02" b="0.05" gr="1" ta="0"/>
+  <x x="288 616 304 616" f="0" si="12" te="3-Phase Motor"/>
+  <ThreePhaseMotor x="320 688 416 688" f="0" rs="0.435" rr="0.816" ls="0.0294" lr="0.0297" lm="0.0287" b="0.05" j="1"/>
+  <ThreePhaseMotor x="480 688 480 784" f="0" rs="0.435" rr="0.816" ls="0.0294" lr="0.0297" lm="0.0287" b="0.05" j="1"/>
+  <x x="544 616 560 616" f="0" si="12" te="Wattmeter (old)"/>
+  <Wattmeter x="576 688 640 688" f="0" w="32" meter="0"/>
+  <Wattmeter x="704 688 704 752" f="0" w="32" meter="0"/>
+</cir>

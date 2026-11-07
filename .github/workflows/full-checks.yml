@@ -1,0 +1,25 @@
+name: Full checks
+
+# Manual only (Actions → Full checks → Run workflow). Runs every check of `npm run checks`
+# (scripts/checks.mjs, expected results in tests/checks.json): typecheck, upstream tests, library
+# benches, round trips, operating points, the accuracy suites against ngspice, models.json and the
+# interface tests. The CircuitJS comparison is skipped: its recordings are not in the repository.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: brew install ngspice
+      - run: ngspice -v
+      - run: npm ci
+      - run: npm run checks

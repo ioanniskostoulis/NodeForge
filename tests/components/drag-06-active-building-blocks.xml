@@ -1,0 +1,1381 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <mm nm="old-jfet" f="1" vt="-7" be="0.0001" sb="0" dsy="0" bd="0" bt="0" sbd="0"/>
+  <x x="16 8 32 8" f="0" si="24" te="Active Building Blocks, dragged out"/>
+  <x x="160 48 176 48" f="0" si="18" te="→"/>
+  <x x="384 48 400 48" f="0" si="18" te="←"/>
+  <x x="608 48 624 48" f="0" si="18" te="↓"/>
+  <x x="832 48 848 48" f="0" si="18" te="↑"/>
+  <x x="1056 48 1072 48" f="0" si="18" te="↘"/>
+  <x x="1280 48 1296 48" f="0" si="18" te="↗"/>
+  <x x="1504 48 1520 48" f="0" si="18" te="↙"/>
+  <x x="1728 48 1744 48" f="0" si="18" te="↖"/>
+  <x x="16 160 32 160" f="0" si="12" te="Op Amp (ideal, - on top)"/>
+  <a x="224 160 288 160" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="448 160 384 160" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="672 160 672 224" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="896 160 896 96" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="1120 160 1120 224" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="1344 160 1344 96" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="1568 160 1568 224" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="1792 160 1792 96" f="8" ma="15" mi="-15" ga="100000"/>
+  <x x="16 384 32 384" f="0" si="12" te="Op Amp (ideal, + on top)"/>
+  <a x="224 384 288 384" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="448 384 384 384" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="672 384 672 448" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="896 384 896 320" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="1120 384 1120 448" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="1344 384 1344 320" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="1568 384 1568 448" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="1792 384 1792 320" f="9" ma="15" mi="-15" ga="100000"/>
+  <x x="16 608 32 608" f="0" si="12" te="Op Amp (real)"/>
+  <OpAmpReal x="224 608 288 608" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="448 608 384 608" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="672 608 672 672" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="896 608 896 544" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="1120 608 1120 672" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="1344 608 1344 544" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="1568 608 1568 672" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="1792 608 1792 544" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <x x="16 832 32 832" f="0" si="12" te="Analog Switch (SPST)"/>
+  <as x="224 832 288 832" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="448 832 384 832" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="672 832 672 896" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="896 832 896 768" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="1120 832 1120 896" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="1344 832 1344 768" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="1568 832 1568 896" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="1792 832 1792 768" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <x x="16 1056 32 1056" f="0" si="12" te="Analog Switch (SPDT)"/>
+  <as2 x="224 1056 288 1056" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="448 1056 384 1056" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="672 1056 672 1120" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="896 1056 896 992" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="1120 1056 1120 1120" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="1344 1056 1344 992" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="1568 1056 1568 1120" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="1792 1056 1792 992" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <x x="16 1280 32 1280" f="0" si="12" te="Analog Multiplexer"/>
+  <AnalogMux x="224 1280 288 1280" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="448 1280 384 1280" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="672 1280 672 1344" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="896 1280 896 1216" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="1120 1280 1120 1344" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="1344 1280 1344 1216" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="1568 1280 1568 1344" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="1792 1280 1792 1216" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <x x="16 1504 32 1504" f="0" si="12" te="Tristate Buffer"/>
+  <ts x="224 1504 288 1504" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="448 1504 384 1504" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="672 1504 672 1568" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="896 1504 896 1440" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="1120 1504 1120 1568" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="1344 1504 1344 1440" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="1568 1504 1568 1568" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="1792 1504 1792 1440" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <x x="16 1728 32 1728" f="0" si="12" te="Schmitt Trigger"/>
+  <Schmitt x="224 1728 288 1728" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="448 1728 384 1728" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="672 1728 672 1792" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="896 1728 896 1664" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="1120 1728 1120 1792" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="1344 1728 1344 1664" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="1568 1728 1568 1792" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="1792 1728 1792 1664" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <x x="16 1952 32 1952" f="0" si="12" te="Schmitt Trigger (Inverting)"/>
+  <InvertingSchmitt x="224 1952 288 1952" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="448 1952 384 1952" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="672 1952 672 2016" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="896 1952 896 1888" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="1120 1952 1120 2016" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="1344 1952 1344 1888" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="1568 1952 1568 2016" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="1792 1952 1792 1888" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <x x="16 2176 32 2176" f="0" si="12" te="Delay Buffer"/>
+  <DelayBuffer x="224 2176 288 2176" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="448 2176 384 2176" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="672 2176 672 2240" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="896 2176 896 2112" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="1120 2176 1120 2240" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="1344 2176 1344 2112" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="1568 2176 1568 2240" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="1792 2176 1792 2112" f="0" dl="0" th="2.5" hv="5"/>
+  <x x="16 2400 32 2400" f="0" si="12" te="CCII+"/>
+  <CC2 x="224 2400 288 2400" f="0" ga="1"/>
+  <CC2 x="448 2400 384 2400" f="0" ga="1"/>
+  <CC2 x="672 2400 672 2464" f="0" ga="1"/>
+  <CC2 x="896 2400 896 2336" f="0" ga="1"/>
+  <CC2 x="1120 2400 1120 2464" f="0" ga="1"/>
+  <CC2 x="1344 2400 1344 2336" f="0" ga="1"/>
+  <CC2 x="1568 2400 1568 2464" f="0" ga="1"/>
+  <CC2 x="1792 2400 1792 2336" f="0" ga="1"/>
+  <x x="16 2624 32 2624" f="0" si="12" te="CCII-"/>
+  <CC2Neg x="224 2624 288 2624" f="0" ga="-1"/>
+  <CC2Neg x="448 2624 384 2624" f="0" ga="-1"/>
+  <CC2Neg x="672 2624 672 2688" f="0" ga="-1"/>
+  <CC2Neg x="896 2624 896 2560" f="0" ga="-1"/>
+  <CC2Neg x="1120 2624 1120 2688" f="0" ga="-1"/>
+  <CC2Neg x="1344 2624 1344 2560" f="0" ga="-1"/>
+  <CC2Neg x="1568 2624 1568 2688" f="0" ga="-1"/>
+  <CC2Neg x="1792 2624 1792 2560" f="0" ga="-1"/>
+  <x x="16 2848 32 2848" f="0" si="12" te="Comparator (Hi-Z/GND output)"/>
+  <Comparator x="224 2848 288 2848" f="1"/>
+  <Comparator x="448 2848 384 2848" f="1"/>
+  <Comparator x="672 2848 672 2912" f="1"/>
+  <Comparator x="896 2848 896 2784" f="1"/>
+  <Comparator x="1120 2848 1120 2912" f="1"/>
+  <Comparator x="1344 2848 1344 2784" f="1"/>
+  <Comparator x="1568 2848 1568 2912" f="1"/>
+  <Comparator x="1792 2848 1792 2784" f="1"/>
+  <x x="16 3072 32 3072" f="0" si="12" te="OTA (LM13700 style)"/>
+  <OTA x="224 3072 320 3072" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="448 3072 352 3072" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="672 3072 672 3168" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="896 3072 896 2976" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="1120 3072 1120 3168" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="1344 3072 1344 2976" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="1568 3072 1568 3168" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="1792 3072 1792 2976" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <x x="16 3296 32 3296" f="0" si="12" te="Norton Amp (LM3900)"/>
+  <nor x="224 3296 288 3296" f="1"/>
+  <nor x="448 3296 384 3296" f="1"/>
+  <nor x="672 3296 672 3360" f="1"/>
+  <nor x="896 3296 896 3232" f="1"/>
+  <nor x="1120 3296 1120 3360" f="1"/>
+  <nor x="1344 3296 1344 3232" f="1"/>
+  <nor x="1568 3296 1568 3360" f="1"/>
+  <nor x="1792 3296 1792 3232" f="1"/>
+  <x x="16 3520 32 3520" f="0" si="12" te="Voltage-Controlled Voltage Source (VCVS)"/>
+  <VCVS x="224 3520 288 3520" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="448 3520 384 3520" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="672 3520 672 3584" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="896 3520 896 3456" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="1120 3520 1120 3584" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="1344 3520 1344 3456" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="1568 3520 1568 3584" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="1792 3520 1792 3456" f="0" ic="2" ex=".1*(a-b)"/>
+  <x x="16 3744 32 3744" f="0" si="12" te="Voltage-Controlled Current Source (VCCS)"/>
+  <VCCS x="224 3744 288 3744" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="448 3744 384 3744" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="672 3744 672 3808" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="896 3744 896 3680" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="1120 3744 1120 3808" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="1344 3744 1344 3680" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="1568 3744 1568 3808" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="1792 3744 1792 3680" f="0" ic="2" ex=".1*(a-b)"/>
+  <x x="16 3968 32 3968" f="0" si="12" te="Current-Controlled Voltage Source (CCVS)"/>
+  <CCVS x="224 3968 288 3968" f="0" ic="2" ex="2*a"/>
+  <CCVS x="448 3968 384 3968" f="0" ic="2" ex="2*a"/>
+  <CCVS x="672 3968 672 4032" f="0" ic="2" ex="2*a"/>
+  <CCVS x="896 3968 896 3904" f="0" ic="2" ex="2*a"/>
+  <CCVS x="1120 3968 1120 4032" f="0" ic="2" ex="2*a"/>
+  <CCVS x="1344 3968 1344 3904" f="0" ic="2" ex="2*a"/>
+  <CCVS x="1568 3968 1568 4032" f="0" ic="2" ex="2*a"/>
+  <CCVS x="1792 3968 1792 3904" f="0" ic="2" ex="2*a"/>
+  <x x="16 4192 32 4192" f="0" si="12" te="Current-Controlled Current Source (CCCS)"/>
+  <CCCS x="224 4192 288 4192" f="0" ic="2" ex="2*a"/>
+  <CCCS x="448 4192 384 4192" f="0" ic="2" ex="2*a"/>
+  <CCCS x="672 4192 672 4256" f="0" ic="2" ex="2*a"/>
+  <CCCS x="896 4192 896 4128" f="0" ic="2" ex="2*a"/>
+  <CCCS x="1120 4192 1120 4256" f="0" ic="2" ex="2*a"/>
+  <CCCS x="1344 4192 1344 4128" f="0" ic="2" ex="2*a"/>
+  <CCCS x="1568 4192 1568 4256" f="0" ic="2" ex="2*a"/>
+  <CCCS x="1792 4192 1792 4128" f="0" ic="2" ex="2*a"/>
+  <x x="16 4416 32 4416" f="0" si="12" te="Optocoupler"/>
+  <Optocoupler x="224 4416 288 4416" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="448 4416 384 4416" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="672 4416 672 4480" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="896 4416 896 4352" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="1120 4416 1120 4480" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="1344 4416 1344 4352" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="1568 4416 1568 4480" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="1792 4416 1792 4352" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <x x="16 4640 32 4640" f="0" si="12" te="Time Delay Relay"/>
+  <TimeDelayRelay x="224 4640 288 4640" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="448 4640 384 4640" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="672 4640 672 4704" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="896 4640 896 4576" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="1120 4640 1120 4704" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="1344 4640 1344 4576" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="1568 4640 1568 4704" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="1792 4640 1792 4576" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <x x="16 4864 32 4864" f="0" si="12" te="LM317"/>
+  <cc x="224 4864 288 4864" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="448 4864 384 4864" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="672 4864 672 4928" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="896 4864 896 4800" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="1120 4864 1184 4928" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="1344 4864 1408 4800" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="1568 4864 1504 4928" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="1792 4864 1728 4800" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <x x="16 5088 32 5088" f="0" si="12" te="TL431"/>
+  <cc x="224 5088 288 5088" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="448 5088 384 5088" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="672 5088 672 5152" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="896 5088 896 5024" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="1120 5088 1184 5152" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="1344 5088 1408 5024" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="1568 5088 1504 5152" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="1792 5088 1728 5024" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <x x="16 5312 32 5312" f="0" si="12" te="Motor Protection Switch"/>
+  <MotorProtectionSwitch x="224 5312 288 5312" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="448 5312 384 5312" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="672 5312 672 5376" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="896 5312 896 5248" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="1120 5312 1184 5376" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="1344 5312 1408 5248" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="1568 5312 1504 5376" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="1792 5312 1728 5248" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <x x="16 5536 32 5536" f="0" si="12" te="Subcircuit Instance"/>
+  <cc x="224 5536 288 5536" f="1" mo="default"/>
+  <cc x="448 5536 384 5536" f="1" mo="default"/>
+  <cc x="672 5536 672 5600" f="1" mo="default"/>
+  <cc x="896 5536 896 5472" f="1" mo="default"/>
+  <cc x="1120 5536 1184 5600" f="1" mo="default"/>
+  <cc x="1344 5536 1408 5472" f="1" mo="default"/>
+  <cc x="1568 5536 1504 5600" f="1" mo="default"/>
+  <cc x="1792 5536 1728 5472" f="1" mo="default"/>
+</cir>

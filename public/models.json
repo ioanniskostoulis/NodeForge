@@ -1,0 +1,1608 @@
+[
+ {
+  "name": "GEN_1N4148",
+  "kind": "diode",
+  "specs": {
+   "BV": "100 V",
+   "IS": "4 nA",
+   "N": "1.9",
+   "RS": "600 mΩ",
+   "CJO": "2 pF",
+   "TT": "6 ns"
+  },
+  "spice": ".model GEN_1N4148 D(IS=4n N=1.9 RS=0.6 BV=100 IBV=5u CJO=2p VJ=0.7 M=0.33 TT=6n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00000212,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4007",
+  "kind": "diode",
+  "specs": {
+   "BV": "1 kV",
+   "IS": "7 nA",
+   "N": "1.8",
+   "RS": "40 mΩ",
+   "CJO": "15 pF",
+   "TT": "3 µs"
+  },
+  "spice": ".model GEN_1N4007 D(IS=7n N=1.8 RS=0.04 BV=1000 IBV=5u CJO=15p VJ=0.7 M=0.4 TT=3u RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 8.31e-9,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_UF4007",
+  "kind": "diode",
+  "specs": {
+   "BV": "1 kV",
+   "IS": "1 nA",
+   "N": "1.9",
+   "RS": "60 mΩ",
+   "CJO": "15 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_UF4007 D(IS=1n N=1.9 RS=0.06 BV=1000 IBV=5u CJO=15p VJ=0.7 M=0.4 TT=50n RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 4.3e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N5819",
+  "kind": "diode",
+  "specs": {
+   "BV": "40 V",
+   "IS": "30 µA",
+   "N": "1.05",
+   "RS": "150 mΩ",
+   "CJO": "110 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_1N5819 D(IS=30u N=1.05 RS=0.15 BV=40 IBV=1m CJO=110p VJ=0.35 M=0.4 TT=0 RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 3.63e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4001",
+  "kind": "diode",
+  "specs": {
+   "BV": "50 V",
+   "IS": "7 nA",
+   "N": "1.8",
+   "RS": "40 mΩ",
+   "CJO": "15 pF",
+   "TT": "3 µs"
+  },
+  "spice": ".model GEN_1N4001 D(IS=7n N=1.8 RS=0.04 BV=50 IBV=5u CJO=15p VJ=0.7 M=0.4 TT=3u RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 8.31e-9,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4004",
+  "kind": "diode",
+  "specs": {
+   "BV": "400 V",
+   "IS": "7 nA",
+   "N": "1.8",
+   "RS": "40 mΩ",
+   "CJO": "15 pF",
+   "TT": "3 µs"
+  },
+  "spice": ".model GEN_1N4004 D(IS=7n N=1.8 RS=0.04 BV=400 IBV=5u CJO=15p VJ=0.7 M=0.4 TT=3u RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 8.31e-9,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N5408",
+  "kind": "diode",
+  "specs": {
+   "BV": "1 kV",
+   "IS": "20 nA",
+   "N": "1.8",
+   "RS": "15 mΩ",
+   "CJO": "50 pF",
+   "TT": "3 µs"
+  },
+  "spice": ".model GEN_1N5408 D(IS=20n N=1.8 RS=0.015 BV=1000 IBV=10u CJO=50p VJ=0.7 M=0.4 TT=3u RTH0=20 CTH0=0.005)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.25e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_FR107",
+  "kind": "diode",
+  "specs": {
+   "BV": "1 kV",
+   "IS": "3 nA",
+   "N": "1.85",
+   "RS": "50 mΩ",
+   "CJO": "12 pF",
+   "TT": "400 ns"
+  },
+  "spice": ".model GEN_FR107 D(IS=3n N=1.85 RS=0.05 BV=1000 IBV=5u CJO=12p VJ=0.7 M=0.4 TT=400n RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 4.1e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_MUR160",
+  "kind": "diode",
+  "specs": {
+   "BV": "600 V",
+   "IS": "500 pA",
+   "N": "1.9",
+   "RS": "70 mΩ",
+   "CJO": "10 pF",
+   "TT": "40 ns"
+  },
+  "spice": ".model GEN_MUR160 D(IS=0.5n N=1.9 RS=0.07 BV=600 IBV=5u CJO=10p VJ=0.7 M=0.4 TT=40n RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 4.6e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N5817",
+  "kind": "diode",
+  "specs": {
+   "BV": "20 V",
+   "IS": "40 µA",
+   "N": "1.05",
+   "RS": "120 mΩ",
+   "CJO": "120 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_1N5817 D(IS=40u N=1.05 RS=0.12 BV=20 IBV=1m CJO=120p VJ=0.3 M=0.4 TT=0 RTH0=50 CTH0=0.002)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.68e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N5822",
+  "kind": "diode",
+  "specs": {
+   "BV": "40 V",
+   "IS": "80 µA",
+   "N": "1.05",
+   "RS": "70 mΩ",
+   "CJO": "250 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_1N5822 D(IS=80u N=1.05 RS=0.07 BV=40 IBV=2m CJO=250p VJ=0.35 M=0.4 TT=0 RTH0=40 CTH0=0.0025)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000493,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BAT54",
+  "kind": "diode",
+  "specs": {
+   "BV": "30 V",
+   "IS": "200 nA",
+   "N": "1.03",
+   "RS": "1.5 Ω",
+   "CJO": "10 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_BAT54 D(IS=0.2u N=1.03 RS=1.5 BV=30 IBV=2u CJO=10p VJ=0.35 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 2.8e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_SS34",
+  "kind": "diode",
+  "specs": {
+   "BV": "40 V",
+   "IS": "60 µA",
+   "N": "1.05",
+   "RS": "70 mΩ",
+   "CJO": "200 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_SS34 D(IS=60u N=1.05 RS=0.07 BV=40 IBV=1m CJO=200p VJ=0.35 M=0.4 TT=0 RTH0=55 CTH0=0.00182)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 2.26e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_MBR1045",
+  "kind": "diode",
+  "specs": {
+   "BV": "45 V",
+   "IS": "200 µA",
+   "N": "1.05",
+   "RS": "28 mΩ",
+   "CJO": "600 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_MBR1045 D(IS=0.2m N=1.05 RS=0.028 BV=45 IBV=5m CJO=600p VJ=0.35 M=0.4 TT=0 RTH0=60 CTH0=0.0045)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 8.53e-9,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N34A",
+  "kind": "diode",
+  "specs": {
+   "BV": "60 V",
+   "IS": "2 µA",
+   "N": "1.3",
+   "RS": "10 Ω",
+   "CJO": "1 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_1N34A D(IS=2u N=1.3 RS=10 BV=60 IBV=100u CJO=1p VJ=0.25 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.28e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_RED",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "1.00e-16 A",
+   "N": "2",
+   "RS": "5 Ω",
+   "CJO": "40 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_RED D(IS=1e-16 N=2 RS=5 BV=5 IBV=10u CJO=40p VJ=1.6 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.12e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_YELLOW",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "3.00e-18 A",
+   "N": "2",
+   "RS": "5 Ω",
+   "CJO": "40 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_YELLOW D(IS=3e-18 N=2 RS=5 BV=5 IBV=10u CJO=40p VJ=1.8 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 2.61e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_GREEN",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "3.20e-19 A",
+   "N": "2",
+   "RS": "5 Ω",
+   "CJO": "40 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_GREEN D(IS=3.2e-19 N=2 RS=5 BV=5 IBV=10u CJO=40p VJ=1.9 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 3.44e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_BLUE",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "1.00e-26 A",
+   "N": "2",
+   "RS": "10 Ω",
+   "CJO": "30 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_BLUE D(IS=1e-26 N=2 RS=10 BV=5 IBV=10u CJO=30p VJ=2.7 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.3e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_WHITE",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "1.00e-26 A",
+   "N": "2",
+   "RS": "10 Ω",
+   "CJO": "30 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_WHITE D(IS=1e-26 N=2 RS=10 BV=5 IBV=10u CJO=30p VJ=2.7 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 1.3e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_LED_IR",
+  "kind": "diode",
+  "specs": {
+   "BV": "5 V",
+   "IS": "1.00e-16 A",
+   "N": "1.6",
+   "RS": "2 Ω",
+   "CJO": "20 pF",
+   "TT": "0 s"
+  },
+  "spice": ".model GEN_LED_IR D(IS=1e-16 N=1.6 RS=2 BV=5 IBV=10u CJO=20p VJ=1.2 M=0.4 TT=0)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 4.16e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4728",
+  "kind": "zener",
+  "specs": {
+   "BV": "3.3 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "9.49 Ω",
+   "CJO": "364 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4728 D(IS=1n N=1.2 RS=9.49 BV=3.3 IBV=0.076 NBV=1.5 CJO=3.64e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4729",
+  "kind": "zener",
+  "specs": {
+   "BV": "3.6 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "9.44 Ω",
+   "CJO": "333 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4729 D(IS=1n N=1.2 RS=9.44 BV=3.6 IBV=0.069 NBV=1.5 CJO=3.33e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4730",
+  "kind": "zener",
+  "specs": {
+   "BV": "3.9 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "8.39 Ω",
+   "CJO": "308 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4730 D(IS=1n N=1.2 RS=8.39 BV=3.9 IBV=0.064 NBV=1.5 CJO=3.08e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00000185,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4731",
+  "kind": "zener",
+  "specs": {
+   "BV": "4.3 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "8.33 Ω",
+   "CJO": "279 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4731 D(IS=1n N=1.2 RS=8.33 BV=4.3 IBV=0.058 NBV=1.5 CJO=2.79e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4732",
+  "kind": "zener",
+  "specs": {
+   "BV": "4.7 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "7.27 Ω",
+   "CJO": "255 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4732 D(IS=1n N=1.2 RS=7.27 BV=4.7 IBV=0.053 NBV=1.5 CJO=2.55e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4733",
+  "kind": "zener",
+  "specs": {
+   "BV": "5.1 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "6.21 Ω",
+   "CJO": "235 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4733 D(IS=1n N=1.2 RS=6.21 BV=5.1 IBV=0.049 NBV=1.5 CJO=2.35e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00000554,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4734",
+  "kind": "zener",
+  "specs": {
+   "BV": "5.6 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "4.31 Ω",
+   "CJO": "214 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4734 D(IS=1n N=1.2 RS=4.31 BV=5.6 IBV=0.045 NBV=1.2 CJO=2.14e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4735",
+  "kind": "zener",
+  "specs": {
+   "BV": "6.2 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "1.24 Ω",
+   "CJO": "194 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4735 D(IS=1n N=1.2 RS=1.24 BV=6.2 IBV=0.041 NBV=1.2 CJO=1.94e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4736",
+  "kind": "zener",
+  "specs": {
+   "BV": "6.8 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "2.66 Ω",
+   "CJO": "176 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4736 D(IS=1n N=1.2 RS=2.66 BV=6.8 IBV=0.037 NBV=1.2 CJO=1.76e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4737",
+  "kind": "zener",
+  "specs": {
+   "BV": "7.5 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "3.09 Ω",
+   "CJO": "160 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4737 D(IS=1n N=1.2 RS=3.09 BV=7.5 IBV=0.034 NBV=1.2 CJO=1.6e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4738",
+  "kind": "zener",
+  "specs": {
+   "BV": "8.2 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "3.5 Ω",
+   "CJO": "146 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4738 D(IS=1n N=1.2 RS=3.5 BV=8.2 IBV=0.031 NBV=1.2 CJO=1.46e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4739",
+  "kind": "zener",
+  "specs": {
+   "BV": "9.1 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "3.89 Ω",
+   "CJO": "132 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4739 D(IS=1n N=1.2 RS=3.89 BV=9.1 IBV=0.028 NBV=1.2 CJO=1.32e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4740",
+  "kind": "zener",
+  "specs": {
+   "BV": "10 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "5.76 Ω",
+   "CJO": "120 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4740 D(IS=1n N=1.2 RS=5.76 BV=10 IBV=0.025 NBV=1.2 CJO=1.2e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4741",
+  "kind": "zener",
+  "specs": {
+   "BV": "11 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "6.65 Ω",
+   "CJO": "109 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4741 D(IS=1n N=1.2 RS=6.65 BV=11 IBV=0.023 NBV=1.2 CJO=1.09e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4742",
+  "kind": "zener",
+  "specs": {
+   "BV": "12 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "7.52 Ω",
+   "CJO": "100 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4742 D(IS=1n N=1.2 RS=7.52 BV=12 IBV=0.021 NBV=1.2 CJO=1e-10 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4743",
+  "kind": "zener",
+  "specs": {
+   "BV": "13 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "8.37 Ω",
+   "CJO": "92.3 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4743 D(IS=1n N=1.2 RS=8.37 BV=13 IBV=0.019 NBV=1.2 CJO=9.23e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4744",
+  "kind": "zener",
+  "specs": {
+   "BV": "15 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "12.2 Ω",
+   "CJO": "80 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4744 D(IS=1n N=1.2 RS=12.2 BV=15 IBV=0.017 NBV=1.2 CJO=8e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 3.85e-8,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4745",
+  "kind": "zener",
+  "specs": {
+   "BV": "16 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "14 Ω",
+   "CJO": "75 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4745 D(IS=1n N=1.2 RS=14 BV=16 IBV=0.0155 NBV=1.2 CJO=7.5e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4746",
+  "kind": "zener",
+  "specs": {
+   "BV": "18 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "17.8 Ω",
+   "CJO": "66.7 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4746 D(IS=1n N=1.2 RS=17.8 BV=18 IBV=0.014 NBV=1.2 CJO=6.67e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4747",
+  "kind": "zener",
+  "specs": {
+   "BV": "20 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "19.5 Ω",
+   "CJO": "60 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4747 D(IS=1n N=1.2 RS=19.5 BV=20 IBV=0.0125 NBV=1.2 CJO=6e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4748",
+  "kind": "zener",
+  "specs": {
+   "BV": "22 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "20.3 Ω",
+   "CJO": "54.5 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4748 D(IS=1n N=1.2 RS=20.3 BV=22 IBV=0.0115 NBV=1.2 CJO=5.45e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4749",
+  "kind": "zener",
+  "specs": {
+   "BV": "24 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "22 Ω",
+   "CJO": "50 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4749 D(IS=1n N=1.2 RS=22 BV=24 IBV=0.0105 NBV=1.2 CJO=5e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4750",
+  "kind": "zener",
+  "specs": {
+   "BV": "27 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "31.7 Ω",
+   "CJO": "44.4 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4750 D(IS=1n N=1.2 RS=31.7 BV=27 IBV=0.0095 NBV=1.2 CJO=4.44e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4751",
+  "kind": "zener",
+  "specs": {
+   "BV": "30 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "36.4 Ω",
+   "CJO": "40 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4751 D(IS=1n N=1.2 RS=36.4 BV=30 IBV=0.0085 NBV=1.2 CJO=4e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00000967,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_1N4752",
+  "kind": "zener",
+  "specs": {
+   "BV": "33 V",
+   "IS": "1 nA",
+   "N": "1.2",
+   "RS": "40.9 Ω",
+   "CJO": "36.4 pF",
+   "TT": "50 ns"
+  },
+  "spice": ".model GEN_1N4752 D(IS=1n N=1.2 RS=40.9 BV=33 IBV=0.0075 NBV=1.2 CJO=3.64e-11 VJ=0.75 M=0.33 TT=50n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRFP250",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "200 V",
+   "Ron": "75 mΩ",
+   "Qg": "120 nC",
+   "Vto": "4 V",
+   "Kp": "30 A/V²",
+   "Cgs": "2.6 nF",
+   "Cgd max": "3 nF",
+   "Rd": "45 mΩ"
+  },
+  "spice": ".model GEN_IRFP250 VDMOS(Rg=1.5 Vto=4 Rd=45m Rs=8m Rb=20m Kp=30 lambda=0.001 Cgdmax=3n Cgdmin=0.15n Cgs=2.6n Cjo=2n Is=1e-11 TT=250n BV=200 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=0.65 Rthca=39.4 Cthj=0.0154 mfg=Generic Vds=200 Ron=75m Qg=120n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 3.64e-7,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF540",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "100 V",
+   "Ron": "45 mΩ",
+   "Qg": "70 nC",
+   "Vto": "3.5 V",
+   "Kp": "28 A/V²",
+   "Cgs": "1.8 nF",
+   "Cgd max": "2 nF",
+   "Rd": "25 mΩ"
+  },
+  "spice": ".model GEN_IRF540 VDMOS(Rg=2 Vto=3.5 Rd=25m Rs=6m Rb=15m Kp=28 lambda=0.002 Cgdmax=2n Cgdmin=0.1n Cgs=1.8n Cjo=1.2n Is=1e-11 TT=120n BV=100 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1.15 Rthca=60.9 Cthj=0.00435 mfg=Generic Vds=100 Ron=45m Qg=70n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 8.36e-7,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N7000",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "60 V",
+   "Ron": "2 Ω",
+   "Qg": "1.5 nC",
+   "Vto": "2 V",
+   "Kp": "300 mA/V²",
+   "Cgs": "25 pF",
+   "Cgd max": "30 pF",
+   "Rd": "1 Ω"
+  },
+  "spice": ".model GEN_2N7000 VDMOS(Rg=10 Vto=2 Rd=1 Rs=0.5 Rb=1 Kp=0.3 lambda=0.01 Cgdmax=30p Cgdmin=3p Cgs=25p Cjo=20p Is=1e-14 TT=20n BV=60 IBV=10u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=83 Rthca=229 Cthj=1.2e-05 mfg=Generic Vds=60 Ron=2 Qg=1.5n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000243,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF9540",
+  "kind": "pmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "-100 V",
+   "Ron": "200 mΩ",
+   "Qg": "60 nC",
+   "Vto": "-3.5 V",
+   "Kp": "12 A/V²",
+   "Cgs": "1.4 nF",
+   "Cgd max": "1.5 nF",
+   "Rd": "60 mΩ"
+  },
+  "spice": ".model GEN_IRF9540 VDMOS(pchan Rg=3 Vto=-3.5 Rd=60m Rs=20m Rb=30m Kp=12 lambda=0.002 Cgdmax=1.5n Cgdmin=0.1n Cgs=1.4n Cjo=1n Is=5e-11 TT=150n BV=100 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=5m trd1=7m Rthjc=1.2 Rthca=60.8 Cthj=0.00417 mfg=Generic Vds=-100 Ron=200m Qg=60n)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000318,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRFZ44N",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "55 V",
+   "Ron": "17.5 mΩ",
+   "Qg": "63 nC",
+   "Vto": "3 V",
+   "Kp": "24.7 A/V²",
+   "Cgs": "1.38 nF",
+   "Cgd max": "1.32 nF",
+   "Rd": "9.63 mΩ"
+  },
+  "spice": ".model GEN_IRFZ44N VDMOS(Rg=2 Vto=3 Rd=0.00963 Rs=0.0021 Rb=0.00525 Kp=24.7 lambda=0.002 Cgdmax=1.32e-09 Cgdmin=6.16e-11 Cgs=1.38e-09 Cjo=1.8e-09 Is=1e-11 TT=6.3e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1.5 Rthca=60.5 Cthj=0.00333 mfg=Generic Vds=55 Ron=0.0175 Qg=6.3e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000201,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF3205",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "55 V",
+   "Ron": "8 mΩ",
+   "Qg": "146 nC",
+   "Vto": "3 V",
+   "Kp": "54.1 A/V²",
+   "Cgs": "3.04 nF",
+   "Cgd max": "2.93 nF",
+   "Rd": "4.4 mΩ"
+  },
+  "spice": ".model GEN_IRF3205 VDMOS(Rg=1.5 Vto=3 Rd=0.0044 Rs=0.00096 Rb=0.0024 Kp=54.1 lambda=0.002 Cgdmax=2.93e-09 Cgdmin=1.48e-10 Cgs=3.04e-09 Cjo=3.91e-09 Is=1e-11 TT=6.9e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=0.75 Rthca=61.2 Cthj=0.00667 mfg=Generic Vds=55 Ron=0.008 Qg=1.46e-07)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000604,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRLZ44N",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "55 V",
+   "Ron": "25 mΩ",
+   "Qg": "48 nC",
+   "Vto": "1.5 V",
+   "Kp": "34.6 A/V²",
+   "Cgs": "1.56 nF",
+   "Cgd max": "1.53 nF",
+   "Rd": "13.8 mΩ"
+  },
+  "spice": ".model GEN_IRLZ44N VDMOS(Rg=2 Vto=1.5 Rd=0.0138 Rs=0.003 Rb=0.0075 Kp=34.6 lambda=0.002 Cgdmax=1.53e-09 Cgdmin=9.8e-11 Cgs=1.56e-09 Cjo=2e-09 Is=1e-11 TT=8e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1.4 Rthca=60.6 Cthj=0.00357 mfg=Generic Vds=55 Ron=0.025 Qg=4.8e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000007,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRFB4110",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "100 V",
+   "Ron": "3.7 mΩ",
+   "Qg": "150 nC",
+   "Vto": "4 V",
+   "Kp": "137 A/V²",
+   "Cgs": "9.39 nF",
+   "Cgd max": "8.66 nF",
+   "Rd": "2.04 mΩ"
+  },
+  "spice": ".model GEN_IRFB4110 VDMOS(Rg=1.3 Vto=4 Rd=0.00204 Rs=0.000444 Rb=0.00111 Kp=137 lambda=0.002 Cgdmax=8.66e-09 Cgdmin=1.61e-10 Cgs=9.39e-09 Cjo=3.35e-09 Is=1e-11 TT=5e-08 BV=100 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=0.4 Rthca=61.6 Cthj=0.0125 mfg=Generic Vds=100 Ron=0.0037 Qg=1.5e-07)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00000886,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF530",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "100 V",
+   "Ron": "160 mΩ",
+   "Qg": "26 nC",
+   "Vto": "3 V",
+   "Kp": "2.71 A/V²",
+   "Cgs": "610 pF",
+   "Cgd max": "603 pF",
+   "Rd": "88 mΩ"
+  },
+  "spice": ".model GEN_IRF530 VDMOS(Rg=4 Vto=3 Rd=0.088 Rs=0.0192 Rb=0.048 Kp=2.71 lambda=0.002 Cgdmax=6.03e-10 Cgdmin=4.2e-11 Cgs=6.1e-10 Cjo=1.25e-09 Is=1e-11 TT=1.5e-07 BV=100 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1.7 Rthca=60.3 Cthj=0.00294 mfg=Generic Vds=100 Ron=0.16 Qg=2.6e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00043,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRFP260N",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "200 V",
+   "Ron": "40 mΩ",
+   "Qg": "234 nC",
+   "Vto": "3 V",
+   "Kp": "10.8 A/V²",
+   "Cgs": "3.9 nF",
+   "Cgd max": "3.65 nF",
+   "Rd": "22 mΩ"
+  },
+  "spice": ".model GEN_IRFP260N VDMOS(Rg=1.5 Vto=3 Rd=0.022 Rs=0.0048 Rb=0.012 Kp=10.8 lambda=0.002 Cgdmax=3.65e-09 Cgdmin=1.12e-10 Cgs=3.9e-09 Cjo=3e-09 Is=1e-11 TT=2.7e-07 BV=200 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=0.5 Rthca=39.5 Cthj=0.02 mfg=Generic Vds=200 Ron=0.04 Qg=2.34e-07)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000581,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF740",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "400 V",
+   "Ron": "550 mΩ",
+   "Qg": "63 nC",
+   "Vto": "3 V",
+   "Kp": "787 mA/V²",
+   "Cgs": "1.28 nF",
+   "Cgd max": "1.26 nF",
+   "Rd": "303 mΩ"
+  },
+  "spice": ".model GEN_IRF740 VDMOS(Rg=3 Vto=3 Rd=0.303 Rs=0.066 Rb=0.165 Kp=0.787 lambda=0.002 Cgdmax=1.26e-09 Cgdmin=8.4e-11 Cgs=1.28e-09 Cjo=1.65e-09 Is=1e-11 TT=3.7e-07 BV=400 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1 Rthca=61 Cthj=0.005 mfg=Generic Vds=400 Ron=0.55 Qg=6.3e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000535,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF840",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "500 V",
+   "Ron": "850 mΩ",
+   "Qg": "63 nC",
+   "Vto": "3 V",
+   "Kp": "509 mA/V²",
+   "Cgs": "1.18 nF",
+   "Cgd max": "1.17 nF",
+   "Rd": "468 mΩ"
+  },
+  "spice": ".model GEN_IRF840 VDMOS(Rg=3 Vto=3 Rd=0.468 Rs=0.102 Rb=0.255 Kp=0.509 lambda=0.002 Cgdmax=1.17e-09 Cgdmin=8.4e-11 Cgs=1.18e-09 Cjo=1.55e-09 Is=1e-11 TT=4.6e-07 BV=500 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1 Rthca=61 Cthj=0.005 mfg=Generic Vds=500 Ron=0.85 Qg=6.3e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00129,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRFP460",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "500 V",
+   "Ron": "270 mΩ",
+   "Qg": "210 nC",
+   "Vto": "3 V",
+   "Kp": "1.6 A/V²",
+   "Cgs": "3.86 nF",
+   "Cgd max": "3.78 nF",
+   "Rd": "149 mΩ"
+  },
+  "spice": ".model GEN_IRFP460 VDMOS(Rg=1.5 Vto=3 Rd=0.149 Rs=0.0324 Rb=0.081 Kp=1.6 lambda=0.002 Cgdmax=3.78e-09 Cgdmin=2.38e-10 Cgs=3.86e-09 Cjo=4.35e-09 Is=1e-11 TT=5.7e-07 BV=500 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=0.45 Rthca=39.5 Cthj=0.0222 mfg=Generic Vds=500 Ron=0.27 Qg=2.1e-07)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00352,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BS170",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "60 V",
+   "Ron": "1.8 Ω",
+   "Qg": "1.6 nC",
+   "Vto": "2.1 V",
+   "Kp": "213 mA/V²",
+   "Cgs": "19 pF",
+   "Cgd max": "21.6 pF",
+   "Rd": "990 mΩ"
+  },
+  "spice": ".model GEN_BS170 VDMOS(Rg=10 Vto=2.1 Rd=0.99 Rs=0.216 Rb=0.54 Kp=0.213 lambda=0.002 Cgdmax=2.16e-11 Cgdmin=3.5e-12 Cgs=1.9e-11 Cjo=8.5e-11 Is=1e-11 TT=2e-08 BV=60 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=83 Rthca=67 Cthj=1.2e-05 mfg=Generic Vds=60 Ron=1.8 Qg=1.6e-09)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000555,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_AO3400",
+  "kind": "nmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "30 V",
+   "Ron": "28 mΩ",
+   "Qg": "6 nC",
+   "Vto": "1.05 V",
+   "Kp": "31.4 A/V²",
+   "Cgs": "580 pF",
+   "Cgd max": "567 pF",
+   "Rd": "15.4 mΩ"
+  },
+  "spice": ".model GEN_AO3400 VDMOS(Rg=3 Vto=1.05 Rd=0.0154 Rs=0.00336 Rb=0.0084 Kp=31.4 lambda=0.002 Cgdmax=5.67e-10 Cgdmin=3.5e-11 Cgs=5.8e-10 Cjo=3.75e-10 Is=1e-11 TT=1.5e-08 BV=30 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=63 Rthca=62 Cthj=1.59e-05 mfg=Generic Vds=30 Ron=0.028 Qg=6e-09)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000712,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF4905",
+  "kind": "pmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "-55 V",
+   "Ron": "20 mΩ",
+   "Qg": "180 nC",
+   "Vto": "-3 V",
+   "Kp": "21.6 A/V²",
+   "Cgs": "3 nF",
+   "Cgd max": "3.06 nF",
+   "Rd": "11 mΩ"
+  },
+  "spice": ".model GEN_IRF4905 VDMOS(pchan Rg=2 Vto=-3 Rd=0.011 Rs=0.0024 Rb=0.006 Kp=21.6 lambda=0.002 Cgdmax=3.06e-09 Cgdmin=2.8e-10 Cgs=3e-09 Cjo=7e-09 Is=1e-11 TT=8.9e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=5m trd1=7m Rthjc=0.75 Rthca=61.2 Cthj=0.00667 mfg=Generic Vds=-55 Ron=0.02 Qg=1.8e-07)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0124,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF9Z34N",
+  "kind": "pmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "-55 V",
+   "Ron": "100 mΩ",
+   "Qg": "34 nC",
+   "Vto": "-3 V",
+   "Kp": "4.33 A/V²",
+   "Cgs": "500 pF",
+   "Cgd max": "558 pF",
+   "Rd": "55 mΩ"
+  },
+  "spice": ".model GEN_IRF9Z34N VDMOS(pchan Rg=4 Vto=-3 Rd=0.055 Rs=0.012 Rb=0.03 Kp=4.33 lambda=0.002 Cgdmax=5.58e-10 Cgdmin=8.4e-11 Cgs=5e-10 Cjo=1.35e-09 Is=1e-11 TT=5.6e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=5m trd1=7m Rthjc=2.2 Rthca=59.8 Cthj=0.00227 mfg=Generic Vds=-55 Ron=0.1 Qg=3.4e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000647,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_IRF5305",
+  "kind": "pmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "-55 V",
+   "Ron": "60 mΩ",
+   "Qg": "63 nC",
+   "Vto": "-3 V",
+   "Kp": "7.22 A/V²",
+   "Cgs": "970 pF",
+   "Cgd max": "1.08 nF",
+   "Rd": "33 mΩ"
+  },
+  "spice": ".model GEN_IRF5305 VDMOS(pchan Rg=3 Vto=-3 Rd=0.033 Rs=0.0072 Rb=0.018 Kp=7.22 lambda=0.002 Cgdmax=1.08e-09 Cgdmin=1.61e-10 Cgs=9.7e-10 Cjo=2.6e-09 Is=1e-11 TT=7.1e-08 BV=55 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=5m trd1=7m Rthjc=1.4 Rthca=60.6 Cthj=0.00357 mfg=Generic Vds=-55 Ron=0.06 Qg=6.3e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000452,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_AO3401",
+  "kind": "pmos",
+  "manufacturer": "Generic",
+  "specs": {
+   "Vds": "-30 V",
+   "Ron": "50 mΩ",
+   "Qg": "12 nC",
+   "Vto": "-900 mV",
+   "Kp": "16.8 A/V²",
+   "Cgs": "590 pF",
+   "Cgd max": "581 pF",
+   "Rd": "27.5 mΩ"
+  },
+  "spice": ".model GEN_AO3401 VDMOS(pchan Rg=5 Vto=-0.9 Rd=0.0275 Rs=0.006 Rb=0.015 Kp=16.8 lambda=0.002 Cgdmax=5.81e-10 Cgdmin=3.85e-11 Cgs=5.9e-10 Cjo=4e-10 Is=1e-11 TT=1.5e-08 BV=30 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=5m trd1=7m Rthjc=63 Rthca=62 Cthj=1.59e-05 mfg=Generic Vds=-30 Ron=0.05 Qg=1.2e-08)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000448,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N3904",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "40 V",
+   "Ic": "200 mA",
+   "BF": "300",
+   "IS": "6.7 fA",
+   "VAF": "75 V",
+   "IKF": "70 mA",
+   "CJC": "3.6 pF",
+   "TF": "300 ps"
+  },
+  "spice": ".model GEN_2N3904 NPN(IS=6.7f BF=300 NF=1 VAF=75 IKF=70m ISE=7f NE=1.3 BR=0.7 NR=1 RB=10 RC=1 CJE=4.5p VJE=0.75 MJE=0.36 CJC=3.6p VJC=0.75 MJC=0.31 TF=300p XTF=2 VTF=4 ITF=0.4 TR=240n XTB=1.5 Vceo=40 Icrating=200m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0122,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BC547",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "45 V",
+   "Ic": "100 mA",
+   "BF": "400",
+   "IS": "7 fA",
+   "VAF": "70 V",
+   "IKF": "80 mA",
+   "CJC": "5 pF",
+   "TF": "500 ps"
+  },
+  "spice": ".model GEN_BC547 NPN(IS=7f BF=400 NF=1 VAF=70 IKF=80m ISE=7f NE=1.5 BR=8 NR=1 RB=10 RC=1 CJE=12p VJE=0.6 MJE=0.33 CJC=5p VJC=0.5 MJC=0.33 TF=500p TR=10n XTB=1.5 Vceo=45 Icrating=100m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00757,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N2222",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "40 V",
+   "Ic": "800 mA",
+   "BF": "200",
+   "IS": "15 fA",
+   "VAF": "75 V",
+   "IKF": "300 mA",
+   "CJC": "7.3 pF",
+   "TF": "410 ps"
+  },
+  "spice": ".model GEN_2N2222 NPN(IS=15f BF=200 NF=1 VAF=75 IKF=0.3 ISE=15f NE=1.3 BR=6 NR=1 RB=10 RC=1 CJE=22p VJE=0.75 MJE=0.38 CJC=7.3p VJC=0.75 MJC=0.34 TF=410p XTF=3 VTF=1.7 ITF=0.6 TR=47n XTB=1.5 Vceo=40 Icrating=800m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000436,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N5551",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "160 V",
+   "Ic": "600 mA",
+   "BF": "180",
+   "IS": "2.5 fA",
+   "VAF": "100 V",
+   "IKF": "250 mA",
+   "CJC": "6 pF",
+   "TF": "550 ps"
+  },
+  "spice": ".model GEN_2N5551 NPN(IS=2.5f BF=180 NF=1 VAF=100 IKF=0.25 ISE=2.5f NE=1.3 BR=4 NR=1 RB=10 RC=2 CJE=20p VJE=0.75 MJE=0.33 CJC=6p VJC=0.75 MJC=0.33 TF=550p TR=100n XTB=1.5 Vceo=160 Icrating=600m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000912,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BD139",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "80 V",
+   "Ic": "1.5 A",
+   "BF": "150",
+   "IS": "400 fA",
+   "VAF": "100 V",
+   "IKF": "1 A",
+   "CJC": "40 pF",
+   "TF": "10 ns"
+  },
+  "spice": ".model GEN_BD139 NPN(IS=0.4p BF=150 NF=1 VAF=100 IKF=1 ISE=0.1p NE=1.7 BR=10 NR=1 RB=5 RC=0.2 RE=0.05 CJE=150p VJE=0.75 MJE=0.4 CJC=40p VJC=0.75 MJC=0.4 TF=10n TR=500n XTB=1.5 Vceo=80 Icrating=1.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0041,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_TIP31C",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "100 V",
+   "Ic": "3 A",
+   "BF": "60",
+   "IS": "1.8 pA",
+   "VAF": "100 V",
+   "IKF": "2.5 A",
+   "CJC": "80 pF",
+   "TF": "20 ns"
+  },
+  "spice": ".model GEN_TIP31C NPN(IS=1.8p BF=60 NF=1 VAF=100 IKF=2.5 ISE=0.2p NE=2 BR=5 NR=1 RB=3 RC=0.1 RE=0.03 CJE=200p VJE=0.75 MJE=0.4 CJC=80p VJC=0.75 MJC=0.4 TF=20n TR=1u XTB=1.5 Vceo=100 Icrating=3)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0000222,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_MJE13005",
+  "kind": "npn",
+  "specs": {
+   "Vceo": "400 V",
+   "Ic": "4 A",
+   "BF": "30",
+   "IS": "1 pA",
+   "VAF": "200 V",
+   "IKF": "2 A",
+   "CJC": "100 pF",
+   "TF": "50 ns"
+  },
+  "spice": ".model GEN_MJE13005 NPN(IS=1p BF=30 NF=1 VAF=200 IKF=2 ISE=2p NE=1.8 BR=3 NR=1 RB=2 RC=0.3 RE=0.05 CJE=600p VJE=0.75 MJE=0.4 CJC=100p VJC=0.75 MJC=0.4 TF=50n TR=2u XTB=1.5 Vceo=400 Icrating=4)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00272,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N3906",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "40 V",
+   "Ic": "200 mA",
+   "BF": "200",
+   "IS": "1.4 fA",
+   "VAF": "20 V",
+   "IKF": "80 mA",
+   "CJC": "4.5 pF",
+   "TF": "500 ps"
+  },
+  "spice": ".model GEN_2N3906 PNP(IS=1.4f BF=200 NF=1 VAF=20 IKF=80m ISE=1.4f NE=1.5 BR=4 NR=1 RB=10 RC=2.5 CJE=4.5p VJE=0.75 MJE=0.26 CJC=4.5p VJC=0.75 MJC=0.31 TF=500p TR=30n XTB=1.5 Vceo=40 Icrating=200m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0178,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BC557",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "45 V",
+   "Ic": "100 mA",
+   "BF": "300",
+   "IS": "10 fA",
+   "VAF": "40 V",
+   "IKF": "80 mA",
+   "CJC": "7 pF",
+   "TF": "600 ps"
+  },
+  "spice": ".model GEN_BC557 PNP(IS=10f BF=300 NF=1 VAF=40 IKF=80m ISE=10f NE=1.5 BR=8 NR=1 RB=10 RC=1 CJE=12p VJE=0.6 MJE=0.33 CJC=7p VJC=0.5 MJC=0.33 TF=600p TR=10n XTB=1.5 Vceo=45 Icrating=100m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0149,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N2907",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "60 V",
+   "Ic": "600 mA",
+   "BF": "230",
+   "IS": "20 fA",
+   "VAF": "115 V",
+   "IKF": "600 mA",
+   "CJC": "14 pF",
+   "TF": "550 ps"
+  },
+  "spice": ".model GEN_2N2907 PNP(IS=20f BF=230 NF=1 VAF=115 IKF=0.6 ISE=20f NE=1.5 BR=4 NR=1 RB=10 RC=1 CJE=20p VJE=0.75 MJE=0.38 CJC=14p VJC=0.75 MJC=0.38 TF=550p TR=30n XTB=1.5 Vceo=60 Icrating=600m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00218,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N5401",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "150 V",
+   "Ic": "600 mA",
+   "BF": "180",
+   "IS": "2.5 fA",
+   "VAF": "100 V",
+   "IKF": "250 mA",
+   "CJC": "8 pF",
+   "TF": "600 ps"
+  },
+  "spice": ".model GEN_2N5401 PNP(IS=2.5f BF=180 NF=1 VAF=100 IKF=0.25 ISE=2.5f NE=1.3 BR=4 NR=1 RB=10 RC=2 CJE=25p VJE=0.75 MJE=0.33 CJC=8p VJC=0.75 MJC=0.33 TF=600p TR=100n XTB=1.5 Vceo=150 Icrating=600m)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.0059,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_BD140",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "80 V",
+   "Ic": "1.5 A",
+   "BF": "150",
+   "IS": "400 fA",
+   "VAF": "100 V",
+   "IKF": "1 A",
+   "CJC": "50 pF",
+   "TF": "12 ns"
+  },
+  "spice": ".model GEN_BD140 PNP(IS=0.4p BF=150 NF=1 VAF=100 IKF=1 ISE=0.1p NE=1.7 BR=10 NR=1 RB=5 RC=0.2 RE=0.05 CJE=150p VJE=0.75 MJE=0.4 CJC=50p VJC=0.75 MJC=0.4 TF=12n TR=500n XTB=1.5 Vceo=80 Icrating=1.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00399,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_TIP32C",
+  "kind": "pnp",
+  "specs": {
+   "Vceo": "100 V",
+   "Ic": "3 A",
+   "BF": "60",
+   "IS": "1.8 pA",
+   "VAF": "100 V",
+   "IKF": "2.5 A",
+   "CJC": "100 pF",
+   "TF": "25 ns"
+  },
+  "spice": ".model GEN_TIP32C PNP(IS=1.8p BF=60 NF=1 VAF=100 IKF=2.5 ISE=0.2p NE=2 BR=5 NR=1 RB=3 RC=0.1 RE=0.03 CJE=200p VJE=0.75 MJE=0.4 CJC=100p VJC=0.75 MJC=0.4 TF=25n TR=1u XTB=1.5 Vceo=100 Icrating=3)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00219,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N5457",
+  "kind": "njf",
+  "specs": {
+   "Vto": "-1.5 V",
+   "Beta": "1 mA/V²",
+   "Lambda": "0.003 /V",
+   "Cgs": "4.5 pF",
+   "Cgd": "4 pF"
+  },
+  "spice": ".model GEN_2N5457 NJF(VTO=-1.5 BETA=1m LAMBDA=3m RD=1 RS=1 IS=0.2p CGS=4.5p CGD=4p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00175,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N3819",
+  "kind": "njf",
+  "specs": {
+   "Vto": "-3 V",
+   "Beta": "1.3 mA/V²",
+   "Lambda": "0.0025 /V",
+   "Cgs": "2.4 pF",
+   "Cgd": "1.6 pF"
+  },
+  "spice": ".model GEN_2N3819 NJF(VTO=-3 BETA=1.3m LAMBDA=2.5m RD=1 RS=1 IS=33f CGS=2.4p CGD=1.6p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000823,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_J201",
+  "kind": "njf",
+  "specs": {
+   "Vto": "-600 mV",
+   "Beta": "1.5 mA/V²",
+   "Lambda": "0.004 /V",
+   "Cgs": "3 pF",
+   "Cgd": "3 pF"
+  },
+  "spice": ".model GEN_J201 NJF(VTO=-0.6 BETA=1.5m LAMBDA=4m RD=1 RS=1 IS=0.1p CGS=3p CGD=3p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00147,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_J310",
+  "kind": "njf",
+  "specs": {
+   "Vto": "-3 V",
+   "Beta": "3.3 mA/V²",
+   "Lambda": "0.02 /V",
+   "Cgs": "5 pF",
+   "Cgd": "5 pF"
+  },
+  "spice": ".model GEN_J310 NJF(VTO=-3 BETA=3.3m LAMBDA=20m RD=1 RS=1 IS=0.2p CGS=5p CGD=5p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00151,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_J111",
+  "kind": "njf",
+  "specs": {
+   "Vto": "-6 V",
+   "Beta": "2.5 mA/V²",
+   "Lambda": "0.02 /V",
+   "Cgs": "13 pF",
+   "Cgd": "6 pF"
+  },
+  "spice": ".model GEN_J111 NJF(VTO=-6 BETA=2.5m LAMBDA=20m RD=5 RS=5 IS=0.2p CGS=13p CGD=6p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.00153,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_2N5460",
+  "kind": "pjf",
+  "specs": {
+   "Vto": "-2 V",
+   "Beta": "750 µA/V²",
+   "Lambda": "0.005 /V",
+   "Cgs": "5 pF",
+   "Cgd": "5 pF"
+  },
+  "spice": ".model GEN_2N5460 PJF(VTO=-2 BETA=0.75m LAMBDA=5m RD=1 RS=1 IS=0.1p CGS=5p CGD=5p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0,
+   "date": "2026-10-10"
+  }
+ },
+ {
+  "name": "GEN_J175",
+  "kind": "pjf",
+  "specs": {
+   "Vto": "-3 V",
+   "Beta": "2 mA/V²",
+   "Lambda": "0.02 /V",
+   "Cgs": "10 pF",
+   "Cgd": "10 pF"
+  },
+  "spice": ".model GEN_J175 PJF(VTO=-3 BETA=2m LAMBDA=20m RD=5 RS=5 IS=0.1p CGS=10p CGD=10p PB=1 FC=0.5)",
+  "added": "2026-10-10",
+  "check": {
+   "error": 0.000672,
+   "date": "2026-10-10"
+  }
+ }
+]

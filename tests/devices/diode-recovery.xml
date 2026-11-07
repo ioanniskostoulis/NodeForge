@@ -1,0 +1,8 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="D1N4007">.model D1N4007 D(IS=7.02767n RS=0.0341512 N=1.80803 EG=1.05743 XTI=5 BV=1000 IBV=0.1 CJO=1e-11 VJ=0.7 M=0.5 FC=0.5 TT=1e-07)</nfmodel>
+  <v x="96 304 96 160" f="0" wf="2" fr="50000" maxv="10" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <r x="96 160 224 160" f="0" r="10"/>
+  <d x="224 160 224 304" f="2" mo="default" nfm="D1N4007"/>
+  <w x="224 304 96 304" f="0"/>
+  <g x="96 304 96 336" f="0"/>
+</cir>

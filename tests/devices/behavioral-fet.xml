@@ -1,0 +1,21 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="BEHAV_FET">.param vth0=3.5
+.func softplus(x) {ln(1+exp(x))}
+.subckt BEHAV_FET d g s params: kp=8 lam=0.01
+.param vt={vth0+0.3} rgate={2*1}
+Rg g gi {rgate}
+Cgs gi s 1.5n
+Cgd gi d 0.3n
+G1 d s VALUE={kp*pwr(0.1*softplus((V(gi,s)-vt)/0.1),2)*(1+lam*V(d,s))*tanh(V(d,s)/0.5)}
+Dbody s d DB
+.model DB D(Is=1e-12 N=1.1 Rs=10m Cjo={0.5n} TT=50n)
+.ends</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="BEHAV_FET"/>
+  <r x="240 240 304 240" f="0" r="10"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="100000" maxv="6" bias="6" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="10"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="48" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

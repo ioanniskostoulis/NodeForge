@@ -1,0 +1,20 @@
+<cir f="1" nfsh="1" ts="1e-7" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="PWRTH">* A self-heating power MOSFET in a subcircuit (made-up values), ngspice's thermal syntax
+* 1 = drain, 2 = gate, 3 = source
+.SUBCKT PWRTH 1 2 3
+M1 1 2 3 tj tc VDM thermal
+CCASE tc 0 20u
+D1 3 1 tjd DCL thermal
+.MODEL VDM VDMOS(Rg=3 Vto=4 Rd=34m Rs=10m Rb=17m Kp=25 Cgdmax=2n Cgdmin=.1n Cgs=2n Cjo=1n Is=88p ksubthres=.1 mu=-1.8 tcvth=-6m Rthjc=2 Rthca=20 Cthj=10u)
+.MODEL DCL D(IS=5n N=1.4 RS=0.05 CJO=300p TT=30n RTH0=60 CTH0=20u)
+.ENDS
+</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="PWRTH"/>
+  <r x="240 240 304 240" f="0" r="10"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="20000" maxv="6" bias="6" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="4"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="48" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

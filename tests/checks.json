@@ -1,0 +1,146 @@
+{
+  "_comment": "Expected results of `npm run checks` (scripts/checks.mjs), in one place. Accuracy limits are the worst shape error in percent against ngspice.",
+  "upstream": {
+    "passed": 7
+  },
+  "oracle": {
+    "list": "tests/oracle/oracle-all.txt",
+    "expected": "tests/oracle/oracle-full.txt"
+  },
+  "bench": {
+    "circuits": 373,
+    "failed": 0
+  },
+  "benchCircuitjs": {
+    "circuits": 373,
+    "failed": 0
+  },
+  "roundtrip": {
+    "roundTripped": 365,
+    "failed": [
+      "chua.txt",
+      "ledflasher.txt",
+      "relaxosc.txt",
+      "ringcascade.txt",
+      "sawtooth.txt",
+      "triangle.txt",
+      "trianglevco.txt",
+      "vco.txt"
+    ]
+  },
+  "op": {
+    "newton": 365,
+    "gminStepping": 1,
+    "failed": [
+      "555int.txt",
+      "blank.txt",
+      "delta-pwm.txt",
+      "freqdouble.txt",
+      "pll.txt",
+      "pll2.txt",
+      "pll2a.txt"
+    ]
+  },
+  "accuracy": {
+    "default": 0.01,
+    "limits": {
+      "tests/accuracy/*": 0.07,
+      "selfheat-vdmos.xml": 0.015,
+      "vdmos-bodydiode.xml": 0.11,
+      "zvs-mazzilli-ramp.xml": 0.1,
+      "startup-lm317.xml": 2.5,
+      "zvs.txt": 0.11
+    }
+  },
+  "dcsweep": {
+    "limit": 0.001,
+    "sweeps": [
+      [
+        "tests/devices/zener-clamp.xml",
+        1,
+        -20,
+        20,
+        0.5
+      ],
+      [
+        "tests/devices/vdmos-switch.xml",
+        1,
+        0,
+        10,
+        0.5
+      ],
+      [
+        "tests/devices/bjt-switch.xml",
+        1,
+        0,
+        5,
+        0.05
+      ],
+      [
+        "tests/devices/jfet-amp.xml",
+        1,
+        -3,
+        3,
+        0.1
+      ],
+      [
+        "tests/devices/temp-mos3-125.xml",
+        1,
+        0,
+        10,
+        0.25
+      ]
+    ]
+  },
+  "ac": {
+    "db": 0.002,
+    "deg": 0.005,
+    "sweeps": [
+      [
+        "tests/accuracy/rlc.txt",
+        1,
+        10,
+        100000,
+        10
+      ],
+      [
+        "tests/devices/bjt-pnp-amp.xml",
+        1,
+        10,
+        10000000,
+        10
+      ],
+      [
+        "tests/devices/jfet-amp.xml",
+        1,
+        10,
+        10000000,
+        10
+      ],
+      [
+        "tests/devices/vdmos-switch.xml",
+        1,
+        10,
+        10000000,
+        10
+      ],
+      [
+        "tests/devices/coupled-inductors.xml",
+        1,
+        10,
+        10000000,
+        10
+      ],
+      [
+        "tests/devices/mos2-subckt.xml",
+        1,
+        10,
+        10000000,
+        10
+      ]
+    ]
+  },
+  "app": {
+    "files": 29
+  }
+}

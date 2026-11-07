@@ -1,0 +1,11 @@
+<cir f="1" ts="2e-9" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="Q2N2907">.model Q2N2907 PNP(IS=650.6E-18 XTI=3 EG=1.11 VAF=115.7 BF=231.7 NE=1.829 ISE=54.81f IKF=1.079 XTB=1.5 BR=3.563 NC=2 ISC=0 IKR=0 RC=.715 CJC=14.76p MJC=.5383 VJC=.75 FC=.5 CJE=19.82p MJE=.3357 VJE=.75 TR=111.3n TF=603.7p ITF=.65 VTF=5 XTF=1.7 RB=10 CJS=4p VJS=0.7 MJS=0.35)</nfmodel>
+  <v x="240 304 240 240" f="0" wf="2" fr="500000" maxv="2.5" bias="-2.5" phaseShift="0" dutyCycle="0.5"/>
+  <r x="240 240 304 240" f="0" r="1000"/>
+  <t x="304 240 352 240" f="0" pn="-1" be="100" mo="default" nfm="Q2N2907"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 224 352 176" f="0"/>
+  <g x="352 176 352 160" f="0"/>
+  <r x="352 256 352 304" f="0" r="100"/>
+  <R x="352 304 352 336" f="0" wf="0" fr="40" maxv="-12" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

@@ -1,0 +1,13 @@
+node_modules/
+build/
+.DS_Store
+# official CircuitJS recordings (61 MB; regenerate with scripts/oracle.mjs)
+/tests/oracle/recordings/
+
+# machine-specific configuration; keep the safe .env.example template tracked
+.env
+.env.local
+.env.*.local
+
+# component-gallery inspection views and scratch circuits
+tests/components/_*

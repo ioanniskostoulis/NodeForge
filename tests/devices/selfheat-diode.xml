@@ -1,0 +1,8 @@
+<cir f="1" ts="2e-5" ic="10" cb="50" pb="50" vr="5" mts="5e-14" nfsh="1">
+  <nfmodel n="DHOT">.model DHOT D(IS=2n N=1.6 RS=0.08 TRS1=4m CJO=200p TT=40n XTI=3 EG=1.11 RTH0=20 CTH0=1m)</nfmodel>
+  <v x="96 304 96 160" f="0" wf="2" fr="50" maxv="6" bias="6" phaseShift="0" dutyCycle="0.5"/>
+  <r x="96 160 224 160" f="0" r="5"/>
+  <d x="224 160 224 304" f="2" mo="default" nfm="DHOT"/>
+  <w x="224 304 96 304" f="0"/>
+  <g x="96 304 96 336" f="0"/>
+</cir>

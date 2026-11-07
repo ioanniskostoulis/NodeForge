@@ -1,0 +1,11 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="IRF540">.model IRF540 VDMOS(Rg=3 Vto=4 Rd=34m Rs=10m Rb=17m Kp=25 Cgdmax=2n Cgdmin=.1n Cgs=2n Cjo=1n Is=88p ksubthres=.1 mfg=International_Rectifier Vds=100 Ron=77m Qg=72n)</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="IRF540"/>
+  <r x="240 240 304 240" f="0" r="10"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="100000" maxv="6" bias="6" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="10"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="48" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

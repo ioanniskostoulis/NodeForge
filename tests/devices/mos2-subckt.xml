@@ -1,0 +1,18 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="SC2">* A level 2 MOSFET as a subcircuit (made-up values)
+* 1 = drain, 2 = gate, 3 = source
+.SUBCKT SC2 1 2 3
+M1 1 7 3 3 N2 L=2u W=400u AD=800p AS=800p PD=420u PS=420u
+RG 2 7 20
+.MODEL N2 NMOS LEVEL=2 TOX=25n NSUB=2e16 UO=600 UCRIT=2e4 UEXP=0.15 XJ=0.3u LD=0.15u DELTA=0.8 NFS=6e11 CGSO=3e-10 CGDO=3e-10 CJ=3e-4 MJ=0.5 CJSW=4e-10 MJSW=0.33 JS=1e-6 PB=0.85
+.ENDS
+</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="SC2"/>
+  <r x="240 240 304 240" f="0" r="100"/>
+  <v x="240 304 240 240" f="0" wf="1" fr="100000" maxv="1.6" bias="1.6" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="200"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

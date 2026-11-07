@@ -1,0 +1,31 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="MIXED_FET">.subckt MIXED_FET drain gate source params: Lsrc=2n Ldrn=1n Rgint=1.2
+Ld drain d1 {Ldrn}
+Lsx source s1 {Lsrc}
+Kc Ld Lsx 0.5
+Rg gate g1 {Rgint}
+Vsense d1 d2 0
+E1 g2 s1 TABLE {V(g1,s1)} = (0,0) (2,1.8) (5,4.6) (10,9.5) (20,19)
+Rgx g2 g3 1
+Cgs g3 s1 2n
+Cgd g1 d2 0.4n
+Bch d2 s1 I={6*pwr(uramp(V(g3,s1)-4),2)*tanh(V(d2,s1)/0.8)}
+H1 hs 0 Vsense 1
+Rh hs 0 1k
+F1 0 fb Vsense 1m
+Rfb fb 0 1k
+Epoly pz 0 POLY(2) g1 s1 d2 s1 0 1 0.5 0.01
+Rpz pz 0 1k
+Gtail d2 s1 POLY(1) hs 0 0 1u
+D1 s1 d2 DB
+.model DB D(Is=1e-12 N=1.1 Rs=10m Cjo=500p TT=50n)
+.ends</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="MIXED_FET"/>
+  <r x="240 240 304 240" f="0" r="10"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="100000" maxv="6" bias="6" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="10"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="48" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

@@ -1,0 +1,11 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="QQS">.model QQS NPN(IS=1e-13 BF=80 VAF=100 IKF=2 ISE=1e-13 NE=1.6 BR=4 RB=2 RC=0.05 RE=0.02 CJE=200p CJC=80p TF=10n TR=500n RCO=5 VO=5 GAMMA=1e-10)</nfmodel>
+  <v x="240 304 240 240" f="0" wf="2" fr="100000" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <r x="240 240 304 240" f="0" r="100"/>
+  <t x="304 240 352 240" f="0" pn="1" be="100" mo="default" nfm="QQS"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="10"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="12" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

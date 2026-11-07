@@ -1,0 +1,70 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Active Components"/>
+  <x x="32 40 48 40" f="0" si="12" te="Diode"/>
+  <d x="64 112 128 112" f="0" mo="default"/>
+  <d x="192 112 192 176" f="0" mo="default"/>
+  <x x="288 40 304 40" f="0" si="12" te="Zener Diode"/>
+  <z x="320 112 384 112" f="0" mo="default-zener"/>
+  <z x="448 112 448 176" f="0" mo="default-zener"/>
+  <x x="544 40 560 40" f="0" si="12" te="Transistor (bipolar, NPN)"/>
+  <t x="576 112 640 112" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="704 112 704 176" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="800 40 816 40" f="0" si="12" te="Transistor (bipolar, PNP)"/>
+  <t x="832 112 896 112" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="960 112 960 176" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="1056 40 1072 40" f="0" si="12" te="MOSFET (N-Channel)"/>
+  <f x="1088 112 1120 112" f="0" mo="default"/>
+  <f x="1216 112 1216 144" f="0" mo="default"/>
+  <x x="1312 40 1328 40" f="0" si="12" te="MOSFET (P-Channel)"/>
+  <f x="1344 112 1376 112" f="1" mo="default"/>
+  <f x="1472 112 1472 144" f="1" mo="default"/>
+  <x x="32 232 48 232" f="0" si="12" te="JFET (N-Channel)"/>
+  <j x="64 304 96 304" f="0" mo="default-jfet"/>
+  <j x="192 304 192 336" f="0" mo="default-jfet"/>
+  <x x="288 232 304 232" f="0" si="12" te="JFET (P-Channel)"/>
+  <j x="320 304 352 304" f="1" mo="default-jfet"/>
+  <j x="448 304 448 336" f="1" mo="default-jfet"/>
+  <x x="544 232 560 232" f="0" si="12" te="SCR"/>
+  <SCR x="576 304 640 304" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="704 304 704 368" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <x x="800 232 816 232" f="0" si="12" te="DIAC"/>
+  <Diac x="832 304 896 304" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="960 304 960 368" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <x x="1056 232 1072 232" f="0" si="12" te="TRIAC"/>
+  <Triac x="1088 304 1152 304" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1216 304 1216 368" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <x x="1312 232 1328 232" f="0" si="12" te="Darlington Pair (NPN)"/>
+  <dar x="1344 304 1408 304" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1472 304 1472 368" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="32 424 48 424" f="0" si="12" te="Darlington Pair (PNP)"/>
+  <dar x="64 496 128 496" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="192 496 192 560" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="288 424 304 424" f="0" si="12" te="Varactor/Varicap"/>
+  <Varactor x="320 496 384 496" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="448 496 448 560" f="0" mo="default" ca="0" ba="4e-12"/>
+  <x x="544 424 560 424" f="0" si="12" te="Tunnel Diode"/>
+  <TunnelDiode x="576 496 640 496" f="0"/>
+  <TunnelDiode x="704 496 704 560" f="0"/>
+  <x x="800 424 816 424" f="0" si="12" te="Triode"/>
+  <Triode x="832 496 896 496" f="2" mu="93" kg="680"/>
+  <Triode x="960 496 960 560" f="2" mu="93" kg="680"/>
+  <x x="1056 424 1072 424" f="0" si="12" te="Unijunction Transistor"/>
+  <Unijunction x="1088 496 1152 496" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1216 496 1216 560" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+</cir>

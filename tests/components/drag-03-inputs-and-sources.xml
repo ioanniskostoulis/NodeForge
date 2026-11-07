@@ -1,0 +1,173 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Inputs and Sources, dragged out"/>
+  <x x="160 48 176 48" f="0" si="18" te="→"/>
+  <x x="384 48 400 48" f="0" si="18" te="←"/>
+  <x x="608 48 624 48" f="0" si="18" te="↓"/>
+  <x x="832 48 848 48" f="0" si="18" te="↑"/>
+  <x x="1056 48 1072 48" f="0" si="18" te="↘"/>
+  <x x="1280 48 1296 48" f="0" si="18" te="↗"/>
+  <x x="1504 48 1520 48" f="0" si="18" te="↙"/>
+  <x x="1728 48 1744 48" f="0" si="18" te="↖"/>
+  <x x="16 160 32 160" f="0" si="12" te="Ground"/>
+  <g x="224 160 288 160" f="0"/>
+  <g x="448 160 384 160" f="0"/>
+  <g x="672 160 672 224" f="0"/>
+  <g x="896 160 896 96" f="0"/>
+  <g x="1120 160 1184 224" f="0"/>
+  <g x="1344 160 1408 96" f="0"/>
+  <g x="1568 160 1504 224" f="0"/>
+  <g x="1792 160 1728 96" f="0"/>
+  <x x="16 384 32 384" f="0" si="12" te="Voltage Source (2-terminal)"/>
+  <v x="288 384 224 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="384 384 448 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="672 448 672 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="896 320 896 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1184 448 1120 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1408 320 1344 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1504 448 1568 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1728 320 1792 384" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 608 32 608" f="0" si="12" te="A/C Voltage Source (2-terminal)"/>
+  <v x="288 608 224 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="384 608 448 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="672 672 672 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="896 544 896 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1184 672 1120 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1408 544 1344 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1504 672 1568 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="1728 544 1792 608" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 832 32 832" f="0" si="12" te="Voltage Source (1-terminal)"/>
+  <R x="224 832 288 832" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="448 832 384 832" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="672 832 672 896" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="896 832 896 768" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1120 832 1184 896" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1344 832 1408 768" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1568 832 1504 896" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1792 832 1728 768" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 1056 32 1056" f="0" si="12" te="A/C Voltage Source (1-terminal)"/>
+  <R x="224 1056 288 1056" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="448 1056 384 1056" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="672 1056 672 1120" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="896 1056 896 992" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1120 1056 1184 1120" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1344 1056 1408 992" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1568 1056 1504 1120" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1792 1056 1728 992" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 1280 32 1280" f="0" si="12" te="Square Wave Source (1-terminal)"/>
+  <R x="224 1280 288 1280" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="448 1280 384 1280" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="672 1280 672 1344" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="896 1280 896 1216" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1120 1280 1184 1344" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1344 1280 1408 1216" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1568 1280 1504 1344" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1792 1280 1728 1216" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 1504 32 1504" f="0" si="12" te="Clock"/>
+  <R x="224 1504 288 1504" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="448 1504 384 1504" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="672 1504 672 1568" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="896 1504 896 1440" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1120 1504 1184 1568" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1344 1504 1408 1440" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1568 1504 1504 1568" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1792 1504 1728 1440" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 1728 32 1728" f="0" si="12" te="A/C Sweep"/>
+  <sw x="224 1728 288 1728" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="448 1728 384 1728" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="672 1728 672 1792" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="896 1728 896 1664" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="1120 1728 1184 1792" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="1344 1728 1408 1664" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="1568 1728 1504 1792" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="1792 1728 1728 1664" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <x x="16 1952 32 1952" f="0" si="12" te="Battery"/>
+  <Battery x="288 1952 224 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="384 1952 448 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="672 2016 672 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="896 1888 896 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="1184 2016 1120 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="1408 1888 1344 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="1504 2016 1568 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="1728 1888 1792 1952" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <x x="16 2176 32 2176" f="0" si="12" te="Variable Voltage"/>
+  <VarRail x="224 2176 288 2176" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="448 2176 384 2176" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="672 2176 672 2240" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="896 2176 896 2112" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="1120 2176 1184 2240" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="1344 2176 1408 2112" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="1568 2176 1504 2240" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="1792 2176 1728 2112" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <x x="16 2400 32 2400" f="0" si="12" te="Antenna"/>
+  <A x="224 2400 288 2400" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="448 2400 384 2400" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="672 2400 672 2464" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="896 2400 896 2336" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1120 2400 1184 2464" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1344 2400 1408 2336" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1568 2400 1504 2464" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1792 2400 1728 2336" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 2624 32 2624" f="0" si="12" te="AM Source"/>
+  <AM x="224 2624 288 2624" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="448 2624 384 2624" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="672 2624 672 2688" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="896 2624 896 2560" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1120 2624 1184 2688" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1344 2624 1408 2560" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1568 2624 1504 2688" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1792 2624 1728 2560" f="0" cf="1000" sf="40" mv="5"/>
+  <x x="16 2848 32 2848" f="0" si="12" te="FM Source"/>
+  <FM x="224 2848 288 2848" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="448 2848 384 2848" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="672 2848 672 2912" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="896 2848 896 2784" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="1120 2848 1184 2912" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="1344 2848 1408 2784" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="1568 2848 1504 2912" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="1792 2848 1728 2784" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <x x="16 3072 32 3072" f="0" si="12" te="Current Source"/>
+  <i x="224 3072 288 3072" f="0" cu="0.01"/>
+  <i x="448 3072 384 3072" f="0" cu="0.01"/>
+  <i x="672 3072 672 3136" f="0" cu="0.01"/>
+  <i x="896 3072 896 3008" f="0" cu="0.01"/>
+  <i x="1120 3072 1184 3136" f="0" cu="0.01"/>
+  <i x="1344 3072 1408 3008" f="0" cu="0.01"/>
+  <i x="1568 3072 1504 3136" f="0" cu="0.01"/>
+  <i x="1792 3072 1728 3008" f="0" cu="0.01"/>
+  <x x="16 3296 32 3296" f="0" si="12" te="Noise Generator"/>
+  <R x="224 3296 288 3296" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="448 3296 384 3296" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="672 3296 672 3360" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="896 3296 896 3232" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1120 3296 1184 3360" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1344 3296 1408 3232" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1568 3296 1504 3360" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1792 3296 1728 3232" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="16 3520 32 3520" f="0" si="12" te="Audio Input"/>
+  <ain x="224 3520 288 3520" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="448 3520 384 3520" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="672 3520 672 3584" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="896 3520 896 3456" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="1120 3520 1184 3584" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="1344 3520 1408 3456" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="1568 3520 1504 3584" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="1792 3520 1728 3456" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <x x="16 3744 32 3744" f="0" si="12" te="Data Input"/>
+  <DataInput x="224 3744 288 3744" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="448 3744 384 3744" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="672 3744 672 3808" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="896 3744 896 3680" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1120 3744 1184 3808" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1344 3744 1408 3680" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1568 3744 1504 3808" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1792 3744 1728 3680" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <x x="16 3968 32 3968" f="0" si="12" te="External Voltage (JavaScript)"/>
+  <ExtVoltage x="224 3968 288 3968" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="448 3968 384 3968" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="672 3968 672 4032" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="896 3968 896 3904" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1120 3968 1184 4032" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1344 3968 1408 3904" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1568 3968 1504 4032" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1792 3968 1728 3904" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+</cir>

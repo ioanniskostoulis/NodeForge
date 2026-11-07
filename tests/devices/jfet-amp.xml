@@ -1,0 +1,13 @@
+<cir f="1" ts="1e-7" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="J2N5457">.model J2N5457 NJF(Beta=1.125m Betatce=-.5 Rd=1 Rs=1 Lambda=2.3m Vto=-1.372 Vtotc=-2.5m Is=181.3f Isr=1.747p N=1 Nr=2 Xti=3 Alpha=2.543u Vk=134.1 Cgd=6p M=.3622 Pb=1 Fc=.5 Cgs=4.627p B=0.8)</nfmodel>
+  <v x="96 304 96 240" f="0" wf="1" fr="50000" maxv="0.3" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <r x="96 240 224 240" f="0" r="10000"/>
+  <r x="224 240 224 304" f="0" r="1000000"/>
+  <j x="224 240 272 240" f="0" mo="default-jfet" nfm="J2N5457"/>
+  <r x="272 256 272 304" f="0" r="470"/>
+  <r x="272 224 272 160" f="0" r="4700"/>
+  <R x="272 160 272 128" f="0" wf="0" fr="40" maxv="15" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <g x="96 304 96 320" f="0"/>
+  <w x="224 304 272 304" f="0"/>
+  <g x="272 304 272 320" f="0"/>
+</cir>

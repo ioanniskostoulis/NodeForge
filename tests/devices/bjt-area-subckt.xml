@@ -1,0 +1,22 @@
+<cir nftemp="85" f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="QAREA">* Transistors with AREA, AREAB and AREAC, quasi-saturation with QUASIMOD's temperature
+* equations, at 85 °C (made-up values). 1 = collector, 2 = base drive, 3 = emitter
+.SUBCKT QAREA 1 2 3
+* a vertical NPN: base-collector junction by AREAB, substrate (to ground) by AREAC
+Q1 1 7 3 0 QN 2 AREAB=3 AREAC=1.5
+RB 2 7 50
+* a lateral PNP held off across the switch, its junctions a load: base-collector by AREAC, substrate by AREAB
+Q2 3 1 3 0 QP 1.5 AREAB=2 AREAC=0.5
+.MODEL QN NPN(IS=1e-15 BF=150 VAF=80 IKF=0.2 ISE=1e-15 NE=1.5 ISC=1e-14 NC=2 BR=3 RB=5 RC=1 RE=0.2 CJE=10p CJC=5p CJS=3p ISS=1e-16 TF=0.5n TR=50n RCO=20 VO=3 GAMMA=1e-11 QUASIMOD=1 XTB=1.5)
+.MODEL QP PNP(IS=1e-15 BF=50 ISC=1e-13 NC=2 CJE=8p CJC=6p CJS=4p ISS=1e-15 TF=1n)
+.ENDS
+</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="QAREA"/>
+  <r x="240 240 304 240" f="0" r="100"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="100000" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="200"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="12" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>

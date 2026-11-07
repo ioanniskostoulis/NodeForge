@@ -1,0 +1,57 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Inputs and Sources"/>
+  <x x="32 40 48 40" f="0" si="12" te="Ground"/>
+  <g x="64 112 64 144" f="0"/>
+  <g x="192 112 224 112" f="0"/>
+  <x x="288 40 304 40" f="0" si="12" te="Voltage Source (2-terminal)"/>
+  <v x="320 48 320 112" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="384 112 448 112" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="544 40 560 40" f="0" si="12" te="A/C Voltage Source (2-terminal)"/>
+  <v x="576 48 576 112" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="640 112 704 112" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="800 40 816 40" f="0" si="12" te="Voltage Source (1-terminal)"/>
+  <R x="832 112 880 112" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="960 112 960 160" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1056 40 1072 40" f="0" si="12" te="A/C Voltage Source (1-terminal)"/>
+  <R x="1088 112 1136 112" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1216 112 1216 160" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1312 40 1328 40" f="0" si="12" te="Square Wave Source (1-terminal)"/>
+  <R x="1344 112 1392 112" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1472 112 1472 160" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="32 232 48 232" f="0" si="12" te="Clock"/>
+  <R x="64 304 112 304" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="192 304 192 352" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <x x="288 232 304 232" f="0" si="12" te="A/C Sweep"/>
+  <sw x="320 304 384 304" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="448 304 448 368" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <x x="544 232 560 232" f="0" si="12" te="Battery"/>
+  <Battery x="640 304 576 304" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="704 368 704 304" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <x x="800 232 816 232" f="0" si="12" te="Variable Voltage"/>
+  <VarRail x="832 304 880 304" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="960 304 960 352" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <x x="1056 232 1072 232" f="0" si="12" te="Antenna"/>
+  <A x="1088 304 1136 304" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1216 304 1216 352" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1312 232 1328 232" f="0" si="12" te="AM Source"/>
+  <AM x="1344 304 1408 304" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1472 304 1472 368" f="0" cf="1000" sf="40" mv="5"/>
+  <x x="32 424 48 424" f="0" si="12" te="FM Source"/>
+  <FM x="64 496 128 496" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="192 496 192 560" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <x x="288 424 304 424" f="0" si="12" te="Current Source"/>
+  <i x="320 496 384 496" f="0" cu="0.01"/>
+  <i x="448 496 448 560" f="0" cu="0.01"/>
+  <x x="544 424 560 424" f="0" si="12" te="Noise Generator"/>
+  <R x="576 496 624 496" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="704 496 704 544" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="800 424 816 424" f="0" si="12" te="Audio Input"/>
+  <ain x="832 496 880 496" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="960 496 960 544" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <x x="1056 424 1072 424" f="0" si="12" te="Data Input"/>
+  <DataInput x="1088 496 1136 496" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1216 496 1216 544" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <x x="1312 424 1328 424" f="0" si="12" te="External Voltage (JavaScript)"/>
+  <ExtVoltage x="1344 496 1392 496" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1472 496 1472 544" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+</cir>

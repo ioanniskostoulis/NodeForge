@@ -1,0 +1,17 @@
+<cir f="1" nfsh="1" ts="5e-6" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="GEN_IRF540">.model GEN_IRF540 VDMOS(Rg=2 Vto=3.5 Rd=25m Rs=6m Rb=15m Kp=28 lambda=0.002 Cgdmax=2n Cgdmin=0.1n Cgs=1.8n Cjo=1.2n Is=1e-11 TT=120n BV=100 IBV=250u ksubthres=0.1 mu=-1.5 tcvth=-5m trd1=7m Rthjc=1.15 Rthca=60.9 Cthj=0.00435 mfg=Generic Vds=100 Ron=45m Qg=70n)</nfmodel>
+  <nfmodel n="GEN_1N5408">.model GEN_1N5408 D(IS=20n N=1.8 RS=0.015 BV=1000 IBV=10u CJO=50p VJ=0.7 M=0.4 TT=3u RTH0=20 CTH0=0.005)</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="GEN_IRF540"/>
+  <r x="240 240 304 240" f="0" r="10"/>
+  <v x="240 304 240 240" f="0" wf="0" fr="40" maxv="10" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="1"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="12" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="480 304 480 160" f="0" wf="1" fr="250" maxv="20" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <d x="480 160 576 160" f="2" mo="default" nfm="GEN_1N5408"/>
+  <r x="576 160 576 304" f="0" r="2"/>
+  <w x="480 304 576 304" f="0"/>
+  <g x="480 304 480 320" f="0"/>
+</cir>

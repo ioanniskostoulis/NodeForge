@@ -1,0 +1,63 @@
+@import url("forge-tokens.css");
+
+@import url("forge-brand.css");
+
+@import url("forge-shell.css");
+
+/* MARK: workspace */
+
+#canvas-wrap { flex: 1; position: relative; min-height: 120px; background: #131313; }
+#canvas-wrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* MARK: welcome state in a narrow centre column: the buttons wrap and nothing overhangs */
+#empty-state { min-width: 0; padding: 0 var(--pad); box-sizing: border-box; }
+#empty-state .actions { flex-wrap: wrap; justify-content: center; }
+#empty-state .title, #empty-state .detail { max-width: 100%; text-align: center; }
+
+/* MARK: bottom panel */
+#bottom-tabs { overflow-x: auto; scrollbar-width: none; }
+#bottom-tabs::-webkit-scrollbar { display: none; }
+
+#scopes { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+/* MARK: paper (white background) mode: the sheet turns white; the chrome stays dark */
+body.no-docs #canvas-wrap { display: none; }
+body.paper #canvas-wrap { background: white; }
+body[data-theme="light"] #canvas-wrap { background: #f8f8f7; }
+body[data-theme="light"].paper #canvas-wrap { background: white; }
+body.paper #empty-state { --empty-sheet: #fff; --empty-grid-dot: #0000001a; --empty-grid-line: #0000000d; }
+.save-prompt.models { width: min(860px, calc(100vw - 32px)); max-height: 82vh; }
+.save-prompt.tune { width: min(560px, calc(100vw - 32px)); max-height: 82vh; }
+.save-prompt.tune .field { grid-template-columns: 80px 1fr; }
+.tune-body { display: flex; flex-direction: column; gap: 4px; overflow: auto; min-height: 0; max-height: 52vh; padding: 6px 8px; border: 1px solid var(--hairline); border-radius: 6px; background: var(--well); }
+.tune-row { display: grid; grid-template-columns: 96px 120px 1fr; gap: 8px; align-items: center; }
+.tune-key, .tune-value { min-width: 0; font-family: var(--mono, monospace); }
+.tune-hint { color: var(--text3); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tune-text { min-height: 280px; font-family: var(--mono, monospace); font-size: 11px; white-space: pre; resize: vertical; }
+.tune-body .link-button { align-self: flex-start; margin-top: 4px; }
+.tune-status { white-space: pre-line; min-height: 14px; }
+.models-status { min-height: 14px; white-space: pre-line; }
+.models-body { display: flex; flex-direction: column; gap: 8px; min-height: 0; flex: 1; overflow: hidden; }
+.models-bar, .models-link { display: flex; gap: 6px; align-items: center; }
+.models-bar .panel-button, .models-link .panel-button { flex: 0 0 auto; padding: 0 12px; }
+.models-search, .models-url { flex: 1; min-width: 0; }
+.models-table { overflow: auto; border: 1px solid var(--hairline); background: var(--well); border-radius: 6px; min-height: 120px; max-height: 56vh; }
+.models-row { display: grid; grid-template-columns: 150px 170px 1fr 110px auto; gap: 4px 10px; padding: 6px 10px; border-bottom: 1px solid var(--hairline); align-items: baseline; }
+.models-row.review { grid-template-columns: 18px 150px 150px 1fr auto; cursor: default; }
+.models-row:last-child { border-bottom: none; }
+.models-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.models-kind, .models-source { color: var(--text3); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.models-specs { color: var(--text2); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.models-check { font-size: 11px; color: var(--text2); white-space: nowrap; }
+.models-actions { display: flex; gap: 8px; }
+.models-source { grid-column: 1 / -1; }
+.models-empty { padding: 16px; }
+.models-note { max-width: 520px; }
+.hint-text { white-space: pre-line; }
+@media (max-width: 640px) {
+  .models-row { grid-template-columns: 1fr auto; }
+  .models-row .models-specs, .models-row .models-kind { grid-column: 1 / -1; }
+}
+.slider-config-content { display: flex; flex-direction: column; gap: 10px; }
+.slider-config-content[hidden] { display: none; }
+
+.startup-error { margin: 0; padding: 20px; color: var(--error); }

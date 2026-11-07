@@ -1,0 +1,83 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Passive Components"/>
+  <x x="32 40 48 40" f="0" si="12" te="Capacitor"/>
+  <c x="64 112 128 112" f="0" c="0.00001" iv="0.001" vd="0"/>
+  <c x="192 112 192 176" f="0" c="0.00001" iv="0.001" vd="0"/>
+  <x x="288 40 304 40" f="0" si="12" te="Capacitor (polarized)"/>
+  <pc x="320 112 384 112" f="0" c="0.00001" iv="0.001" mv="1" vd="0"/>
+  <pc x="448 112 448 176" f="0" c="0.00001" iv="0.001" mv="1" vd="0"/>
+  <x x="544 40 560 40" f="0" si="12" te="Inductor"/>
+  <l x="576 112 640 112" f="0" l="1" ic="0" i="0"/>
+  <l x="704 112 704 176" f="0" l="1" ic="0" i="0"/>
+  <x x="800 40 816 40" f="0" si="12" te="Switch"/>
+  <s x="832 112 896 112" f="0" p="0" mm="false"/>
+  <s x="960 112 960 176" f="0" p="0" mm="false"/>
+  <x x="1056 40 1072 40" f="0" si="12" te="Push Switch"/>
+  <s x="1088 112 1152 112" f="0" p="1" mm="true"/>
+  <s x="1216 112 1216 176" f="0" p="1" mm="true"/>
+  <x x="1312 40 1328 40" f="0" si="12" te="SPDT Switch"/>
+  <S x="1344 112 1408 112" f="0" p="0" mm="false" li="0" th="2"/>
+  <S x="1472 112 1472 176" f="0" p="0" mm="false" li="0" th="2"/>
+  <x x="32 232 48 232" f="0" si="12" te="DPDT Switch"/>
+  <dpdt x="64 304 128 304" f="0" p="0" mm="false" po="2"/>
+  <dpdt x="224 304 224 368" f="0" p="0" mm="false" po="2"/>
+  <x x="288 232 304 232" f="0" si="12" te="Make-Before-Break Switch"/>
+  <MBBSwitch x="320 304 384 304" f="0" p="0" mm="false" li="0"/>
+  <MBBSwitch x="448 304 448 368" f="0" p="0" mm="false" li="0"/>
+  <x x="544 232 560 232" f="0" si="12" te="Potentiometer"/>
+  <pt x="576 304 640 304" f="1" ma="1000" po="0.5" sl="Resistance"/>
+  <pt x="704 304 704 368" f="1" ma="1000" po="0.5" sl="Resistance"/>
+  <x x="800 232 816 232" f="0" si="12" te="Transformer"/>
+  <T x="832 304 896 304" f="0" in="4" ra="1" co="0.999" wi="64" c0="0" c1="0"/>
+  <T x="992 304 992 368" f="8" in="4" ra="1" co="0.999" wi="64" c0="0" c1="0"/>
+  <x x="1056 232 1072 232" f="0" si="12" te="Tapped Transformer"/>
+  <tt x="1088 304 1152 304" f="0" in="4" ra="1" co="0.99" c0="0" c1="0" c2="0"/>
+  <tt x="1248 304 1248 368" f="0" in="4" ra="1" co="0.99" c0="0" c1="0" c2="0"/>
+  <x x="1312 232 1328 232" f="0" si="12" te="Custom Transformer"/>
+  <CustomTransformer x="1344 304 1408 304" f="0" in="4" cc="0.999" ds="1,1:1" nc="3" ci="0 0 0"/>
+  <CustomTransformer x="1520 304 1520 368" f="8" in="4" cc="0.999" ds="1,1:1" nc="3" ci="0 0 0"/>
+  <x x="32 424 48 424" f="0" si="12" te="Transmission Line"/>
+  <tl x="64 496 128 496" f="0" de="0.005" im="75" wi="16"/>
+  <tl x="192 496 192 560" f="0" de="0.005" im="75" wi="16"/>
+  <x x="288 424 304 424" f="0" si="12" te="Relay"/>
+  <rl x="320 496 384 496" f="0" mo="default" i="0" ip="0"/>
+  <rl x="448 496 448 560" f="0" mo="default" i="0" ip="0"/>
+  <x x="544 424 560 424" f="0" si="12" te="Relay Coil"/>
+  <RelayCoil x="576 496 640 496" f="0" lb="label" in="0.2" oc="0.02" cr="20" ofc="0.015" swt="0.005" tp="0" ci="0" st="0" sp="0"/>
+  <RelayCoil x="704 496 704 560" f="0" lb="label" in="0.2" oc="0.02" cr="20" ofc="0.015" swt="0.005" tp="0" ci="0" st="0" sp="0"/>
+  <x x="800 424 816 424" f="0" si="12" te="Relay Contact"/>
+  <RelayContact x="832 496 896 496" f="4" lb="label" ron="0.05" roff="1000000" ip="0"/>
+  <RelayContact x="960 496 960 560" f="4" lb="label" ron="0.05" roff="1000000" ip="0"/>
+  <x x="1056 424 1072 424" f="0" si="12" te="Photoresistor"/>
+  <LDR x="1088 496 1152 496" f="0" ps="0.3367" st="Light Brightness"/>
+  <LDR x="1216 496 1216 560" f="0" ps="0.3367" st="Light Brightness"/>
+  <x x="1312 424 1328 424" f="0" si="12" te="Thermistor"/>
+  <ThermistorNTC x="1344 496 1408 496" f="0" r25="10000" r50="3605" mnt="-40" mxt="150" ps="0.3416" st="Temperature"/>
+  <ThermistorNTC x="1472 496 1472 560" f="0" r25="10000" r50="3605" mnt="-40" mxt="150" ps="0.3416" st="Temperature"/>
+  <x x="32 616 48 616" f="0" si="12" te="Memristor"/>
+  <m x="64 688 128 688" f="0" ron="100" rof="16000" do="0" to="1e-8" mo="1e-10"/>
+  <m x="192 688 192 752" f="0" ron="100" rof="16000" do="0" to="1e-8" mo="1e-10"/>
+  <x x="288 616 304 616" f="0" si="12" te="Spark Gap"/>
+  <SparkGap x="320 688 384 688" f="0" on="1000" of="1000000000" br="1000" ho="0.001"/>
+  <SparkGap x="448 688 448 752" f="0" on="1000" of="1000000000" br="1000" ho="0.001"/>
+  <x x="544 616 560 616" f="0" si="12" te="Fuse"/>
+  <Fuse x="576 688 640 688" f="0" re="0.0613" i2="6.73" he="0" bl="false"/>
+  <Fuse x="704 688 704 752" f="0" re="0.0613" i2="6.73" he="0" bl="false"/>
+  <x x="800 616 816 616" f="0" si="12" te="Crystal"/>
+  <cr x="832 688 896 688" f="2" pc="2.87e-11" sc="1e-13" in="0.0025" r="6.4">
+    <c vd="0" ix="0"/>
+    <c vd="0" ix="1"/>
+    <l i="0" ix="2"/>
+  </cr>
+  <cr x="960 688 960 752" f="2" pc="2.87e-11" sc="1e-13" in="0.0025" r="6.4">
+    <c vd="0" ix="0"/>
+    <c vd="0" ix="1"/>
+    <l i="0" ix="2"/>
+  </cr>
+  <x x="1056 616 1072 616" f="0" si="12" te="Cross Switch"/>
+  <CrossSwitch x="1088 688 1152 688" f="0" p="0" mm="false"/>
+  <CrossSwitch x="1296 688 1296 752" f="0" p="0" mm="false"/>
+  <x x="1312 616 1328 616" f="0" si="12" te="Gyrator"/>
+  <Gyrator x="1344 688 1408 688" f="0"/>
+  <Gyrator x="1472 688 1472 752" f="8"/>
+</cir>

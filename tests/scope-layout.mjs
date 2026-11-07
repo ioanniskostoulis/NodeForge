@@ -1,0 +1,35 @@
+// Docking must preserve scope identity, order, column numbering and retained recordings.
+import assert from "node:assert/strict";
+import { build } from "esbuild";
+const bundle = await build({ entryPoints: ["source/app/scope-layout.ts"], bundle: true, platform: "node", format: "esm", write: false });
+const { moveScope } = await import(`data:text/javascript;base64,${Buffer.from(bundle.outputFiles[0].contents).toString("base64")}`);
+const a = { name: "a", position: 0, recording: {} };
+const b = { name: "b", position: 0, recording: {} };
+const c = { name: "c", position: 1, recording: {} };
+const recordings = [a.recording, b.recording, c.recording];
+let scopes = [a, b, c];
+const expect = (names, positions) => {
+  assert.deepEqual(scopes.map((s) => s.name), names);
+  assert.deepEqual(scopes.map((s) => s.position), positions);
+  assert.equal(new Set(scopes).size, 3);
+  assert.deepEqual([a.recording, b.recording, c.recording], recordings);
+};
+scopes = moveScope(scopes, a, b, "below");
+expect(["b", "a", "c"], [0, 0, 1]);
+assert.equal(moveScope(scopes, a, b, "below"), null, "same placement does not create an edit");
+scopes = moveScope(scopes, a, a, "left");
+expect(["a", "b", "c"], [0, 1, 2]);
+assert.equal(moveScope(scopes, a, a, "right"), null, "a single scope cannot split itself");
+scopes = moveScope(scopes, a, c, "below");
+expect(["b", "c", "a"], [0, 1, 1]);
+scopes = moveScope(scopes, b, c, "above");
+expect(["b", "c", "a"], [0, 0, 0]);
+scopes = moveScope(scopes, c, b, "right");
+expect(["b", "a", "c"], [0, 0, 1]);
+scopes = moveScope(scopes, c, b, "left");
+expect(["c", "b", "a"], [0, 1, 1]);
+const before = scopes.map((s) => s.position);
+assert.equal(moveScope(scopes, a, a, "above"), null);
+assert.equal(moveScope(scopes, {}, a, "below"), null);
+assert.deepEqual(scopes.map((s) => s.position), before, "cancelled/invalid moves do not mutate layout");
+console.log("Scope layout passed: stack reorder, splitting, merging, column reorder, no-op and identity preservation.");

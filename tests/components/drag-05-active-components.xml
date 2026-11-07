@@ -1,0 +1,228 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <x x="16 8 32 8" f="0" si="24" te="Active Components, dragged out"/>
+  <x x="160 48 176 48" f="0" si="18" te="→"/>
+  <x x="384 48 400 48" f="0" si="18" te="←"/>
+  <x x="608 48 624 48" f="0" si="18" te="↓"/>
+  <x x="832 48 848 48" f="0" si="18" te="↑"/>
+  <x x="1056 48 1072 48" f="0" si="18" te="↘"/>
+  <x x="1280 48 1296 48" f="0" si="18" te="↗"/>
+  <x x="1504 48 1520 48" f="0" si="18" te="↙"/>
+  <x x="1728 48 1744 48" f="0" si="18" te="↖"/>
+  <x x="16 160 32 160" f="0" si="12" te="Diode"/>
+  <d x="224 160 288 160" f="0" mo="default"/>
+  <d x="448 160 384 160" f="0" mo="default"/>
+  <d x="672 160 672 224" f="0" mo="default"/>
+  <d x="896 160 896 96" f="0" mo="default"/>
+  <d x="1120 160 1184 224" f="0" mo="default"/>
+  <d x="1344 160 1408 96" f="0" mo="default"/>
+  <d x="1568 160 1504 224" f="0" mo="default"/>
+  <d x="1792 160 1728 96" f="0" mo="default"/>
+  <x x="16 384 32 384" f="0" si="12" te="Zener Diode"/>
+  <z x="224 384 288 384" f="0" mo="default-zener"/>
+  <z x="448 384 384 384" f="0" mo="default-zener"/>
+  <z x="672 384 672 448" f="0" mo="default-zener"/>
+  <z x="896 384 896 320" f="0" mo="default-zener"/>
+  <z x="1120 384 1184 448" f="0" mo="default-zener"/>
+  <z x="1344 384 1408 320" f="0" mo="default-zener"/>
+  <z x="1568 384 1504 448" f="0" mo="default-zener"/>
+  <z x="1792 384 1728 320" f="0" mo="default-zener"/>
+  <x x="16 608 32 608" f="0" si="12" te="Transistor (bipolar, NPN)"/>
+  <t x="224 608 288 608" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="448 608 384 608" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="672 608 672 672" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="896 608 896 544" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1120 608 1120 672" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1344 608 1344 544" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1568 608 1568 672" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1792 608 1792 544" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="16 832 32 832" f="0" si="12" te="Transistor (bipolar, PNP)"/>
+  <t x="224 832 288 832" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="448 832 384 832" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="672 832 672 896" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="896 832 896 768" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1120 832 1120 896" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1344 832 1344 768" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1568 832 1568 896" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="1792 832 1792 768" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="16 1056 32 1056" f="0" si="12" te="MOSFET (N-Channel)"/>
+  <f x="224 1056 288 1056" f="0" mo="default"/>
+  <f x="448 1056 384 1056" f="0" mo="default"/>
+  <f x="672 1056 672 1120" f="0" mo="default"/>
+  <f x="896 1056 896 992" f="0" mo="default"/>
+  <f x="1120 1056 1120 1120" f="0" mo="default"/>
+  <f x="1344 1056 1344 992" f="0" mo="default"/>
+  <f x="1568 1056 1568 1120" f="0" mo="default"/>
+  <f x="1792 1056 1792 992" f="0" mo="default"/>
+  <x x="16 1280 32 1280" f="0" si="12" te="MOSFET (P-Channel)"/>
+  <f x="224 1280 288 1280" f="1" mo="default"/>
+  <f x="448 1280 384 1280" f="1" mo="default"/>
+  <f x="672 1280 672 1344" f="1" mo="default"/>
+  <f x="896 1280 896 1216" f="1" mo="default"/>
+  <f x="1120 1280 1120 1344" f="1" mo="default"/>
+  <f x="1344 1280 1344 1216" f="1" mo="default"/>
+  <f x="1568 1280 1568 1344" f="1" mo="default"/>
+  <f x="1792 1280 1792 1216" f="1" mo="default"/>
+  <x x="16 1504 32 1504" f="0" si="12" te="JFET (N-Channel)"/>
+  <j x="224 1504 288 1504" f="0" mo="default-jfet"/>
+  <j x="448 1504 384 1504" f="0" mo="default-jfet"/>
+  <j x="672 1504 672 1568" f="0" mo="default-jfet"/>
+  <j x="896 1504 896 1440" f="0" mo="default-jfet"/>
+  <j x="1120 1504 1120 1568" f="0" mo="default-jfet"/>
+  <j x="1344 1504 1344 1440" f="0" mo="default-jfet"/>
+  <j x="1568 1504 1568 1568" f="0" mo="default-jfet"/>
+  <j x="1792 1504 1792 1440" f="0" mo="default-jfet"/>
+  <x x="16 1728 32 1728" f="0" si="12" te="JFET (P-Channel)"/>
+  <j x="224 1728 288 1728" f="1" mo="default-jfet"/>
+  <j x="448 1728 384 1728" f="1" mo="default-jfet"/>
+  <j x="672 1728 672 1792" f="1" mo="default-jfet"/>
+  <j x="896 1728 896 1664" f="1" mo="default-jfet"/>
+  <j x="1120 1728 1120 1792" f="1" mo="default-jfet"/>
+  <j x="1344 1728 1344 1664" f="1" mo="default-jfet"/>
+  <j x="1568 1728 1568 1792" f="1" mo="default-jfet"/>
+  <j x="1792 1728 1792 1664" f="1" mo="default-jfet"/>
+  <x x="16 1952 32 1952" f="0" si="12" te="SCR"/>
+  <SCR x="224 1952 288 1952" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="448 1952 384 1952" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="672 1952 672 2016" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="896 1952 896 1888" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="1120 1952 1184 2016" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="1344 1952 1408 1888" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="1568 1952 1504 2016" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="1792 1952 1728 1888" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <x x="16 2176 32 2176" f="0" si="12" te="DIAC"/>
+  <Diac x="224 2176 288 2176" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="448 2176 384 2176" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="672 2176 672 2240" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="896 2176 896 2112" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="1120 2176 1184 2240" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="1344 2176 1408 2112" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="1568 2176 1504 2240" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="1792 2176 1728 2112" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <x x="16 2400 32 2400" f="0" si="12" te="TRIAC"/>
+  <Triac x="224 2400 288 2400" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="448 2400 384 2400" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="672 2400 672 2464" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="896 2400 896 2336" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1120 2400 1184 2464" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1344 2400 1408 2336" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1568 2400 1504 2464" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1792 2400 1728 2336" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <x x="16 2624 32 2624" f="0" si="12" te="Darlington Pair (NPN)"/>
+  <dar x="224 2624 288 2624" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="448 2624 384 2624" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="672 2624 672 2688" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="896 2624 896 2560" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1120 2624 1120 2688" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1344 2624 1344 2560" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1568 2624 1568 2688" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1792 2624 1792 2560" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="16 2848 32 2848" f="0" si="12" te="Darlington Pair (PNP)"/>
+  <dar x="224 2848 288 2848" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="448 2848 384 2848" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="672 2848 672 2912" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="896 2848 896 2784" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1120 2848 1120 2912" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1344 2848 1344 2784" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1568 2848 1568 2912" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1792 2848 1792 2784" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="16 3072 32 3072" f="0" si="12" te="Varactor/Varicap"/>
+  <Varactor x="224 3072 288 3072" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="448 3072 384 3072" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="672 3072 672 3136" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="896 3072 896 3008" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="1120 3072 1184 3136" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="1344 3072 1408 3008" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="1568 3072 1504 3136" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="1792 3072 1728 3008" f="0" mo="default" ca="0" ba="4e-12"/>
+  <x x="16 3296 32 3296" f="0" si="12" te="Tunnel Diode"/>
+  <TunnelDiode x="224 3296 288 3296" f="0"/>
+  <TunnelDiode x="448 3296 384 3296" f="0"/>
+  <TunnelDiode x="672 3296 672 3360" f="0"/>
+  <TunnelDiode x="896 3296 896 3232" f="0"/>
+  <TunnelDiode x="1120 3296 1184 3360" f="0"/>
+  <TunnelDiode x="1344 3296 1408 3232" f="0"/>
+  <TunnelDiode x="1568 3296 1504 3360" f="0"/>
+  <TunnelDiode x="1792 3296 1728 3232" f="0"/>
+  <x x="16 3520 32 3520" f="0" si="12" te="Triode"/>
+  <Triode x="224 3520 288 3520" f="2" mu="93" kg="680"/>
+  <Triode x="448 3520 384 3520" f="2" mu="93" kg="680"/>
+  <Triode x="672 3520 672 3584" f="2" mu="93" kg="680"/>
+  <Triode x="896 3520 896 3456" f="2" mu="93" kg="680"/>
+  <Triode x="1120 3520 1120 3584" f="2" mu="93" kg="680"/>
+  <Triode x="1344 3520 1344 3456" f="2" mu="93" kg="680"/>
+  <Triode x="1568 3520 1568 3584" f="2" mu="93" kg="680"/>
+  <Triode x="1792 3520 1792 3456" f="2" mu="93" kg="680"/>
+  <x x="16 3744 32 3744" f="0" si="12" te="Unijunction Transistor"/>
+  <Unijunction x="224 3744 288 3744" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="448 3744 384 3744" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="672 3744 672 3808" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="896 3744 896 3680" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1120 3744 1120 3808" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1344 3744 1344 3680" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1568 3744 1568 3808" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1792 3744 1792 3680" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+</cir>

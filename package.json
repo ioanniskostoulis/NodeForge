@@ -1,0 +1,42 @@
+{
+  "name": "nodeforge",
+  "productName": "NodeForge",
+  "version": "2.7.0",
+  "description": "Circuit simulator for macOS and Windows, a TypeScript port of CircuitJS1",
+  "license": "GPL-2.0-or-later",
+  "author": "Ioannis Kostoulis",
+  "private": true,
+  "main": "build/desktop/main.cjs",
+  "scripts": {
+    "prepare": "node scripts/install-hooks.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "tsc --noEmit -p .",
+    "test": "npm run build && node build/nfsim.cjs test tests/upstream-auto-tests",
+    "test:current-flow": "node scripts/test-current-flow.mjs",
+    "test:app": "node scripts/test-app.mjs",
+    "test:shell": "npm run build && node scripts/check-shell.mjs",
+    "gallery": "esbuild scripts/component-gallery.ts --bundle --platform=node --format=cjs --keep-names --outfile=build/tests/gallery.cjs --log-level=error && node build/tests/gallery.cjs",
+    "accuracy": "npm run build && node build/nfsim.cjs accuracy tests/accuracy",
+    "checks": "node scripts/checks.mjs",
+    "web": "node scripts/web.mjs",
+    "dev": "node scripts/web.mjs --desktop",
+    "start": "npm run build && electron .",
+    "dist": "npm run build && node scripts/package-config.mjs && node scripts/dist.mjs",
+    "dist:win-app": "npm run build && node scripts/package-config.mjs && node scripts/dist.mjs --unpacked-only",
+    "installer": "node scripts/build-installer.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "forge-shell": "file:source/forge-shell-3.0.0.tgz"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "electron-winstaller": false
+  }
+}

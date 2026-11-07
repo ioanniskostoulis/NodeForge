@@ -1,0 +1,764 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <mm nm="old-jfet" f="1" vt="-7" be="0.0001" sb="0" dsy="0" bd="0" bt="0" sbd="0"/>
+  <clm nm="default" f="0" in="A,B" o="C,D" if="custom logic"/>
+  <x x="16 8 32 8" f="0" si="24" te="Basic"/>
+  <x x="32 40 48 40" f="0" si="12" te="Wire"/>
+  <w x="64 112 128 112" f="0"/>
+  <w x="192 112 192 176" f="0"/>
+  <x x="288 40 304 40" f="0" si="12" te="Routed Wire"/>
+  <rw x="320 112 384 112" f="0">320,112;384,112</rw>
+  <rw x="448 112 448 176" f="0">448,112;448,176</rw>
+  <x x="544 40 560 40" f="0" si="12" te="Resistor"/>
+  <r x="576 112 640 112" f="0" r="1000"/>
+  <r x="704 112 704 176" f="0" r="1000"/>
+  <x x="16 296 32 296" f="0" si="24" te="Passive Components"/>
+  <x x="32 328 48 328" f="0" si="12" te="Capacitor"/>
+  <c x="64 400 128 400" f="0" c="0.00001" iv="0.001" vd="0"/>
+  <c x="192 400 192 464" f="0" c="0.00001" iv="0.001" vd="0"/>
+  <x x="288 328 304 328" f="0" si="12" te="Capacitor (polarized)"/>
+  <pc x="320 400 384 400" f="0" c="0.00001" iv="0.001" mv="1" vd="0"/>
+  <pc x="448 400 448 464" f="0" c="0.00001" iv="0.001" mv="1" vd="0"/>
+  <x x="544 328 560 328" f="0" si="12" te="Inductor"/>
+  <l x="576 400 640 400" f="0" l="1" ic="0" i="0"/>
+  <l x="704 400 704 464" f="0" l="1" ic="0" i="0"/>
+  <x x="800 328 816 328" f="0" si="12" te="Switch"/>
+  <s x="832 400 896 400" f="0" p="0" mm="false"/>
+  <s x="960 400 960 464" f="0" p="0" mm="false"/>
+  <x x="1056 328 1072 328" f="0" si="12" te="Push Switch"/>
+  <s x="1088 400 1152 400" f="0" p="1" mm="true"/>
+  <s x="1216 400 1216 464" f="0" p="1" mm="true"/>
+  <x x="1312 328 1328 328" f="0" si="12" te="SPDT Switch"/>
+  <S x="1344 400 1408 400" f="0" p="0" mm="false" li="0" th="2"/>
+  <S x="1472 400 1472 464" f="0" p="0" mm="false" li="0" th="2"/>
+  <x x="32 520 48 520" f="0" si="12" te="DPDT Switch"/>
+  <dpdt x="64 592 128 592" f="0" p="0" mm="false" po="2"/>
+  <dpdt x="224 592 224 656" f="0" p="0" mm="false" po="2"/>
+  <x x="288 520 304 520" f="0" si="12" te="Make-Before-Break Switch"/>
+  <MBBSwitch x="320 592 384 592" f="0" p="0" mm="false" li="0"/>
+  <MBBSwitch x="448 592 448 656" f="0" p="0" mm="false" li="0"/>
+  <x x="544 520 560 520" f="0" si="12" te="Potentiometer"/>
+  <pt x="576 592 640 592" f="1" ma="1000" po="0.5" sl="Resistance"/>
+  <pt x="704 592 704 656" f="1" ma="1000" po="0.5" sl="Resistance"/>
+  <x x="800 520 816 520" f="0" si="12" te="Transformer"/>
+  <T x="832 592 896 592" f="0" in="4" ra="1" co="0.999" wi="64" c0="0" c1="0"/>
+  <T x="992 592 992 656" f="8" in="4" ra="1" co="0.999" wi="64" c0="0" c1="0"/>
+  <x x="1056 520 1072 520" f="0" si="12" te="Tapped Transformer"/>
+  <tt x="1088 592 1152 592" f="0" in="4" ra="1" co="0.99" c0="0" c1="0" c2="0"/>
+  <tt x="1248 592 1248 656" f="0" in="4" ra="1" co="0.99" c0="0" c1="0" c2="0"/>
+  <x x="1312 520 1328 520" f="0" si="12" te="Custom Transformer"/>
+  <CustomTransformer x="1344 592 1408 592" f="0" in="4" cc="0.999" ds="1,1:1" nc="3" ci="0 0 0"/>
+  <CustomTransformer x="1520 592 1520 656" f="8" in="4" cc="0.999" ds="1,1:1" nc="3" ci="0 0 0"/>
+  <x x="32 712 48 712" f="0" si="12" te="Transmission Line"/>
+  <tl x="64 784 128 784" f="0" de="0.005" im="75" wi="16"/>
+  <tl x="192 784 192 848" f="0" de="0.005" im="75" wi="16"/>
+  <x x="288 712 304 712" f="0" si="12" te="Relay"/>
+  <rl x="320 784 384 784" f="0" mo="default" i="0" ip="0"/>
+  <rl x="448 784 448 848" f="0" mo="default" i="0" ip="0"/>
+  <x x="544 712 560 712" f="0" si="12" te="Relay Coil"/>
+  <RelayCoil x="576 784 640 784" f="0" lb="label" in="0.2" oc="0.02" cr="20" ofc="0.015" swt="0.005" tp="0" ci="0" st="0" sp="0"/>
+  <RelayCoil x="704 784 704 848" f="0" lb="label" in="0.2" oc="0.02" cr="20" ofc="0.015" swt="0.005" tp="0" ci="0" st="0" sp="0"/>
+  <x x="800 712 816 712" f="0" si="12" te="Relay Contact"/>
+  <RelayContact x="832 784 896 784" f="4" lb="label" ron="0.05" roff="1000000" ip="0"/>
+  <RelayContact x="960 784 960 848" f="4" lb="label" ron="0.05" roff="1000000" ip="0"/>
+  <x x="1056 712 1072 712" f="0" si="12" te="Photoresistor"/>
+  <LDR x="1088 784 1152 784" f="0" ps="0.3367" st="Light Brightness"/>
+  <LDR x="1216 784 1216 848" f="0" ps="0.3367" st="Light Brightness"/>
+  <x x="1312 712 1328 712" f="0" si="12" te="Thermistor"/>
+  <ThermistorNTC x="1344 784 1408 784" f="0" r25="10000" r50="3605" mnt="-40" mxt="150" ps="0.3416" st="Temperature"/>
+  <ThermistorNTC x="1472 784 1472 848" f="0" r25="10000" r50="3605" mnt="-40" mxt="150" ps="0.3416" st="Temperature"/>
+  <x x="32 904 48 904" f="0" si="12" te="Memristor"/>
+  <m x="64 976 128 976" f="0" ron="100" rof="16000" do="0" to="1e-8" mo="1e-10"/>
+  <m x="192 976 192 1040" f="0" ron="100" rof="16000" do="0" to="1e-8" mo="1e-10"/>
+  <x x="288 904 304 904" f="0" si="12" te="Spark Gap"/>
+  <SparkGap x="320 976 384 976" f="0" on="1000" of="1000000000" br="1000" ho="0.001"/>
+  <SparkGap x="448 976 448 1040" f="0" on="1000" of="1000000000" br="1000" ho="0.001"/>
+  <x x="544 904 560 904" f="0" si="12" te="Fuse"/>
+  <Fuse x="576 976 640 976" f="0" re="0.0613" i2="6.73" he="0" bl="false"/>
+  <Fuse x="704 976 704 1040" f="0" re="0.0613" i2="6.73" he="0" bl="false"/>
+  <x x="800 904 816 904" f="0" si="12" te="Crystal"/>
+  <cr x="832 976 896 976" f="2" pc="2.87e-11" sc="1e-13" in="0.0025" r="6.4">
+    <c vd="0" ix="0"/>
+    <c vd="0" ix="1"/>
+    <l i="0" ix="2"/>
+  </cr>
+  <cr x="960 976 960 1040" f="2" pc="2.87e-11" sc="1e-13" in="0.0025" r="6.4">
+    <c vd="0" ix="0"/>
+    <c vd="0" ix="1"/>
+    <l i="0" ix="2"/>
+  </cr>
+  <x x="1056 904 1072 904" f="0" si="12" te="Cross Switch"/>
+  <CrossSwitch x="1088 976 1152 976" f="0" p="0" mm="false"/>
+  <CrossSwitch x="1296 976 1296 1040" f="0" p="0" mm="false"/>
+  <x x="1312 904 1328 904" f="0" si="12" te="Gyrator"/>
+  <Gyrator x="1344 976 1408 976" f="0"/>
+  <Gyrator x="1472 976 1472 1040" f="8"/>
+  <x x="16 1160 32 1160" f="0" si="24" te="Inputs and Sources"/>
+  <x x="32 1192 48 1192" f="0" si="12" te="Ground"/>
+  <g x="64 1264 64 1296" f="0"/>
+  <g x="192 1264 224 1264" f="0"/>
+  <x x="288 1192 304 1192" f="0" si="12" te="Voltage Source (2-terminal)"/>
+  <v x="320 1200 320 1264" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="384 1264 448 1264" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="544 1192 560 1192" f="0" si="12" te="A/C Voltage Source (2-terminal)"/>
+  <v x="576 1200 576 1264" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <v x="640 1264 704 1264" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="800 1192 816 1192" f="0" si="12" te="Voltage Source (1-terminal)"/>
+  <R x="832 1264 880 1264" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="960 1264 960 1312" f="16" wf="0" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1056 1192 1072 1192" f="0" si="12" te="A/C Voltage Source (1-terminal)"/>
+  <R x="1088 1264 1136 1264" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1216 1264 1216 1312" f="16" wf="1" fr="60" maxv="169.7056274847714" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1312 1192 1328 1192" f="0" si="12" te="Square Wave Source (1-terminal)"/>
+  <R x="1344 1264 1392 1264" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="1472 1264 1472 1312" f="16" wf="2" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="32 1384 48 1384" f="0" si="12" te="Clock"/>
+  <R x="64 1456 112 1456" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <R x="192 1456 192 1504" f="17" wf="2" fr="100" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <x x="288 1384 304 1384" f="0" si="12" te="A/C Sweep"/>
+  <sw x="320 1456 384 1456" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <sw x="448 1456 448 1520" f="2" mi="20" ma="4000" mv="5" sw="0.1"/>
+  <x x="544 1384 560 1384" f="0" si="12" te="Battery"/>
+  <Battery x="640 1456 576 1456" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <Battery x="704 1520 704 1456" f="3" r0="0.01" r1="0.02" c1="2000" cap="2" isoc="1" bt="1" soc="1"/>
+  <x x="800 1384 816 1384" f="0" si="12" te="Variable Voltage"/>
+  <VarRail x="832 1456 880 1456" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <VarRail x="960 1456 960 1504" f="16" wf="7" fr="5" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" st="Voltage"/>
+  <x x="1056 1384 1072 1384" f="0" si="12" te="Antenna"/>
+  <A x="1088 1456 1136 1456" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <A x="1216 1456 1216 1504" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="1312 1384 1328 1384" f="0" si="12" te="AM Source"/>
+  <AM x="1344 1456 1408 1456" f="0" cf="1000" sf="40" mv="5"/>
+  <AM x="1472 1456 1472 1520" f="0" cf="1000" sf="40" mv="5"/>
+  <x x="32 1576 48 1576" f="0" si="12" te="FM Source"/>
+  <FM x="64 1648 128 1648" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <FM x="192 1648 192 1712" f="0" cf="800" sf="40" mv="5" dv="200"/>
+  <x x="288 1576 304 1576" f="0" si="12" te="Current Source"/>
+  <i x="320 1648 384 1648" f="0" cu="0.01"/>
+  <i x="448 1648 448 1712" f="0" cu="0.01"/>
+  <x x="544 1576 560 1576" f="0" si="12" te="Noise Generator"/>
+  <R x="576 1648 624 1648" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <R x="704 1648 704 1696" f="16" wf="6" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5"/>
+  <x x="800 1576 816 1576" f="0" si="12" te="Audio Input"/>
+  <ain x="832 1648 880 1648" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <ain x="960 1648 960 1696" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" ma="5" st="0" fi="0"/>
+  <x x="1056 1576 1072 1576" f="0" si="12" te="Data Input"/>
+  <DataInput x="1088 1648 1136 1648" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <DataInput x="1216 1648 1216 1696" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" sl="0.001" sf="1"/>
+  <x x="1312 1576 1328 1576" f="0" si="12" te="External Voltage (JavaScript)"/>
+  <ExtVoltage x="1344 1648 1392 1648" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <ExtVoltage x="1472 1648 1472 1696" f="16" wf="1" fr="60" maxv="5" bias="0" phaseShift="0" dutyCycle="0.5" nm="ext"/>
+  <x x="16 1832 32 1832" f="0" si="24" te="Outputs and Labels"/>
+  <x x="32 1864 48 1864" f="0" si="12" te="Analog Output"/>
+  <O x="64 1936 128 1936" f="0" sc="0"/>
+  <O x="192 1936 192 2000" f="0" sc="0"/>
+  <x x="288 1864 304 1864" f="0" si="12" te="LED"/>
+  <LED x="320 1936 384 1936" f="0" mo="default-led" cr="1" cg="0" cb="0" mbc="0.01"/>
+  <LED x="448 1936 448 2000" f="0" mo="default-led" cr="1" cg="0" cb="0" mbc="0.01"/>
+  <x x="544 1864 560 1864" f="0" si="12" te="Lamp"/>
+  <Lamp x="576 1936 640 1936" f="0" te="300" np="100" nv="120" wa="0.4" co="0.4"/>
+  <Lamp x="704 1936 704 2000" f="0" te="300" np="100" nv="120" wa="0.4" co="0.4"/>
+  <x x="800 1864 816 1864" f="0" si="12" te="Text"/>
+  <x x="832 1936 896 1936" f="0" si="24" te="hello"/>
+  <x x="960 1936 960 2000" f="0" si="24" te="hello"/>
+  <x x="1056 1864 1072 1864" f="0" si="12" te="Box"/>
+  <b x="1088 1936 1152 2000" f="0"/>
+  <b x="1216 1936 1280 2000" f="0"/>
+  <x x="1312 1864 1328 1864" f="0" si="12" te="Line"/>
+  <Line x="1344 1936 1408 1936" f="0"/>
+  <Line x="1472 1936 1472 2000" f="0"/>
+  <x x="32 2056 48 2056" f="0" si="12" te="Labeled Node"/>
+  <ln x="64 2128 128 2128" f="0" te="label"/>
+  <ln x="192 2128 192 2192" f="0" te="label"/>
+  <x x="288 2056 304 2056" f="0" si="12" te="Voltmeter/Scope Probe"/>
+  <p x="320 2128 384 2128" f="3" me="0" sc="0" re="10000000"/>
+  <p x="448 2128 448 2192" f="3" me="0" sc="0" re="10000000"/>
+  <x x="544 2056 560 2056" f="0" si="12" te="Ohmmeter"/>
+  <OhmMeter x="576 2128 640 2128" f="0" cu="0.01"/>
+  <OhmMeter x="704 2128 704 2192" f="0" cu="0.01"/>
+  <x x="800 2056 816 2056" f="0" si="12" te="Ammeter"/>
+  <Ammeter x="832 2128 896 2128" f="3" me="0" sc="0"/>
+  <Ammeter x="960 2128 960 2192" f="3" me="0" sc="0"/>
+  <x x="1056 2056 1072 2056" f="0" si="12" te="Wattmeter"/>
+  <WattmeterTrue x="1088 2128 1152 2128" f="0" w="32" meter="0"/>
+  <WattmeterTrue x="1216 2128 1216 2192" f="0" w="32" meter="0"/>
+  <x x="1312 2056 1328 2056" f="0" si="12" te="Test Point"/>
+  <TestPoint x="1344 2128 1408 2128" f="0" me="0"/>
+  <TestPoint x="1472 2128 1472 2192" f="0" me="0"/>
+  <x x="32 2248 48 2248" f="0" si="12" te="Decimal Display"/>
+  <dd x="64 2320 128 2320" f="0" bc="4" dm="0"/>
+  <dd x="192 2320 192 2384" f="0" bc="4" dm="0"/>
+  <x x="288 2248 304 2248" f="0" si="12" te="Instruction Display"/>
+  <ins x="320 2320 384 2320" f="0" bw="4">0=text0
+1=text1
+0x2-0xF=other ({a})
+</ins>
+  <ins x="448 2320 448 2384" f="0" bw="4">0=text0
+1=text1
+0x2-0xF=other ({a})
+</ins>
+  <x x="544 2248 560 2248" f="0" si="12" te="LED Array"/>
+  <LEDArray x="576 2320 640 2320" f="0" sx="8" sy="8"/>
+  <LEDArray x="864 2320 864 2384" f="0" sx="8" sy="8"/>
+  <x x="800 2248 816 2248" f="0" si="12" te="Data Export"/>
+  <DataRecorder x="832 2320 896 2320" f="0" dc="10240"/>
+  <DataRecorder x="960 2320 960 2384" f="0" dc="10240"/>
+  <x x="1056 2248 1072 2248" f="0" si="12" te="Audio Output"/>
+  <aout x="1088 2320 1152 2320" f="0" du="1" sa="8000" la="1"/>
+  <aout x="1216 2320 1216 2384" f="0" du="1" sa="8000" la="1"/>
+  <x x="1312 2248 1328 2248" f="0" si="12" te="Stop Trigger"/>
+  <StopTrigger x="1344 2320 1408 2320" f="0" tv="1" tp="0" dl="0" ct="1" rd="0"/>
+  <StopTrigger x="1472 2320 1472 2384" f="0" tv="1" tp="0" dl="0" ct="1" rd="0"/>
+  <x x="32 2440 48 2440" f="0" si="12" te="DC Motor"/>
+  <DCMotor x="64 2512 128 2512" f="0" in="0.5" rs="1" k="0.15" kb="0.15" j="0.02" b="0.05" gr="1" ta="0"/>
+  <DCMotor x="192 2512 192 2576" f="0" in="0.5" rs="1" k="0.15" kb="0.15" j="0.02" b="0.05" gr="1" ta="0"/>
+  <x x="288 2440 304 2440" f="0" si="12" te="3-Phase Motor"/>
+  <ThreePhaseMotor x="320 2512 416 2512" f="0" rs="0.435" rr="0.816" ls="0.0294" lr="0.0297" lm="0.0287" b="0.05" j="1"/>
+  <ThreePhaseMotor x="480 2512 480 2608" f="0" rs="0.435" rr="0.816" ls="0.0294" lr="0.0297" lm="0.0287" b="0.05" j="1"/>
+  <x x="544 2440 560 2440" f="0" si="12" te="Wattmeter (old)"/>
+  <Wattmeter x="576 2512 640 2512" f="0" w="32" meter="0"/>
+  <Wattmeter x="704 2512 704 2576" f="0" w="32" meter="0"/>
+  <x x="16 2696 32 2696" f="0" si="24" te="Active Components"/>
+  <x x="32 2728 48 2728" f="0" si="12" te="Diode"/>
+  <d x="64 2800 128 2800" f="0" mo="default"/>
+  <d x="192 2800 192 2864" f="0" mo="default"/>
+  <x x="288 2728 304 2728" f="0" si="12" te="Zener Diode"/>
+  <z x="320 2800 384 2800" f="0" mo="default-zener"/>
+  <z x="448 2800 448 2864" f="0" mo="default-zener"/>
+  <x x="544 2728 560 2728" f="0" si="12" te="Transistor (bipolar, NPN)"/>
+  <t x="576 2800 640 2800" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="704 2800 704 2864" f="0" pn="1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="800 2728 816 2728" f="0" si="12" te="Transistor (bipolar, PNP)"/>
+  <t x="832 2800 896 2800" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <t x="960 2800 960 2864" f="0" pn="-1" be="100" mo="default" vbe="0" vbc="0"/>
+  <x x="1056 2728 1072 2728" f="0" si="12" te="MOSFET (N-Channel)"/>
+  <f x="1088 2800 1120 2800" f="0" mo="default"/>
+  <f x="1216 2800 1216 2832" f="0" mo="default"/>
+  <x x="1312 2728 1328 2728" f="0" si="12" te="MOSFET (P-Channel)"/>
+  <f x="1344 2800 1376 2800" f="1" mo="default"/>
+  <f x="1472 2800 1472 2832" f="1" mo="default"/>
+  <x x="32 2920 48 2920" f="0" si="12" te="JFET (N-Channel)"/>
+  <j x="64 2992 96 2992" f="0" mo="default-jfet"/>
+  <j x="192 2992 192 3024" f="0" mo="default-jfet"/>
+  <x x="288 2920 304 2920" f="0" si="12" te="JFET (P-Channel)"/>
+  <j x="320 2992 352 2992" f="1" mo="default-jfet"/>
+  <j x="448 2992 448 3024" f="1" mo="default-jfet"/>
+  <x x="544 2920 560 2920" f="0" si="12" te="SCR"/>
+  <SCR x="576 2992 640 2992" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <SCR x="704 2992 704 3056" f="1" tr="0.01" ho="0.0082" gr="50"/>
+  <x x="800 2920 816 2920" f="0" si="12" te="DIAC"/>
+  <Diac x="832 2992 896 2992" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <Diac x="960 2992 960 3056" f="0" ron="500" roff="100000000" bd="30" hc="0.01"/>
+  <x x="1056 2920 1072 2920" f="0" si="12" te="TRIAC"/>
+  <Triac x="1088 2992 1152 2992" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <Triac x="1216 2992 1216 3056" f="0" ti="0.01" hi="0.0082" cr="100" st="false"/>
+  <x x="1312 2920 1328 2920" f="0" si="12" te="Darlington Pair (NPN)"/>
+  <dar x="1344 2992 1408 2992" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="1472 2992 1472 3056" f="1" pnp="1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="32 3112 48 3112" f="0" si="12" te="Darlington Pair (PNP)"/>
+  <dar x="64 3184 128 3184" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <dar x="192 3184 192 3248" f="1" pnp="-1">
+    <t vbe="0" vbc="0" ix="0"/>
+    <t vbe="0" vbc="0" ix="1"/>
+  </dar>
+  <x x="288 3112 304 3112" f="0" si="12" te="Varactor/Varicap"/>
+  <Varactor x="320 3184 384 3184" f="0" mo="default" ca="0" ba="4e-12"/>
+  <Varactor x="448 3184 448 3248" f="0" mo="default" ca="0" ba="4e-12"/>
+  <x x="544 3112 560 3112" f="0" si="12" te="Tunnel Diode"/>
+  <TunnelDiode x="576 3184 640 3184" f="0"/>
+  <TunnelDiode x="704 3184 704 3248" f="0"/>
+  <x x="800 3112 816 3112" f="0" si="12" te="Triode"/>
+  <Triode x="832 3184 896 3184" f="2" mu="93" kg="680"/>
+  <Triode x="960 3184 960 3248" f="2" mu="93" kg="680"/>
+  <x x="1056 3112 1072 3112" f="0" si="12" te="Unijunction Transistor"/>
+  <Unijunction x="1088 3184 1152 3184" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <Unijunction x="1216 3184 1216 3248" f="1">
+    <c vd="0" ix="5"/>
+  </Unijunction>
+  <x x="16 3368 32 3368" f="0" si="24" te="Active Building Blocks"/>
+  <x x="32 3400 48 3400" f="0" si="12" te="Op Amp (ideal, - on top)"/>
+  <a x="64 3472 128 3472" f="8" ma="15" mi="-15" ga="100000"/>
+  <a x="192 3472 192 3536" f="8" ma="15" mi="-15" ga="100000"/>
+  <x x="288 3400 304 3400" f="0" si="12" te="Op Amp (ideal, + on top)"/>
+  <a x="320 3472 384 3472" f="9" ma="15" mi="-15" ga="100000"/>
+  <a x="448 3472 448 3536" f="9" ma="15" mi="-15" ga="100000"/>
+  <x x="544 3400 560 3400" f="0" si="12" te="Op Amp (real)"/>
+  <OpAmpReal x="576 3472 640 3472" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <OpAmpReal x="704 3472 704 3536" f="1" slr="0.6" cl="0.0231" mt="0" vd="0"/>
+  <x x="800 3400 816 3400" f="0" si="12" te="Analog Switch (SPST)"/>
+  <as x="832 3472 896 3472" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as x="960 3472 960 3536" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <x x="1056 3400 1072 3400" f="0" si="12" te="Analog Switch (SPDT)"/>
+  <as2 x="1088 3472 1152 3472" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <as2 x="1216 3472 1216 3536" f="2" ron="20" roff="10000000000" th="2.5"/>
+  <x x="1312 3400 1328 3400" f="0" si="12" te="Analog Multiplexer"/>
+  <AnalogMux x="1344 3472 1408 3472" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <AnalogMux x="1504 3472 1504 3536" f="2" sb="2" ron="20" rof="10000000000" thr="2.5"/>
+  <x x="32 3592 48 3592" f="0" si="12" te="Tristate Buffer"/>
+  <ts x="64 3664 128 3664" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <ts x="192 3664 192 3728" f="0" ron="0.1" roff="10000000000" rog="100000000" hi="5"/>
+  <x x="288 3592 304 3592" f="0" si="12" te="Schmitt Trigger"/>
+  <Schmitt x="320 3664 384 3664" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <Schmitt x="448 3664 448 3728" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <x x="544 3592 560 3592" f="0" si="12" te="Schmitt Trigger (Inverting)"/>
+  <InvertingSchmitt x="576 3664 640 3664" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <InvertingSchmitt x="704 3664 704 3728" f="0" slr="0.5" lt="1.66" ut="3.33" lon="5" loff="0"/>
+  <x x="800 3592 816 3592" f="0" si="12" te="Delay Buffer"/>
+  <DelayBuffer x="832 3664 896 3664" f="0" dl="0" th="2.5" hv="5"/>
+  <DelayBuffer x="960 3664 960 3728" f="0" dl="0" th="2.5" hv="5"/>
+  <x x="1056 3592 1072 3592" f="0" si="12" te="CCII+"/>
+  <CC2 x="1088 3664 1152 3664" f="0" ga="1"/>
+  <CC2 x="1216 3664 1216 3728" f="0" ga="1"/>
+  <x x="1312 3592 1328 3592" f="0" si="12" te="CCII-"/>
+  <CC2Neg x="1344 3664 1408 3664" f="0" ga="-1"/>
+  <CC2Neg x="1472 3664 1472 3728" f="0" ga="-1"/>
+  <x x="32 3784 48 3784" f="0" si="12" te="Comparator (Hi-Z/GND output)"/>
+  <Comparator x="64 3856 128 3856" f="1"/>
+  <Comparator x="192 3856 192 3920" f="1"/>
+  <x x="288 3784 304 3784" f="0" si="12" te="OTA (LM13700 style)"/>
+  <OTA x="320 3856 416 3856" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <OTA x="480 3856 480 3952" f="1" pv="9" nv="-9">
+    <t vbe="0" vbc="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <t vbe="0" vbc="0" ix="5"/>
+    <t vbe="0" vbc="0" ix="6"/>
+    <t vbe="0" vbc="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <t vbe="0" vbc="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <t vbe="0" vbc="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <t vbe="0" vbc="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <t vbe="0" vbc="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <t vbe="0" vbc="0" ix="17"/>
+  </OTA>
+  <x x="544 3784 560 3784" f="0" si="12" te="Norton Amp (LM3900)"/>
+  <nor x="576 3856 640 3856" f="1"/>
+  <nor x="704 3856 704 3920" f="1"/>
+  <x x="800 3784 816 3784" f="0" si="12" te="Voltage-Controlled Voltage Source (VCVS)"/>
+  <VCVS x="832 3856 896 3856" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCVS x="960 3856 960 3920" f="0" ic="2" ex=".1*(a-b)"/>
+  <x x="1056 3784 1072 3784" f="0" si="12" te="Voltage-Controlled Current Source (VCCS)"/>
+  <VCCS x="1088 3856 1152 3856" f="0" ic="2" ex=".1*(a-b)"/>
+  <VCCS x="1216 3856 1216 3920" f="0" ic="2" ex=".1*(a-b)"/>
+  <x x="1312 3784 1328 3784" f="0" si="12" te="Current-Controlled Voltage Source (CCVS)"/>
+  <CCVS x="1344 3856 1408 3856" f="0" ic="2" ex="2*a"/>
+  <CCVS x="1472 3856 1472 3920" f="0" ic="2" ex="2*a"/>
+  <x x="32 3976 48 3976" f="0" si="12" te="Current-Controlled Current Source (CCCS)"/>
+  <CCCS x="64 4048 128 4048" f="0" ic="2" ex="2*a"/>
+  <CCCS x="192 4048 192 4112" f="0" ic="2" ex="2*a"/>
+  <x x="288 3976 304 3976" f="0" si="12" te="Optocoupler"/>
+  <Optocoupler x="320 4048 384 4048" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <Optocoupler x="448 4048 448 4112" f="1" ctr="1" dmo="default-optocoupler-led">
+    <t vbe="0" vbc="0" ix="2"/>
+  </Optocoupler>
+  <x x="544 3976 560 3976" f="0" si="12" te="Time Delay Relay"/>
+  <TimeDelayRelay x="576 4048 640 4048" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <TimeDelayRelay x="704 4048 704 4112" f="0" ond="1" ofd="0" onr="1" ofr="10000000"/>
+  <x x="800 3976 816 3976" f="0" si="12" te="LM317"/>
+  <cc x="832 4048 896 4048" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <cc x="960 4048 960 4112" f="1" mo="~LM317-v2">
+    <c vd="0" ix="2"/>
+    <c vd="0" ix="3"/>
+    <t vbe="0" vbc="0" ix="4"/>
+    <c vd="0" ix="6"/>
+    <c vd="0" ix="7"/>
+    <t vbe="0" vbc="0" ix="8"/>
+    <c vd="0" ix="10"/>
+    <c vd="0" ix="11"/>
+    <t vbe="0" vbc="0" ix="12"/>
+    <c vd="0" ix="14"/>
+    <c vd="0" ix="15"/>
+    <t vbe="0" vbc="0" ix="16"/>
+    <c vd="0" ix="18"/>
+    <c vd="0" ix="19"/>
+    <t vbe="0" vbc="0" ix="20"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="38"/>
+    <c vd="0" ix="39"/>
+    <t vbe="0" vbc="0" ix="40"/>
+    <c vd="0" ix="42"/>
+    <c vd="0" ix="43"/>
+    <t vbe="0" vbc="0" ix="44"/>
+    <c vd="0" ix="46"/>
+    <c vd="0" ix="47"/>
+    <t vbe="0" vbc="0" ix="48"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="54"/>
+    <c vd="0" ix="55"/>
+    <t vbe="0" vbc="0" ix="56"/>
+    <c vd="0" ix="58"/>
+    <c vd="0" ix="59"/>
+    <t vbe="0" vbc="0" ix="60"/>
+    <c vd="0" ix="62"/>
+    <c vd="0" ix="63"/>
+    <t vbe="0" vbc="0" ix="64"/>
+    <c vd="0" ix="66"/>
+    <c vd="0" ix="67"/>
+    <t vbe="0" vbc="0" ix="68"/>
+    <c vd="0" ix="70"/>
+    <c vd="0" ix="71"/>
+    <t vbe="0" vbc="0" ix="72"/>
+    <c vd="0" ix="74"/>
+    <c vd="0" ix="75"/>
+    <t vbe="0" vbc="0" ix="76"/>
+    <c vd="0" ix="78"/>
+    <c vd="0" ix="79"/>
+    <t vbe="0" vbc="0" ix="80"/>
+    <c vd="0" ix="82"/>
+    <c vd="0" ix="83"/>
+    <t vbe="0" vbc="0" ix="84"/>
+    <c vd="0" ix="86"/>
+    <c vd="0" ix="87"/>
+    <t vbe="0" vbc="0" ix="88"/>
+    <c vd="0" ix="90"/>
+    <c vd="0" ix="91"/>
+    <t vbe="0" vbc="0" ix="92"/>
+    <c vd="0" ix="94"/>
+    <c vd="0" ix="95"/>
+    <t vbe="0" vbc="0" ix="96"/>
+    <c vd="0" ix="98"/>
+    <c vd="0" ix="99"/>
+    <t vbe="0" vbc="0" ix="100"/>
+    <c vd="0" ix="102"/>
+    <c vd="0" ix="103"/>
+    <t vbe="0" vbc="0" ix="104"/>
+    <c vd="0" ix="106"/>
+    <c vd="0" ix="107"/>
+    <t vbe="0" vbc="0" ix="108"/>
+    <c vd="0" ix="138"/>
+    <c vd="0" ix="139"/>
+    <c vd="0" ix="140"/>
+    <c vd="0" ix="141"/>
+    <c vd="0" ix="142"/>
+    <c vd="0" ix="143"/>
+  </cc>
+  <x x="1056 3976 1072 3976" f="0" si="12" te="TL431"/>
+  <cc x="1088 4048 1152 4048" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <cc x="1216 4048 1216 4112" f="1" mo="~TL431">
+    <c vd="0" ix="1"/>
+    <c vd="0" ix="2"/>
+    <t vbe="0" vbc="0" ix="3"/>
+    <c vd="0" ix="8"/>
+    <c vd="0" ix="9"/>
+    <t vbe="0" vbc="0" ix="10"/>
+    <c vd="0" ix="12"/>
+    <c vd="0" ix="13"/>
+    <t vbe="0" vbc="0" ix="14"/>
+    <c vd="0" ix="17"/>
+    <c vd="0" ix="18"/>
+    <t vbe="0" vbc="0" ix="19"/>
+    <c vd="0" ix="22"/>
+    <c vd="0" ix="23"/>
+    <t vbe="0" vbc="0" ix="24"/>
+    <c vd="0" ix="26"/>
+    <c vd="0" ix="27"/>
+    <t vbe="0" vbc="0" ix="28"/>
+    <c vd="0" ix="30"/>
+    <c vd="0" ix="31"/>
+    <t vbe="0" vbc="0" ix="32"/>
+    <c vd="0" ix="34"/>
+    <c vd="0" ix="35"/>
+    <t vbe="0" vbc="0" ix="36"/>
+    <c vd="0" ix="40"/>
+    <c vd="0" ix="41"/>
+    <t vbe="0" vbc="0" ix="42"/>
+    <c vd="0" ix="45"/>
+    <c vd="0" ix="46"/>
+    <t vbe="0" vbc="0" ix="47"/>
+    <c vd="0" ix="50"/>
+    <c vd="0" ix="51"/>
+    <t vbe="0" vbc="0" ix="52"/>
+    <c vd="0" ix="56"/>
+    <c vd="0" ix="57"/>
+  </cc>
+  <x x="1312 3976 1328 3976" f="0" si="12" te="Motor Protection Switch"/>
+  <MotorProtectionSwitch x="1344 4048 1408 4048" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <MotorProtectionSwitch x="1472 4048 1472 4112" f="0" re="0.0613" i2="6.73" bl="false" la=""/>
+  <x x="32 4168 48 4168" f="0" si="12" te="Subcircuit Instance"/>
+  <cc x="64 4240 128 4240" f="1" mo="default"/>
+  <cc x="192 4240 192 4304" f="1" mo="default"/>
+  <x x="16 4424 32 4424" f="0" si="24" te="Logic Gates, Input and Output"/>
+  <x x="32 4456 48 4456" f="0" si="12" te="Logic Input"/>
+  <L x="64 4528 128 4528" f="0" p="0" mm="false"/>
+  <L x="192 4528 192 4592" f="0" p="0" mm="false"/>
+  <x x="288 4456 304 4456" f="0" si="12" te="Logic Output"/>
+  <M x="320 4528 384 4528" f="0"/>
+  <M x="448 4528 448 4592" f="0"/>
+  <x x="544 4456 560 4456" f="0" si="12" te="Bus Input"/>
+  <bli x="576 4528 640 4528" f="0" p="0" mm="false" bw="4"/>
+  <bli x="704 4528 704 4592" f="0" p="0" mm="false" bw="4"/>
+  <x x="800 4456 816 4456" f="0" si="12" te="Inverter"/>
+  <I x="832 4528 896 4528" f="0" sl="0.5" hi="5"/>
+  <I x="960 4528 960 4592" f="0" sl="0.5" hi="5"/>
+  <x x="1056 4456 1072 4456" f="0" si="12" te="NAND Gate"/>
+  <Nand x="1088 4528 1152 4528" f="0"/>
+  <Nand x="1216 4528 1216 4592" f="0"/>
+  <x x="1312 4456 1328 4456" f="0" si="12" te="NOR Gate"/>
+  <Nor x="1344 4528 1408 4528" f="0"/>
+  <Nor x="1472 4528 1472 4592" f="0"/>
+  <x x="32 4648 48 4648" f="0" si="12" te="AND Gate"/>
+  <And x="64 4720 128 4720" f="0"/>
+  <And x="192 4720 192 4784" f="0"/>
+  <x x="288 4648 304 4648" f="0" si="12" te="OR Gate"/>
+  <Or x="320 4720 384 4720" f="0"/>
+  <Or x="448 4720 448 4784" f="0"/>
+  <x x="544 4648 560 4648" f="0" si="12" te="XOR Gate"/>
+  <Xor x="576 4720 640 4720" f="0"/>
+  <Xor x="704 4720 704 4784" f="0"/>
+  <x x="800 4648 816 4648" f="0" si="12" te="XNOR Gate"/>
+  <Xnor x="832 4720 896 4720" f="0"/>
+  <Xnor x="960 4720 960 4784" f="0"/>
+  <x x="16 4904 32 4904" f="0" si="24" te="Digital Chips"/>
+  <x x="32 4936 48 4936" f="0" si="12" te="D Flip-Flop"/>
+  <DFlipFlop x="64 5008 128 5008" f="0"/>
+  <DFlipFlop x="192 5008 192 5072" f="0"/>
+  <x x="288 4936 304 4936" f="0" si="12" te="JK Flip-Flop"/>
+  <JKFlipFlop x="320 5008 384 5008" f="0"/>
+  <JKFlipFlop x="448 5008 448 5072" f="0"/>
+  <x x="544 4936 560 4936" f="0" si="12" te="T Flip-Flop"/>
+  <TFlipFlop x="576 5008 640 5008" f="0"/>
+  <TFlipFlop x="704 5008 704 5072" f="0"/>
+  <x x="800 4936 816 4936" f="0" si="12" te="7 Segment LED"/>
+  <ssd x="832 5008 896 5008" f="0" bi="7" ba="7" ex="0" di="0"/>
+  <ssd x="992 5008 992 5072" f="0" bi="7" ba="7" ex="0" di="0"/>
+  <x x="1056 4936 1072 4936" f="0" si="12" te="7 Segment Decoder"/>
+  <SevenSegDecoder x="1088 5008 1152 5008" f="0" bi="4" sgt="0"/>
+  <SevenSegDecoder x="1248 5008 1248 5072" f="0" bi="4" sgt="0"/>
+  <x x="1312 4936 1328 4936" f="0" si="12" te="Multiplexer"/>
+  <mux x="1344 5008 1408 5008" f="0" se="2"/>
+  <mux x="1504 5008 1504 5072" f="0" se="2"/>
+  <x x="32 5128 48 5128" f="0" si="12" te="Demultiplexer"/>
+  <dmux x="64 5200 128 5200" f="0" se="2"/>
+  <dmux x="224 5200 224 5264" f="0" se="2"/>
+  <x x="288 5128 304 5128" f="0" si="12" te="SIPO shift register"/>
+  <SipoShift x="320 5200 384 5200" f="0" bi="8" dt="0"/>
+  <SipoShift x="640 5200 640 5264" f="0" bi="8" dt="0"/>
+  <x x="544 5128 560 5128" f="0" si="12" te="PISO shift register"/>
+  <PisoShift x="576 5200 640 5200" f="2" bi="8" dt="0"/>
+  <PisoShift x="960 5200 960 5264" f="2" bi="8" dt="0"/>
+  <x x="800 5128 816 5128" f="0" si="12" te="Counter"/>
+  <ctr x="832 5200 896 5200" f="0" bi="4" in="false" mo="0"/>
+  <ctr x="960 5200 960 5264" f="0" bi="4" in="false" mo="0"/>
+  <x x="1056 5128 1072 5128" f="0" si="12" te="Counter w/ Load"/>
+  <ctr2 x="1088 5200 1152 5200" f="0" bi="4" mo="0"/>
+  <ctr2 x="1216 5200 1216 5264" f="0" bi="4" mo="0"/>
+  <x x="1312 5128 1328 5128" f="0" si="12" te="Ring Counter"/>
+  <RingCounter x="1344 5200 1408 5200" f="2" bi="10"/>
+  <RingCounter x="1696 5200 1696 5264" f="2" bi="10"/>
+  <x x="32 5320 48 5320" f="0" si="12" te="Latch/Register"/>
+  <Latch x="64 5392 128 5392" f="2" bi="4"/>
+  <Latch x="192 5392 192 5456" f="2" bi="4"/>
+  <x x="288 5320 304 5320" f="0" si="12" te="Sequence generator"/>
+  <SeqGen x="320 5392 384 5392" f="10" bc="8" dt="0"/>
+  <SeqGen x="448 5392 448 5456" f="10" bc="8" dt="0"/>
+  <x x="544 5320 560 5320" f="0" si="12" te="Adder"/>
+  <FullAdder x="576 5392 640 5392" f="2" bi="4"/>
+  <FullAdder x="704 5392 704 5456" f="2" bi="4"/>
+  <x x="800 5320 816 5320" f="0" si="12" te="Half Adder"/>
+  <HalfAdder x="832 5392 896 5392" f="0"/>
+  <HalfAdder x="960 5392 960 5456" f="0"/>
+  <x x="1056 5320 1072 5320" f="0" si="12" te="Custom Logic"/>
+  <cl x="1088 5392 1152 5392" f="0" mo="default"/>
+  <cl x="1216 5392 1216 5456" f="0" mo="default"/>
+  <x x="1312 5320 1328 5320" f="0" si="12" te="Static RAM"/>
+  <SRAM x="1344 5392 1408 5392" f="0" bi="4" ab="4" db="4"/>
+  <SRAM x="1472 5392 1472 5456" f="0" bi="4" ab="4" db="4"/>
+  <x x="32 5512 48 5512" f="0" si="12" te="ROM"/>
+  <ROM x="64 5584 128 5584" f="0" bi="4" ab="4" db="4"/>
+  <ROM x="192 5584 192 5648" f="0" bi="4" ab="4" db="4"/>
+  <x x="288 5512 304 5512" f="0" si="12" te="Bus Transceiver"/>
+  <BusTransceiver x="320 5584 384 5584" f="0" bi="4" db="4"/>
+  <BusTransceiver x="448 5584 448 5648" f="0" bi="4" db="4"/>
+  <x x="544 5512 560 5512" f="0" si="12" te="Bus Splitter"/>
+  <bs x="576 5584 640 5584" f="0" bi="4"/>
+  <bs x="704 5584 704 5648" f="0" bi="4"/>
+  <x x="16 5768 32 5768" f="0" si="24" te="Analog and Hybrid Chips"/>
+  <x x="32 5800 48 5800" f="0" si="12" te="555 Timer"/>
+  <Timer x="64 5872 128 5872" f="6"/>
+  <Timer x="224 5872 224 5936" f="6"/>
+  <x x="288 5800 304 5800" f="0" si="12" te="Phase Comparator"/>
+  <PhaseComp x="320 5872 384 5872" f="0"/>
+  <PhaseComp x="448 5872 448 5936" f="0"/>
+  <x x="544 5800 560 5800" f="0" si="12" te="DAC"/>
+  <DAC x="576 5872 640 5872" f="0" bi="4"/>
+  <DAC x="704 5872 704 5936" f="0" bi="4"/>
+  <x x="800 5800 816 5800" f="0" si="12" te="ADC"/>
+  <ADC x="832 5872 896 5872" f="0" bi="4"/>
+  <ADC x="960 5872 960 5936" f="0" bi="4"/>
+  <x x="1056 5800 1072 5800" f="0" si="12" te="VCO"/>
+  <VCO x="1088 5872 1152 5872" f="0"/>
+  <VCO x="1216 5872 1216 5936" f="0"/>
+  <x x="1312 5800 1328 5800" f="0" si="12" te="Monostable"/>
+  <Monostable x="1344 5872 1408 5872" f="0" rt="false" dl="0.01"/>
+  <Monostable x="1472 5872 1472 5936" f="0" rt="false" dl="0.01"/>
+</cir>

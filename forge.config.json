@@ -1,0 +1,80 @@
+{
+  "identity": {
+    "name": "NodeForge",
+    "id": "nodeforge",
+    "purpose": "circuit simulator",
+    "wordmarkPath": "logo.txt",
+    "versionSource": "VERSION",
+    "port": 5174,
+    "repository": "ioanniskostoulis/NodeForge"
+  },
+  "document": {
+    "noun": "circuit",
+    "plural": "circuits",
+    "extension": "nfg",
+    "containsMultipleFiles": false,
+    "welcome": {
+      "title": "No circuit open",
+      "newLabel": "New circuit",
+      "openLabel": "Open…",
+      "detail": "or pick one from File › Open example"
+    },
+    "tabs": {
+      "noun": "circuit",
+      "newTitle": "New tab",
+      "closeTitle": "Close tab"
+    }
+  },
+  "theme": {
+    "dark": {
+      "accent": "#7b90df",
+      "accentLight": "#7b90df",
+      "accentAbout": "#899de6",
+      "accentFill": "#3c56aa",
+      "accentHover": "#344c98"
+    },
+    "light": {
+      "accent": "#3c56aa",
+      "accentLight": "#3c56aa",
+      "accentAbout": "#3c56aa",
+      "accentFill": "#3c56aa",
+      "accentHover": "#344c98"
+    }
+  },
+  "html": {
+    "center": "public/center.html",
+    "panes": "public/panes.html",
+    "prePaintScript": "public/prepaint.js"
+  },
+  "dataColors": [
+    "#0000000d", "#0000001a", "#00000033", "#00792b", "#007a99", "#007c96",
+    "#00877a", "#0098b8", "#00a83c", "#111111", "#131313", "#1e1e1e",
+    "#232323", "#292929", "#2a5fd6", "#2c2c2c", "#2fd3e6", "#333333",
+    "#3be05a", "#5ec8ff", "#666666", "#6b3fc4", "#7a6a00", "#95601e",
+    "#9a9a9a", "#9cff6b", "#b48cff", "#b73500", "#b86e00", "#c0268f",
+    "#c4c4c4", "#c8c8c8", "#d70015", "#e0a040", "#e8b460", "#ed3434",
+    "#ededed", "#ef541b", "#f0f0f0", "#f2f2f1", "#f8f8f7", "#ff3b30",
+    "#ff5c5c", "#ff6bd5", "#ff8a3d", "#ffd23f", "#fff", "#ffffff",
+    "#ffffff0a", "#ffffff14", "#ffffff24"
+  ],
+  "desktop": {
+    "appId": "com.nodeforge.app",
+    "copyright": "GPL-2.0-or-later. Based on CircuitJS1 by Paul Falstad and Iain Sharp.",
+    "macCategory": "public.app-category.education",
+    "extraResources": [
+      { "from": "build/nfsim.cjs", "to": "bin/nfsim.cjs" }
+    ],
+    "document": {
+      "name": "NodeForge Circuit",
+      "description": "NodeForge circuit",
+      "iconStem": "nfg",
+      "iconSource": "assets/icon.png",
+      "iconLabel": "NFG",
+      "iconInk": "#7288e8",
+      "role": "Editor",
+      "typeIdentifier": "com.nodeforge.circuit",
+      "conformsTo": ["public.json"],
+      "mimeType": "application/vnd.nodeforge.circuit+json"
+    }
+  }
+}

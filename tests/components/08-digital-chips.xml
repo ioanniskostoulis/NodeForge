@@ -1,0 +1,67 @@
+<cir f="0" ts="0.000005" ic="10" cb="50" pb="50" vr="5" mts="5e-11">
+  <clm nm="default" f="0" in="A,B" o="C,D" if="custom logic"/>
+  <x x="16 8 32 8" f="0" si="24" te="Digital Chips"/>
+  <x x="32 40 48 40" f="0" si="12" te="D Flip-Flop"/>
+  <DFlipFlop x="64 112 128 112" f="0"/>
+  <DFlipFlop x="192 112 192 176" f="0"/>
+  <x x="288 40 304 40" f="0" si="12" te="JK Flip-Flop"/>
+  <JKFlipFlop x="320 112 384 112" f="0"/>
+  <JKFlipFlop x="448 112 448 176" f="0"/>
+  <x x="544 40 560 40" f="0" si="12" te="T Flip-Flop"/>
+  <TFlipFlop x="576 112 640 112" f="0"/>
+  <TFlipFlop x="704 112 704 176" f="0"/>
+  <x x="800 40 816 40" f="0" si="12" te="7 Segment LED"/>
+  <ssd x="832 112 896 112" f="0" bi="7" ba="7" ex="0" di="0"/>
+  <ssd x="992 112 992 176" f="0" bi="7" ba="7" ex="0" di="0"/>
+  <x x="1056 40 1072 40" f="0" si="12" te="7 Segment Decoder"/>
+  <SevenSegDecoder x="1088 112 1152 112" f="0" bi="4" sgt="0"/>
+  <SevenSegDecoder x="1248 112 1248 176" f="0" bi="4" sgt="0"/>
+  <x x="1312 40 1328 40" f="0" si="12" te="Multiplexer"/>
+  <mux x="1344 112 1408 112" f="0" se="2"/>
+  <mux x="1504 112 1504 176" f="0" se="2"/>
+  <x x="32 232 48 232" f="0" si="12" te="Demultiplexer"/>
+  <dmux x="64 304 128 304" f="0" se="2"/>
+  <dmux x="224 304 224 368" f="0" se="2"/>
+  <x x="288 232 304 232" f="0" si="12" te="SIPO shift register"/>
+  <SipoShift x="320 304 384 304" f="0" bi="8" dt="0"/>
+  <SipoShift x="640 304 640 368" f="0" bi="8" dt="0"/>
+  <x x="544 232 560 232" f="0" si="12" te="PISO shift register"/>
+  <PisoShift x="576 304 640 304" f="2" bi="8" dt="0"/>
+  <PisoShift x="960 304 960 368" f="2" bi="8" dt="0"/>
+  <x x="800 232 816 232" f="0" si="12" te="Counter"/>
+  <ctr x="832 304 896 304" f="0" bi="4" in="false" mo="0"/>
+  <ctr x="960 304 960 368" f="0" bi="4" in="false" mo="0"/>
+  <x x="1056 232 1072 232" f="0" si="12" te="Counter w/ Load"/>
+  <ctr2 x="1088 304 1152 304" f="0" bi="4" mo="0"/>
+  <ctr2 x="1216 304 1216 368" f="0" bi="4" mo="0"/>
+  <x x="1312 232 1328 232" f="0" si="12" te="Ring Counter"/>
+  <RingCounter x="1344 304 1408 304" f="2" bi="10"/>
+  <RingCounter x="1696 304 1696 368" f="2" bi="10"/>
+  <x x="32 424 48 424" f="0" si="12" te="Latch/Register"/>
+  <Latch x="64 496 128 496" f="2" bi="4"/>
+  <Latch x="192 496 192 560" f="2" bi="4"/>
+  <x x="288 424 304 424" f="0" si="12" te="Sequence generator"/>
+  <SeqGen x="320 496 384 496" f="10" bc="8" dt="0"/>
+  <SeqGen x="448 496 448 560" f="10" bc="8" dt="0"/>
+  <x x="544 424 560 424" f="0" si="12" te="Adder"/>
+  <FullAdder x="576 496 640 496" f="2" bi="4"/>
+  <FullAdder x="704 496 704 560" f="2" bi="4"/>
+  <x x="800 424 816 424" f="0" si="12" te="Half Adder"/>
+  <HalfAdder x="832 496 896 496" f="0"/>
+  <HalfAdder x="960 496 960 560" f="0"/>
+  <x x="1056 424 1072 424" f="0" si="12" te="Custom Logic"/>
+  <cl x="1088 496 1152 496" f="0" mo="default"/>
+  <cl x="1216 496 1216 560" f="0" mo="default"/>
+  <x x="1312 424 1328 424" f="0" si="12" te="Static RAM"/>
+  <SRAM x="1344 496 1408 496" f="0" bi="4" ab="4" db="4"/>
+  <SRAM x="1472 496 1472 560" f="0" bi="4" ab="4" db="4"/>
+  <x x="32 616 48 616" f="0" si="12" te="ROM"/>
+  <ROM x="64 688 128 688" f="0" bi="4" ab="4" db="4"/>
+  <ROM x="192 688 192 752" f="0" bi="4" ab="4" db="4"/>
+  <x x="288 616 304 616" f="0" si="12" te="Bus Transceiver"/>
+  <BusTransceiver x="320 688 384 688" f="0" bi="4" db="4"/>
+  <BusTransceiver x="448 688 448 752" f="0" bi="4" db="4"/>
+  <x x="544 616 560 616" f="0" si="12" te="Bus Splitter"/>
+  <bs x="576 688 640 688" f="0" bi="4"/>
+  <bs x="704 688 704 752" f="0" bi="4"/>
+</cir>

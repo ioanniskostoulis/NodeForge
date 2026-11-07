@@ -1,0 +1,655 @@
+[
+ {
+  "label": "Add Wire",
+  "class": "WireElm"
+ },
+ {
+  "label": "Add Routed Wire",
+  "class": "RoutedWireElm"
+ },
+ {
+  "label": "Add Resistor",
+  "class": "ResistorElm"
+ },
+ {
+  "label": "Passive Components",
+  "items": [
+   {
+    "label": "Add Capacitor",
+    "class": "CapacitorElm"
+   },
+   {
+    "label": "Add Capacitor (polarized)",
+    "class": "PolarCapacitorElm"
+   },
+   {
+    "label": "Add Inductor",
+    "class": "InductorElm"
+   },
+   {
+    "label": "Add Switch",
+    "class": "SwitchElm"
+   },
+   {
+    "label": "Add Push Switch",
+    "class": "PushSwitchElm"
+   },
+   {
+    "label": "Add SPDT Switch",
+    "class": "Switch2Elm"
+   },
+   {
+    "label": "Add DPDT Switch",
+    "class": "DPDTSwitchElm"
+   },
+   {
+    "label": "Add Make-Before-Break Switch",
+    "class": "MBBSwitchElm"
+   },
+   {
+    "label": "Add Potentiometer",
+    "class": "PotElm"
+   },
+   {
+    "label": "Add Transformer",
+    "class": "TransformerElm"
+   },
+   {
+    "label": "Add Tapped Transformer",
+    "class": "TappedTransformerElm"
+   },
+   {
+    "label": "Add Custom Transformer",
+    "class": "CustomTransformerElm"
+   },
+   {
+    "label": "Add Transmission Line",
+    "class": "TransLineElm"
+   },
+   {
+    "label": "Add Relay",
+    "class": "RelayElm"
+   },
+   {
+    "label": "Add Relay Coil",
+    "class": "RelayCoilElm"
+   },
+   {
+    "label": "Add Relay Contact",
+    "class": "RelayContactElm"
+   },
+   {
+    "label": "Add Photoresistor",
+    "class": "LDRElm"
+   },
+   {
+    "label": "Add Thermistor",
+    "class": "ThermistorNTCElm"
+   },
+   {
+    "label": "Add Memristor",
+    "class": "MemristorElm"
+   },
+   {
+    "label": "Add Spark Gap",
+    "class": "SparkGapElm"
+   },
+   {
+    "label": "Add Fuse",
+    "class": "FuseElm"
+   },
+   {
+    "label": "Add Crystal",
+    "class": "CrystalElm"
+   },
+   {
+    "label": "Add Cross Switch",
+    "class": "CrossSwitchElm"
+   },
+   {
+    "label": "Add Gyrator",
+    "class": "GyratorElm"
+   }
+  ]
+ },
+ {
+  "label": "Inputs and Sources",
+  "items": [
+   {
+    "label": "Add Ground",
+    "class": "GroundElm"
+   },
+   {
+    "label": "Add Voltage Source (2-terminal)",
+    "class": "DCVoltageElm"
+   },
+   {
+    "label": "Add A/C Voltage Source (2-terminal)",
+    "class": "ACVoltageElm"
+   },
+   {
+    "label": "Add Voltage Source (1-terminal)",
+    "class": "RailElm"
+   },
+   {
+    "label": "Add A/C Voltage Source (1-terminal)",
+    "class": "ACRailElm"
+   },
+   {
+    "label": "Add Square Wave Source (1-terminal)",
+    "class": "SquareRailElm"
+   },
+   {
+    "label": "Add Clock",
+    "class": "ClockElm"
+   },
+   {
+    "label": "Add A/C Sweep",
+    "class": "SweepElm"
+   },
+   {
+    "label": "Add Battery",
+    "class": "BatteryElm"
+   },
+   {
+    "label": "Add Variable Voltage",
+    "class": "VarRailElm"
+   },
+   {
+    "label": "Add Antenna",
+    "class": "AntennaElm"
+   },
+   {
+    "label": "Add AM Source",
+    "class": "AMElm"
+   },
+   {
+    "label": "Add FM Source",
+    "class": "FMElm"
+   },
+   {
+    "label": "Add Current Source",
+    "class": "CurrentElm"
+   },
+   {
+    "label": "Add Noise Generator",
+    "class": "NoiseElm"
+   },
+   {
+    "label": "Add Audio Input",
+    "class": "AudioInputElm"
+   },
+   {
+    "label": "Add Data Input",
+    "class": "DataInputElm"
+   },
+   {
+    "label": "Add External Voltage (JavaScript)",
+    "class": "ExtVoltageElm"
+   }
+  ]
+ },
+ {
+  "label": "Outputs and Labels",
+  "items": [
+   {
+    "label": "Add Analog Output",
+    "class": "OutputElm"
+   },
+   {
+    "label": "Add LED",
+    "class": "LEDElm"
+   },
+   {
+    "label": "Add Lamp",
+    "class": "LampElm"
+   },
+   {
+    "label": "Add Text",
+    "class": "TextElm"
+   },
+   {
+    "label": "Add Box",
+    "class": "BoxElm"
+   },
+   {
+    "label": "Add Line",
+    "class": "LineElm"
+   },
+   {
+    "label": "Add Labeled Node",
+    "class": "LabeledNodeElm"
+   },
+   {
+    "label": "Add Voltmeter/Scope Probe",
+    "class": "ProbeElm"
+   },
+   {
+    "label": "Add Ohmmeter",
+    "class": "OhmMeterElm"
+   },
+   {
+    "label": "Add Ammeter",
+    "class": "AmmeterElm"
+   },
+   {
+    "label": "Add Wattmeter",
+    "class": "WattmeterTrueElm"
+   },
+   {
+    "label": "Add Test Point",
+    "class": "TestPointElm"
+   },
+   {
+    "label": "Add Decimal Display",
+    "class": "DecimalDisplayElm"
+   },
+   {
+    "label": "Add Instruction Display",
+    "class": "InstructionDisplayElm"
+   },
+   {
+    "label": "Add LED Array",
+    "class": "LEDArrayElm"
+   },
+   {
+    "label": "Add Data Export",
+    "class": "DataRecorderElm"
+   },
+   {
+    "label": "Add Audio Output",
+    "class": "AudioOutputElm"
+   },
+   {
+    "label": "Add Stop Trigger",
+    "class": "StopTriggerElm"
+   },
+   {
+    "label": "Add DC Motor",
+    "class": "DCMotorElm"
+   },
+   {
+    "label": "Add 3-Phase Motor",
+    "class": "ThreePhaseMotorElm"
+   },
+   {
+    "label": "Add Wattmeter (old)",
+    "class": "WattmeterElm"
+   }
+  ]
+ },
+ {
+  "label": "Active Components",
+  "items": [
+   {
+    "label": "Add Diode",
+    "class": "DiodeElm"
+   },
+   {
+    "label": "Add Zener Diode",
+    "class": "ZenerElm"
+   },
+   {
+    "label": "Add Transistor (bipolar, NPN)",
+    "class": "NTransistorElm"
+   },
+   {
+    "label": "Add Transistor (bipolar, PNP)",
+    "class": "PTransistorElm"
+   },
+   {
+    "label": "Add MOSFET (N-Channel)",
+    "class": "NMosfetElm"
+   },
+   {
+    "label": "Add MOSFET (P-Channel)",
+    "class": "PMosfetElm"
+   },
+   {
+    "label": "Add JFET (N-Channel)",
+    "class": "NJfetElm"
+   },
+   {
+    "label": "Add JFET (P-Channel)",
+    "class": "PJfetElm"
+   },
+   {
+    "label": "Add SCR",
+    "class": "SCRElm"
+   },
+   {
+    "label": "Add DIAC",
+    "class": "DiacElm"
+   },
+   {
+    "label": "Add TRIAC",
+    "class": "TriacElm"
+   },
+   {
+    "label": "Add Darlington Pair (NPN)",
+    "class": "NDarlingtonElm"
+   },
+   {
+    "label": "Add Darlington Pair (PNP)",
+    "class": "PDarlingtonElm"
+   },
+   {
+    "label": "Add Varactor/Varicap",
+    "class": "VaractorElm"
+   },
+   {
+    "label": "Add Tunnel Diode",
+    "class": "TunnelDiodeElm"
+   },
+   {
+    "label": "Add Triode",
+    "class": "TriodeElm"
+   },
+   {
+    "label": "Add Unijunction Transistor",
+    "class": "UnijunctionElm"
+   }
+  ]
+ },
+ {
+  "label": "Active Building Blocks",
+  "items": [
+   {
+    "label": "Add Op Amp (ideal, - on top)",
+    "class": "OpAmpElm"
+   },
+   {
+    "label": "Add Op Amp (ideal, + on top)",
+    "class": "OpAmpSwapElm"
+   },
+   {
+    "label": "Add Op Amp (real)",
+    "class": "OpAmpRealElm"
+   },
+   {
+    "label": "Add Analog Switch (SPST)",
+    "class": "AnalogSwitchElm"
+   },
+   {
+    "label": "Add Analog Switch (SPDT)",
+    "class": "AnalogSwitch2Elm"
+   },
+   {
+    "label": "Add Analog Multiplexer",
+    "class": "AnalogMuxElm"
+   },
+   {
+    "label": "Add Tristate Buffer",
+    "class": "TriStateElm"
+   },
+   {
+    "label": "Add Schmitt Trigger",
+    "class": "SchmittElm"
+   },
+   {
+    "label": "Add Schmitt Trigger (Inverting)",
+    "class": "InvertingSchmittElm"
+   },
+   {
+    "label": "Add Delay Buffer",
+    "class": "DelayBufferElm"
+   },
+   {
+    "label": "Add CCII+",
+    "class": "CC2Elm"
+   },
+   {
+    "label": "Add CCII-",
+    "class": "CC2NegElm"
+   },
+   {
+    "label": "Add Comparator (Hi-Z/GND output)",
+    "class": "ComparatorElm"
+   },
+   {
+    "label": "Add OTA (LM13700 style)",
+    "class": "OTAElm"
+   },
+   {
+    "label": "Add Norton Amp (LM3900)",
+    "class": "NortonAmpElm"
+   },
+   {
+    "label": "Add Voltage-Controlled Voltage Source (VCVS)",
+    "class": "VCVSElm"
+   },
+   {
+    "label": "Add Voltage-Controlled Current Source (VCCS)",
+    "class": "VCCSElm"
+   },
+   {
+    "label": "Add Current-Controlled Voltage Source (CCVS)",
+    "class": "CCVSElm"
+   },
+   {
+    "label": "Add Current-Controlled Current Source (CCCS)",
+    "class": "CCCSElm"
+   },
+   {
+    "label": "Add Optocoupler",
+    "class": "OptocouplerElm"
+   },
+   {
+    "label": "Add Time Delay Relay",
+    "class": "TimeDelayRelayElm"
+   },
+   {
+    "label": "Add LM317",
+    "class": "CustomCompositeElm:~LM317-v2"
+   },
+   {
+    "label": "Add TL431",
+    "class": "CustomCompositeElm:~TL431"
+   },
+   {
+    "label": "Add Motor Protection Switch",
+    "class": "MotorProtectionSwitchElm"
+   },
+   {
+    "label": "Add Subcircuit Instance",
+    "class": "CustomCompositeElm"
+   }
+  ]
+ },
+ {
+  "label": "Logic Gates, Input and Output",
+  "items": [
+   {
+    "label": "Add Logic Input",
+    "class": "LogicInputElm"
+   },
+   {
+    "label": "Add Logic Output",
+    "class": "LogicOutputElm"
+   },
+   {
+    "label": "Add Bus Input",
+    "class": "BusLogicInputElm"
+   },
+   {
+    "label": "Add Inverter",
+    "class": "InverterElm"
+   },
+   {
+    "label": "Add NAND Gate",
+    "class": "NandGateElm"
+   },
+   {
+    "label": "Add NOR Gate",
+    "class": "NorGateElm"
+   },
+   {
+    "label": "Add AND Gate",
+    "class": "AndGateElm"
+   },
+   {
+    "label": "Add OR Gate",
+    "class": "OrGateElm"
+   },
+   {
+    "label": "Add XOR Gate",
+    "class": "XorGateElm"
+   },
+   {
+    "label": "Add XNOR Gate",
+    "class": "XnorGateElm"
+   }
+  ]
+ },
+ {
+  "label": "Digital Chips",
+  "items": [
+   {
+    "label": "Add D Flip-Flop",
+    "class": "DFlipFlopElm"
+   },
+   {
+    "label": "Add JK Flip-Flop",
+    "class": "JKFlipFlopElm"
+   },
+   {
+    "label": "Add T Flip-Flop",
+    "class": "TFlipFlopElm"
+   },
+   {
+    "label": "Add 7 Segment LED",
+    "class": "SevenSegElm"
+   },
+   {
+    "label": "Add 7 Segment Decoder",
+    "class": "SevenSegDecoderElm"
+   },
+   {
+    "label": "Add Multiplexer",
+    "class": "MultiplexerElm"
+   },
+   {
+    "label": "Add Demultiplexer",
+    "class": "DeMultiplexerElm"
+   },
+   {
+    "label": "Add SIPO shift register",
+    "class": "SipoShiftElm"
+   },
+   {
+    "label": "Add PISO shift register",
+    "class": "PisoShiftElm"
+   },
+   {
+    "label": "Add Counter",
+    "class": "CounterElm"
+   },
+   {
+    "label": "Add Counter w/ Load",
+    "class": "Counter2Elm"
+   },
+   {
+    "label": "Add Ring Counter",
+    "class": "DecadeElm"
+   },
+   {
+    "label": "Add Latch/Register",
+    "class": "LatchElm"
+   },
+   {
+    "label": "Add Sequence generator",
+    "class": "SeqGenElm"
+   },
+   {
+    "label": "Add Adder",
+    "class": "FullAdderElm"
+   },
+   {
+    "label": "Add Half Adder",
+    "class": "HalfAdderElm"
+   },
+   {
+    "label": "Add Custom Logic",
+    "class": "UserDefinedLogicElm"
+   },
+   {
+    "label": "Add Static RAM",
+    "class": "SRAMElm"
+   },
+   {
+    "label": "Add ROM",
+    "class": "ROMElm"
+   },
+   {
+    "label": "Add Bus Transceiver",
+    "class": "BusTransceiverElm"
+   },
+   {
+    "label": "Add Bus Splitter",
+    "class": "BusSplitterElm"
+   }
+  ]
+ },
+ {
+  "label": "Analog and Hybrid Chips",
+  "items": [
+   {
+    "label": "Add 555 Timer",
+    "class": "TimerElm"
+   },
+   {
+    "label": "Add Phase Comparator",
+    "class": "PhaseCompElm"
+   },
+   {
+    "label": "Add DAC",
+    "class": "DACElm"
+   },
+   {
+    "label": "Add ADC",
+    "class": "ADCElm"
+   },
+   {
+    "label": "Add VCO",
+    "class": "VCOElm"
+   },
+   {
+    "label": "Add Monostable",
+    "class": "MonostableElm"
+   }
+  ]
+ },
+ {
+  "label": "Subcircuits",
+  "items": []
+ },
+ {
+  "label": "Drag",
+  "items": [
+   {
+    "label": "Drag All",
+    "class": "DragAll"
+   },
+   {
+    "label": "Drag Row",
+    "class": "DragRow"
+   },
+   {
+    "label": "Drag Column",
+    "class": "DragColumn"
+   },
+   {
+    "label": "Drag Selected",
+    "class": "DragSelected"
+   },
+   {
+    "label": "Drag Post",
+    "class": "DragPost"
+   }
+  ]
+ },
+ {
+  "label": "Select/Drag Sel",
+  "class": "Select"
+ }
+]

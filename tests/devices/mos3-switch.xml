@@ -1,0 +1,11 @@
+<cir f="1" ts="1e-8" ic="10" cb="50" pb="50" vr="5" mts="5e-14">
+  <nfmodel n="NL3">.model NL3 NMOS(LEVEL=3 TOX=50n UO=550 VTO=1.8 PHI=0.65 GAMMA=0.4 THETA=0.08 VMAX=2e5 ETA=0.02 KAPPA=0.3 RD=0.3 RS=0.2 CGSO=4e-6 CGDO=1e-6 CBD=200p CBS=200p PB=0.8 MJ=0.45 IS=1e-15)</nfmodel>
+  <f x="304 240 352 240" f="0" mo="default" nfm="NL3"/>
+  <r x="240 240 304 240" f="0" r="47"/>
+  <v x="240 304 240 240" f="0" wf="2" fr="200000" maxv="2.5" bias="2.5" phaseShift="0" dutyCycle="0.5"/>
+  <g x="240 304 240 320" f="0"/>
+  <w x="352 256 352 304" f="0"/>
+  <g x="352 304 352 320" f="0"/>
+  <r x="352 224 352 160" f="0" r="100"/>
+  <R x="352 160 352 128" f="0" wf="0" fr="40" maxv="12" bias="0" phaseShift="0" dutyCycle="0.5"/>
+</cir>
