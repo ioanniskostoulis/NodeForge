@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.7.5
+
+- The inspector is grouped by subject again: Simulation opens it with Run or Pause, Reset and Step, then simulation speed, current marker speed and electron flow. Circuit holds the name, time, solver, relative tolerance, temperature, self-heating, the start-up ramp, the time step, Recommend settings… and the part count. The Settings section is gone.
+- The interface uses forge-shell 4.0.0.
+
 ## 2.7.4
 
 - The inspector opens with Circuit: Run or Pause, Reset and Step, then the circuit's name, time and part count. Simulation follows with Recommend settings…, speed, temperature, self-heating, the start-up ramp and the time step.
