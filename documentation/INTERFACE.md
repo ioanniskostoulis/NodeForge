@@ -62,7 +62,8 @@ The profile contains the application-specific values of NodeForge. The shared ru
 | Field | Value |
 |---|---|
 | Centre view | The schematic (`public/center.html`) |
-| Inspector sections and default folds | Simulation, Circuit, Tolerance, Adjust, Properties, Part under pointer. Adjust and Slider configuration start closed, and the others start open. |
+| Inspector sections and default folds | Circuit, Simulation, Tolerance, Adjust, Properties, Part under pointer, Settings. Adjust and Slider configuration start closed, and the others start open. Settings holds the app settings (Solver, Relative tolerance, Current marker speed, Electron flow) and shows only while no part is selected. |
+| First inspector section | Circuit (the shell's `fillGeneralSection`): Pause or Run (primary), Reset and Step, then Name, Time and Parts. |
 | Folds that persist | Adjust, Properties, Part under pointer and Slider configuration; the Simulation, Circuit and Tolerance folds are session only |
 | Bottom tabs in order | Terminal, Scopes, Messages (`public/panes.html`); Terminal is selected at launch |
 | Default panel sizes | Inspector 246 px, bottom panel 246 px; no deviation from the shell |
@@ -290,4 +291,4 @@ Window size and position are not remembered. An invalid or removed preference fa
 
 Platform checks: the packaged macOS application is launched by hand; the Windows build, the installer check and the launch screenshot are automated.
 
-The shell is pinned as `source/forge-shell-3.3.0.tgz`, and `scripts/check-release.mjs` verifies the archive, the installed version and the copy in the release source.
+The shell is pinned as `source/forge-shell-3.4.0.tgz`, and `scripts/check-release.mjs` verifies the archive, the installed version and the copy in the release source.

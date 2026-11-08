@@ -2,6 +2,7 @@
 
 import { InspectorSections, SECTION_CHEVRON } from "forge-shell/app/inspector-sections";
 import { createButton, createField, createRow, setButtonBusy } from "forge-shell/app/builders";
+import { fillGeneralSection } from "forge-shell/app/inspector-general";
 import type { RenameOptions } from "forge-shell/app/rename";
 import { createUnitField } from "forge-shell/app/unit-field";
 import { setTip } from "forge-shell/app/tips";
@@ -31,8 +32,8 @@ const el = <K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: 
   return e;
 };
 
-type SectionKey = "simulation" | "circuit" | "tolerance" | "adjust" | "properties" | "pointer";
-export const SECTION_KEYS: SectionKey[] = ["simulation", "circuit", "tolerance", "adjust", "properties", "pointer"];
+type SectionKey = "circuit" | "simulation" | "tolerance" | "adjust" | "properties" | "pointer" | "settings";
+export const SECTION_KEYS: SectionKey[] = ["circuit", "simulation", "tolerance", "adjust", "properties", "pointer", "settings"];
 const SAVED_SECTIONS = { adjust: "adjustExpanded", properties: "propertiesExpanded", pointer: "pointerExpanded" } as const;
 /** Folds of the always-open-at-launch sections, for this session only. */
 const sessionOpen = new Map<SectionKey, boolean>();
@@ -189,6 +190,8 @@ export class Inspector {
   /** Parts with their own sliders (pots, adjustable rails…), as shown. */
   private partSliders: [CircuitElm, HTMLElement][] = [];
   private props!: HTMLElement;
+  /** The app settings, the last section, shown while no part is selected. */
+  private settingsSection?: HTMLElement;
   private propsFor: CircuitElm | null | undefined = undefined;
   private sliderConfigOpen = settings.sliderConfigExpanded;
   private infoTitle!: HTMLElement;
@@ -212,11 +215,6 @@ export class Inspector {
 
   private applySections(smooth = false): void { this.sections.applyAll(smooth); }
 
-  private button(label: string, icon: string, id: string, primary = false): HTMLButtonElement {
-    const b = createButton({ label, primary, onClick: () => this.host.run(id) });
-    b.innerHTML = `${icon}<span>${label}</span>`;
-    return b;
-  }
 
   /** Speed as a multiple of real time, circuit time per second, and the speed reached when the computer can't keep up. */
   private showSpeeds(): void {
@@ -297,12 +295,37 @@ export class Inspector {
     this.sliderTexts = [];
     this.propsFor = undefined;
 
-    const sim = this.sections.create("Simulation", "simulation");
-    const buttons = el("div", "buttons");
-    this.runButton = this.button("Pause", actionIcons.stop, "sim.toggle", true);
-    this.stepButton = this.button("Step", actionIcons.step, "sim.step");
-    buttons.append(this.runButton, this.button("Reset", actionIcons.reset, "sim.reset"), this.stepButton);
-    sim.append(buttons);
+    // Circuit: the main actions (Pause or Run primary, Reset, Step) and the circuit's identity: the shell's first section
+    const circuit = this.sections.create("Circuit", "circuit");
+    const row = (label: string, value: string, rename?: RenameOptions) => {
+      const r = createRow(label, value, document, rename);
+      return { row: r, value: r.querySelector<HTMLElement>(".value")! };
+    };
+    const named = row("Name", this.host.circuitName(), this.host.circuitName() ? {
+      label: "Circuit name",
+      current: () => this.host.circuitName(),
+      validate: (text) => this.host.circuitNameProblem(text),
+      apply: (text) => { this.host.renameCircuit(text); named.value.textContent = this.host.circuitName(); },
+      onError: (message) => this.host.report("error", message),
+    } : undefined);
+    const time = row("Time", "0 s");
+    const parts = row("Parts", "0");
+    this.timeText = time.value;
+    this.partsText = parts.value;
+    fillGeneralSection(circuit, [
+      { label: "Pause", icon: actionIcons.pause, primary: true, onClick: () => this.host.run("sim.toggle") },
+      { label: "Reset", icon: actionIcons.reset, onClick: () => this.host.run("sim.reset") },
+      { label: "Step", icon: actionIcons.step, onClick: () => this.host.run("sim.step") },
+    ], [named.row, time.row, parts.row]);
+    [this.runButton, , this.stepButton] = Array.from(circuit.querySelectorAll<HTMLButtonElement>(".buttons button"));
+
+    // Simulation: how this circuit runs (saved with it); Recommend settings… is its first row
+    const simulation = this.sections.create("Simulation", "simulation");
+    this.recommendButton = createButton({ label: "Recommend settings…", onClick: () => this.host.run("sim.recommend") });
+    this.setRecommendState(this.recommendState);
+    const recommendRow = el("div", "buttons");
+    recommendRow.append(this.recommendButton);
+    simulation.append(recommendRow);
     // speed on a log scale around real time, snapping to 1-2-5 steps, ticks at each decade and
     // labels at every other one; the readout can be typed into, double-click goes back to the
     // circuit's own speed
@@ -321,59 +344,17 @@ export class Inspector {
       return true;
     }, "Enter a speed ratio, such as 0.01, or a rate, such as 2 ms/s");
     setTip(speed.row, "Set simulation speed relative to real time. 1× is real time.");
-    const current = sliderRow("Current marker speed", Math.log10(settings.dotSpeed), Math.log10(DOT_MIN), Math.log10(DOT_MAX), (v) => {
-      updateSettings({ dotSpeed: 10 ** v });
-      this.showSpeeds();
-    }, true, DOT_STOPS, { labels: DOT_LABELS, reset: () => 0 });
-    this.currentText = current.valueText;
-    editableValue(current.valueText, () => `${+settings.dotSpeed.toPrecision(2)}×`, (text) => {
-      const v = parseSI(text.trim().replace(/\s*(×|x)$/i, ""));
-      if (!(v > 0)) return false;
-      updateSettings({ dotSpeed: Math.min(DOT_MAX, Math.max(DOT_MIN, v)) });
-      current.slider.set(Math.log10(settings.dotSpeed));
-      this.showSpeeds();
-      return true;
-    }, "Set marker speed from 0.1× to 5×");
-    setTip(current.row, "Set animation speed. The largest current sets the reference speed; smaller currents move proportionally slower.");
-    sim.append(speed.row, current.row, this.currentDirection());
-    this.showSpeeds();
-
-    const circuit = this.sections.create("Circuit", "circuit");
-    const row = (label: string, value: string, rename?: RenameOptions) => {
-      const r = createRow(label, value, document, rename);
-      circuit.append(r);
-      return r.querySelector<HTMLElement>(".value")!;
-    };
-    const name = row("Name", this.host.circuitName(), this.host.circuitName() ? {
-      label: "Circuit name",
-      current: () => this.host.circuitName(),
-      validate: (text) => this.host.circuitNameProblem(text),
-      apply: (text) => { this.host.renameCircuit(text); name.textContent = this.host.circuitName(); },
-      onError: (message) => this.host.report("error", message),
-    } : undefined);
-    this.timeText = row("Time", "0 s");
-    // solver: NodeForge's error-controlled steps, or CircuitJS's fixed ones (app settings)
-    const solver = this.choiceField("Solver", [["nodeforge", "NodeForge"], ["circuitjs", "CircuitJS"]], settings.solver, (v) => {
-      updateSettings({ solver: v as "nodeforge" | "circuitjs" });
-      this.build();
-    }, false);
-    setTip(solver, "NodeForge controls the step by its error. CircuitJS uses fixed steps, as the original does.");
-    circuit.append(solver);
+    simulation.append(speed.row);
     const accurate = settings.solver === "nodeforge";
-    if (accurate) {
-      const tol = this.choiceField("Relative tolerance", RELTOL_CHOICES.map(([v, t]) => [String(v), t]), String(settings.relTol), (v) => updateSettings({ relTol: Number(v) }), false);
-      setTip(tol, "Set the solver's relative error tolerance. Smaller values require more computation.");
-      circuit.append(tol);
-    }
     // stored in °C; shown and typed in the app's unit (°C, °F or K; a typed suffix wins)
     const temperature = this.numberField("Temperature", model.circuit.options.temperature, "°C", (v) => {
       if (v > -273.15) model.setTemperature(v);
     }, true, { show: (c) => formatTemperature(c), parse: (text) => parseTemperature(text) });
     setTip(temperature, "Set the temperature of SPICE device models. CircuitJS models follow it in the NodeForge solver only.");
-    circuit.append(temperature);
+    simulation.append(temperature);
     const selfHeating = this.checkField("Self-heating", model.circuit.options.selfHeating, (v) => model.setSelfHeating(v));
     setTip(selfHeating, "Heat devices by the power they dissipate. Applies to SPICE models with a thermal resistance (diode RTH0, VDMOS RTHJC).");
-    circuit.append(selfHeating);
+    simulation.append(selfHeating);
     if (accurate) {
       // the start-up ramp: sources rise from 0 over its time at the start of a run from rest
       const ramp = model.circuit.options.startupRamp;
@@ -382,13 +363,13 @@ export class Inspector {
         this.setModel(model);
       });
       setTip(rampOn, "Raise every source from 0 at the start of a run, as if switched on (not after an operating point).");
-      circuit.append(rampOn);
+      simulation.append(rampOn);
       if (ramp > 0) {
         const rampTime = this.numberField("Ramp time", ramp, "s", (v) => {
           if (v > 0) model.setStartupRamp(v);
         });
         setTip(rampTime, "How long the sources take to reach their values.");
-        circuit.append(rampTime);
+        simulation.append(rampTime);
       }
     }
     const step = this.numberField(accurate ? "Maximum time step" : "Time step", model.sim.maxTimeStep, "s", (v) => {
@@ -399,12 +380,7 @@ export class Inspector {
     setTip(step, accurate
       ? "Limit the solver time step and set the recording interval."
       : "Set the time interval per calculation. Smaller steps require more computation.");
-    this.recommendButton = createButton({ label: "Recommend settings…", onClick: () => this.host.run("sim.recommend") });
-    this.setRecommendState(this.recommendState);
-    const recommendRow = el("div", "buttons");
-    recommendRow.append(this.recommendButton);
-    circuit.append(step, recommendRow);
-    this.partsText = row("Parts", "0");
+    simulation.append(step);
 
     this.toleranceSection = this.sections.create("Tolerance", "tolerance");
     this.buildTolerance();
@@ -419,6 +395,39 @@ export class Inspector {
     this.infoTitle = info.firstElementChild!.lastElementChild as HTMLElement;
     this.infoBody = el("div", "info-lines");
     info.append(this.infoBody);
+
+    // app settings (every circuit), shown while nothing is selected, until the shell has a Settings window
+    const settingsSection = this.sections.create("Settings", "settings");
+    this.settingsSection = settingsSection;
+    // solver: NodeForge's error-controlled steps, or CircuitJS's fixed ones (app settings)
+    const solver = this.choiceField("Solver", [["nodeforge", "NodeForge"], ["circuitjs", "CircuitJS"]], settings.solver, (v) => {
+      updateSettings({ solver: v as "nodeforge" | "circuitjs" });
+      this.build();
+    }, false);
+    setTip(solver, "NodeForge controls the step by its error. CircuitJS uses fixed steps, as the original does.");
+    settingsSection.append(solver);
+    if (accurate) {
+      const tol = this.choiceField("Relative tolerance", RELTOL_CHOICES.map(([v, t]) => [String(v), t]), String(settings.relTol), (v) => updateSettings({ relTol: Number(v) }), false);
+      setTip(tol, "Set the solver's relative error tolerance. Smaller values require more computation.");
+      settingsSection.append(tol);
+    }
+    const current = sliderRow("Current marker speed", Math.log10(settings.dotSpeed), Math.log10(DOT_MIN), Math.log10(DOT_MAX), (v) => {
+      updateSettings({ dotSpeed: 10 ** v });
+      this.showSpeeds();
+    }, true, DOT_STOPS, { labels: DOT_LABELS, reset: () => 0 });
+    this.currentText = current.valueText;
+    editableValue(current.valueText, () => `${+settings.dotSpeed.toPrecision(2)}×`, (text) => {
+      const v = parseSI(text.trim().replace(/\s*(×|x)$/i, ""));
+      if (!(v > 0)) return false;
+      updateSettings({ dotSpeed: Math.min(DOT_MAX, Math.max(DOT_MIN, v)) });
+      current.slider.set(Math.log10(settings.dotSpeed));
+      this.showSpeeds();
+      return true;
+    }, "Set marker speed from 0.1× to 5×");
+    setTip(current.row, "Set animation speed. The largest current sets the reference speed; smaller currents move proportionally slower.");
+    settingsSection.append(current.row, this.currentDirection());
+    this.showSpeeds();
+    settingsSection.hidden = !this.props.hidden;
   }
 
   /** A labeled field for a number with SI prefixes, shown with its unit; commits on Enter or when focus leaves. */
@@ -570,6 +579,7 @@ export class Inspector {
     const body = this.props;
     body.replaceChildren(body.firstElementChild!);
     body.hidden = !e || (e instanceof WireElm && !editInfos(e).length);
+    if (this.settingsSection) this.settingsSection.hidden = !body.hidden;
     if (!e) return;
     if (e instanceof PlaceholderElm) {
       body.append(el("div", "muted", "This component is unsupported. Properties are unavailable."));
@@ -890,7 +900,7 @@ export class Inspector {
   /** Refresh the live values (called a few times per second). */
   update(time: string, focusLines: string[], pinned: boolean): void {
     const { model } = this;
-    this.runButton.innerHTML = `${model.running ? actionIcons.stop : actionIcons.play}<span>${model.running ? "Pause" : "Run"}</span>`;
+    this.runButton.innerHTML = `${model.running ? actionIcons.pause : actionIcons.play}<span>${model.running ? "Pause" : "Run"}</span>`;
     this.stepButton.disabled = model.running;
     this.showSpeeds();
     this.timeText.textContent = time;

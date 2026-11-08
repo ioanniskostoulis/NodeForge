@@ -86,6 +86,7 @@ export const actionIcons = {
   trash: UI_ICONS.delete,
   select: UI_ICONS.pointer,
   play: BUTTON_GLYPHS.play,
+  pause: BUTTON_GLYPHS.pause,
   stop: BUTTON_GLYPHS.stop,
   reset: BUTTON_GLYPHS.reset,
   step: BUTTON_GLYPHS.step,

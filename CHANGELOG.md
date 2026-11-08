@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.7.4
+
+- The inspector opens with Circuit: Run or Pause, Reset and Step, then the circuit's name, time and part count. Simulation follows with Recommend settings…, speed, temperature, self-heating, the start-up ramp and the time step.
+- The app settings (solver, relative tolerance, current marker speed and electron flow) move to a Settings section at the end of the inspector, shown while no part is selected.
+- Pause has its own icon, and the icons are Lucide's, at the size of the previous set.
+- The interface uses forge-shell 3.4.0: Cmd or Ctrl with the mouse wheel zooms 1.15× per notch, a cancelled splitter drag stops following the pointer, and the find bar keeps the match under the cursor.
+
 ## 2.7.1
 
 - Circuit files dragged from Finder or File Explorer onto the sheet open as tabs, as File › Open does: `.nfg`, CircuitJS text and CircuitJS XML. Other files are refused with a note in Messages and the status bar.
