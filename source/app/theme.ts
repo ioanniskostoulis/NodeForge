@@ -1,5 +1,6 @@
 // Licensed under the GNU General Public License v2 or later. See LICENSE.
 
+import { OVERLAY_PICK } from "forge-shell/app/canvas-overlay";
 import { settings } from "./settings";
 
 const HEX = Array.from({ length: 256 }, (_, i) => i.toString(16).padStart(2, "0"));
@@ -59,7 +60,7 @@ export const darkTheme: Theme = {
   valueText: "#c4c4c4",
   designatorText: "#ededed",
   openPin: "#9a9a9a",
-  accent: ELECTRON_MARKER_COLOR,
+  accent: OVERLAY_PICK.dark,
   current: "#ffd23f",
   unsupported: "#e0a040",
   unsupportedText: "#e8b460",
@@ -80,7 +81,7 @@ export const paperTheme: Theme = {
   valueText: "#292929",
   designatorText: "#111111",
   openPin: "#666666",
-  accent: "#007a99",
+  accent: OVERLAY_PICK.light,
   current: LIGHT_SIGNALS.current,
   unsupported: "#b86e00",
   unsupportedText: "#b86e00",

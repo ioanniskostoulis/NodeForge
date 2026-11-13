@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.9.1
+
+- Selected parts show the shared handles: hollow squares edged in the selection cyan, 7 px at any zoom and growing with the parts when zoomed in.
+- A scope's box zoom is drawn as the shared selection box.
+- An untitled circuit that was emptied again closes the window without asking to save and keeps no recovery draft.
+- Uses forge-shell 4.5.2: Settings Terminal commands stay on one line and copy on a click, File › Open recent tells apart files with the same name, and buttons show the arrow cursor.
+
 ## 2.9.0
 
 - Settings… (Cmd+, or `settings`) opens the shared Settings dialog with General, Terminal, Health and Updates. Updates are offered only in Settings › Updates; Help › Check for updates… is gone.

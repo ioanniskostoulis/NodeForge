@@ -15,7 +15,7 @@ import { panRange, type Range, rangeOf, scaleOf, subRange, ticks, zoomRange } fr
 import { centeredScale, DIVS_Y, EMPTY_CELLS, fitScale, harmonics, spectrum, holdEnvelope, holdScale, niceCeil, originScale, readCells, readTail } from "./scope-math";
 import type { AudioRange } from "./scope-audio";
 import type { ScopeDropEdge } from "./scope-layout";
-import { dragStarted, dropEdge } from "forge-shell/app/content-selection";
+import { dragStarted, drawSelectionBox, dropEdge } from "forge-shell/app/content-selection";
 
 const COLORS: Record<number, string> = {
   [ScopeValue.voltage]: "#3be05a",
@@ -1973,18 +1973,9 @@ export class ScopeStrip {
   private drawBox(scope: ScopeRuntime): void {
     const b = this.box;
     if (b?.scope !== scope) return;
-    const { ctx } = this, accent = currentTheme().accent;
-    ctx.save();
     const bx = Math.min(b.x0, b.x1), by = Math.min(b.y0, b.y1), bw = Math.abs(b.x1 - b.x0), bh = Math.abs(b.y1 - b.y0);
-    ctx.globalAlpha = 0.12;
-    ctx.fillStyle = accent;
-    ctx.fillRect(bx, by, bw, bh);
-    ctx.globalAlpha = 1;
-    ctx.strokeStyle = accent;
-    ctx.lineWidth = 1;
-    ctx.setLineDash([4, 3]);
-    ctx.strokeRect(Math.round(bx) + 0.5, Math.round(by) + 0.5, Math.round(bw), Math.round(bh));
-    ctx.restore();
+    // on whole pixels plus a half, so the 1 px outline stays crisp
+    drawSelectionBox(this.ctx, { x: Math.round(bx) + 0.5, y: Math.round(by) + 0.5, width: Math.round(bw), height: Math.round(bh) }, 1, currentTheme().accent);
   }
 
 

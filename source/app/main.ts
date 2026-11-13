@@ -252,11 +252,19 @@ async function main(): Promise<void> {
       openDocument);
   }
 
+  /**
+   * Whether a circuit has work to lose, the circuit form of the shell's `hasUnsavedWork`: a saved file while it is
+   * dirty, an untitled one only once it has parts, so an untitled circuit emptied again closes without a question.
+   */
+  function hasWork(target: CircuitDocument): boolean {
+    return target.dirty && !!(target.path || target.model.circuit.elements.length);
+  }
+
   /** Close a tab, offering to save its changes first. The last tab can close too: the window then shows an empty state. */
   async function closeDocument(d: CircuitDocument): Promise<void> {
     await closeDocumentTab({
       documents: docs, active: doc, closing: d,
-      needsPrompt: (target) => target.dirty && !!(target.path || target.model.circuit.elements.length),
+      needsPrompt: hasWork,
       askToSave, save: (target) => save(false, target), activate,
       dispose: (target) => {
         target.model.pauseClock();
@@ -301,7 +309,7 @@ async function main(): Promise<void> {
   // the window closing (or ⌘Q) with unsaved circuits: save the chosen ones, discard, or stay
   const host = desktop;
   if (host) host.onCloseRequest(() => { void confirmWindowClose({
-    documents: docs, askToSaveAll, activate,
+    documents: docs, askToSaveAll, activate, hasWork,
     save: (document) => save(false, document),
     closeWindow: () => host.closeWindow(),
     closeCancelled: () => host.closeCancelled(),
@@ -713,7 +721,7 @@ async function main(): Promise<void> {
     draftTimers.set(d, setTimeout(() => {
       draftTimers.delete(d);
       if (!docs.includes(d)) return;
-      if (!d.dirty) return recovery.clear(draftKey(d));
+      if (!hasWork(d)) return recovery.clear(draftKey(d));
       recovery.keep({ key: draftKey(d), name: d.name, path: d.path, text: d.model.serialize("nfg").text });
     }, DRAFT_DELAY_MS));
   }

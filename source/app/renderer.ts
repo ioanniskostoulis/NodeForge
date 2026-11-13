@@ -25,6 +25,10 @@ import { bridgeMarker, bridgePath, findWireJumps, type WireJump, type WireSegmen
 import type { Viewport } from "forge-shell/app/viewport";
 import { boxRect, drawSelectionBox } from "forge-shell/app/content-selection";
 
+/** The smallest side of a part handle, in grid units: past it a handle grows with the parts when zoomed in. */
+const HANDLE_MIN_SIDE = 5;
+import { drawPointHandles } from "forge-shell/app/canvas-overlay";
+
 
 /** Editing state drawn over the circuit. */
 export interface Overlay {
@@ -171,13 +175,13 @@ export class SchematicRenderer {
     ctx.strokeRect(x0, y0, w, h);
   }
 
-  /** Grab handles on the geometry ends of every selected part. */
+  /**
+   * Grab handles on the geometry ends of every selected part: the shell's nodes, 7 px at any zoom and never under
+   * 5 grid units, so they grow with the parts when zoomed in.
+   */
   private drawHandles(): void {
-    const { ctx, theme } = this;
-    const r = Math.max(2.5, 3.5 / this.vp.scale);
-    ctx.fillStyle = theme.background;
-    ctx.strokeStyle = theme.accent;
-    ctx.lineWidth = this.lw(1.2);
+    const { theme } = this;
+    const all: { x: number; y: number }[] = [];
     for (const e of this.model.selection) {
       let points: { x: number; y: number }[] = [];
       if (isTransformer(e)) {
@@ -186,11 +190,9 @@ export class SchematicRenderer {
       } else if (isLeadPart(e)) {
         points = chipLeadHandles(e);
       } else points = partHandles(e);
-      for (const p of points) {
-        ctx.fillRect(p.x - r, p.y - r, 2 * r, 2 * r);
-        ctx.strokeRect(p.x - r, p.y - r, 2 * r, 2 * r);
-      }
+      all.push(...points);
     }
+    drawPointHandles(this.ctx, all, this.vp.scale, { color: theme.accent, fill: theme.background, minSide: HANDLE_MIN_SIDE });
   }
 
   /** The selection box, in the sheet's selection cyan (the shell's `--pick` on the dark sheet). */
