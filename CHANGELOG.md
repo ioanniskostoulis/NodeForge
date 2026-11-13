@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.9.2
+
+- Part handles keep their proportions when zoomed in: the edge thickens with the handle, as it did before 2.9.1, instead of staying a hairline.
+- Uses forge-shell 4.5.3.
+
 ## 2.9.1
 
 - Selected parts show the shared handles: hollow squares edged in the selection cyan, 7 px at any zoom and growing with the parts when zoomed in.

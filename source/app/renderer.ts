@@ -27,6 +27,8 @@ import { boxRect, drawSelectionBox } from "forge-shell/app/content-selection";
 
 /** The smallest side of a part handle, in grid units: past it a handle grows with the parts when zoomed in. */
 const HANDLE_MIN_SIDE = 5;
+/** The thinnest edge of a part handle, in grid units: it thickens with the handle, as a schematic line does. */
+const HANDLE_MIN_EDGE = 1.2;
 import { drawPointHandles } from "forge-shell/app/canvas-overlay";
 
 
@@ -192,7 +194,9 @@ export class SchematicRenderer {
       } else points = partHandles(e);
       all.push(...points);
     }
-    drawPointHandles(this.ctx, all, this.vp.scale, { color: theme.accent, fill: theme.background, minSide: HANDLE_MIN_SIDE });
+    // the edge is drawn as `lw` draws a line: never under 1 view px, 1.2 grid units once zoomed in, thinner on a light sheet
+    const f = this.lineFactor();
+    drawPointHandles(this.ctx, all, this.vp.scale, { color: theme.accent, fill: theme.background, minSide: HANDLE_MIN_SIDE, edge: f, minEdge: HANDLE_MIN_EDGE * f });
   }
 
   /** The selection box, in the sheet's selection cyan (the shell's `--pick` on the dark sheet). */
@@ -1019,9 +1023,13 @@ export class SchematicRenderer {
   }
 
   /** Stable geometry: voltage and hover colors never change the stroke's width. */
+  /** Lines are 15 % thinner on a light or white sheet. */
+  private lineFactor(): number {
+    return settings.appearance === "light" || settings.whiteBackground ? 0.85 : 1;
+  }
+
   private lw(w: number): number {
-    const factor = settings.appearance === "light" || settings.whiteBackground ? 0.85 : 1;
-    return Math.max(w, 1 / this.vp.scale) * factor;
+    return Math.max(w, 1 / this.vp.scale) * this.lineFactor();
   }
 
   private stroke(pts: P[], color: string, width: number): void {
