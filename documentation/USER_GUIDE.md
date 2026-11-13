@@ -79,7 +79,11 @@ A click on the speaker switches sound on or off and resumes the last trace and m
 
 ## Updates
 
-Help › Check for updates… compares this version with the latest release on GitHub. On the desktop, Update and restart downloads the release's installer, checks its size and checksum, installs it and restarts NodeForge. On macOS NodeForge replaces itself when it runs from a folder it can write, such as Applications; otherwise the disk image opens to drag it in. On Windows the setup runs silently and asks for administrator rights once. In the browser the release page is offered. At most once a day, at launch, a newer release is noted in Messages.
+File › Settings… (⌘,) › Updates checks the latest release on GitHub when the page opens. On the desktop, Update and restart downloads the release's installer, checks its size and checksum, installs it and restarts NodeForge. On macOS NodeForge replaces itself when it runs from a folder it can write, such as Applications; otherwise the disk image opens to drag it in. On Windows the setup runs silently and asks for administrator rights once. In the browser the release page is offered. An update waits while a window has unsaved circuits.
+
+## Settings
+
+File › Settings… (⌘,), or `settings [page]` in the Terminal, opens Settings: General (appearance, inspector, panels), Terminal (text size, history, banner, caret, spacing and wrap), Health (active use and the daily break reminder, `health reminder <off|2-6>`) and Updates. Each row shows the Terminal command that sets it.
 
 ## Terminal
 

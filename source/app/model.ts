@@ -1,5 +1,6 @@
 // Licensed under the GNU General Public License v2 or later. See LICENSE.
 
+import { fitBounds, type Rect } from "forge-shell/app/content-selection";
 import {
   type Adjustable, adjustablePosition, adjustableValue, CapacitorElm, chooseFormat, Circuit, type CircuitElm, type CircuitFormat,
   CurrentElm, DiodeElm, editItem, FuseElm, GroundElm, type GridPoint, InductorElm, MosfetElm, PlaceholderElm, pointKey, RailElm,
@@ -1848,24 +1849,22 @@ export class SimulationModel {
   }
 
   /** World-space bounds of the drawing, or null if it's empty. */
-  get bounds(): { x: number; y: number; width: number; height: number } | null {
-    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
-    for (const ce of this.circuit.elements) {
+  get bounds(): Rect | null {
+    return this.boundsOf([]);
+  }
+
+  /** World-space bounds of what Fit frames: the given parts, or the whole drawing when none are given. */
+  boundsOf(selected: Iterable<CircuitElm>): Rect | null {
+    const r = fitBounds(this.circuit.elements, [...selected], (ce) => {
       const b = ce.boundingBox;
-      x0 = Math.min(x0, b.x, ce.point1.x, ce.point2.x);
-      y0 = Math.min(y0, b.y, ce.point1.y, ce.point2.y);
-      x1 = Math.max(x1, b.x + b.width, ce.point1.x, ce.point2.x);
-      y1 = Math.max(y1, b.y + b.height, ce.point1.y, ce.point2.y);
       // terminals too: not every part keeps its bounding box current (a rotated custom transformer)
       const p = partBox(ce);
-      x0 = Math.min(x0, p.x);
-      y0 = Math.min(y0, p.y);
-      x1 = Math.max(x1, p.x + p.width);
-      y1 = Math.max(y1, p.y + p.height);
-    }
-    if (!Number.isFinite(x0)) return null;
+      const x0 = Math.min(b.x, ce.point1.x, ce.point2.x, p.x), y0 = Math.min(b.y, ce.point1.y, ce.point2.y, p.y);
+      const x1 = Math.max(b.x + b.width, ce.point1.x, ce.point2.x, p.x + p.width), y1 = Math.max(b.y + b.height, ce.point1.y, ce.point2.y, p.y + p.height);
+      return { x: x0, y: y0, width: x1 - x0, height: y1 - y0 };
+    });
     // room for labels, which grow when zoomed out
-    return { x: x0 - 64, y: y0 - 64, width: x1 - x0 + 128, height: y1 - y0 + 128 };
+    return r && { x: r.x - 64, y: r.y - 64, width: r.width + 128, height: r.height + 128 };
   }
 }
 

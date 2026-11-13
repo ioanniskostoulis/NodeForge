@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.9.0
+
+- Settings… (Cmd+, or `settings`) opens the shared Settings dialog with General, Terminal, Health and Updates. Updates are offered only in Settings › Updates; Help › Check for updates… is gone.
+- Settings › Health and `health reminder` record active use and offer a daily break reminder.
+- The Terminal keeps its own preferences under `terminal` (font, banner, caret, spacing, wrap), shown in Settings › Terminal; the bare `font` and `fit` commands are gone (`terminal font`, `zoom fit`).
+- Every choice in the inspector (solver, relative tolerance, model, slider property) and in the Model library uses the shared drawn select instead of the system's list. The Model list separates its makers with a line.
+- The part flyouts in the toolbar keep each symbol in its own column, so a switch or fuse no longer runs into its name.
+- Exports other than a circuit file go through the shared export dialog, which asks before replacing a file and never overwrites an open circuit.
+- Fit frames the selection, or the whole circuit when nothing is selected; the toolbar has Zoom out before Zoom in.
+- The panes use the shared overlay scrollbars.
+- The interface uses forge-shell 4.5.1.
+
 ## 2.7.5
 
 - The inspector is grouped by subject again: Simulation opens it with Run or Pause, Reset and Step, then simulation speed, current marker speed and electron flow. Circuit holds the name, time, solver, relative tolerance, temperature, self-heating, the start-up ramp, the time step, Recommend settings… and the part count. The Settings section is gone.

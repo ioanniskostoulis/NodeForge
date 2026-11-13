@@ -95,6 +95,7 @@ const NODEFORGE_GROUPS: [string, string[]][] = [
   ["File", ["export", "spice", "tabs", "tab"]],
   ["Edit", ["list", "info", "select", "set", "delete", "duplicate", "rotate", "switch", "model", "models", "slider", "tolerance", "seed"]],
   ["View", ["show", "symbols", "electron", "wheel"]],
+  ["Help", ["health"]],
   ["Scopes", ["scope", "plot"]],
   ["Simulation", ["run", "pause", "step", "reset", "status", "solver", "reltol", "maxstep", "speed", "temp", "selfheat", "ramp", "op", "analyze"]],
   ["Analysis", ["dcsweep", "stepsweep", "ac", "power", "montecarlo", "compare", "bench"]],

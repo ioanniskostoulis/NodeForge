@@ -153,7 +153,6 @@ The menus appear in the order File, Edit, View, Draw, Scopes, Simulation, Help; 
 | Help | `about.whatsNew` | What's new… |  | Always |  | Enabled |
 | Help | `about.shortcuts` | Keyboard shortcuts… |  | Always |  | Enabled |
 | Help | `about.licenses` | Licenses… |  | Always |  | Enabled |
-| Help | `about.updates` | Check for updates… |  | Always |  | Enabled |
 
 The shortcuts of Windows use Ctrl in place of ⌘.
 
@@ -161,7 +160,7 @@ The shortcuts of Windows use Ctrl in place of ⌘.
 |---|---|---|
 | Edit history | Undo, Redo | `Undo (⌘Z)`, `Redo (⇧⌘Z)` |
 | Edit | Cut, Copy, Paste, Duplicate, Rotate, Delete | The action with its shortcut, such as `Duplicate (⌘D)` |
-| View | Fit, Zoom in, Zoom out | `Fit (⌘0)`, `Zoom in (⌘=)`, `Zoom out (⌘-)` |
+| View | Fit, Zoom out, Zoom in | `Fit (⌘0)`, `Zoom out (⌘-)`, `Zoom in (⌘=)` |
 | Select | Select | `Select (⎋): drag components to move them or empty space to select.` |
 | Basic parts | Wire, Resistor, Capacitor, Inductor, Ground | `Resistor (R): click or drag to place.` |
 | Part families | Switches and protection, Sources, Active parts, Transformers, Logic gates | The family name; the menu of each flyout lists the parts with their shortcuts |
@@ -185,8 +184,7 @@ The command registry is `source/app/commands.ts`. A command is of application sc
 | `duplicate` | `duplicate <part>` | `duplicate R1` | document | no | no | Duplicate a component |
 | `electron` | `electron [state]` |  | app | yes | no | Toggle electron-flow direction |
 | `export` | `export <format>` |  | document | no | no | Export the active circuit |
-| `fit` | `fit` |  | document | no | no | Fit the schematic in view |
-| `font` | `font [size]` | `font 14` | app | yes | no | Show or set the Terminal text size, from 10 to 24 px |
+| `health` | `health [reminder] [hours]` | `health reminder 3` | app | yes | no | Show or set the daily break reminder |
 | `help` | `help [command]` |  | app | yes | no | Show commands or detailed usage |
 | `history` | `history [number]` | `history 10` | app | yes | no | List or clear command history |
 | `info` | `info <part>` | `info R1` | document | no | no | Read a part's values |
@@ -290,4 +288,4 @@ Window size and position are not remembered. An invalid or removed preference fa
 
 Platform checks: the packaged macOS application is launched by hand; the Windows build, the installer check and the launch screenshot are automated.
 
-The shell is pinned as `source/forge-shell-4.0.0.tgz`, and `scripts/check-release.mjs` verifies the archive, the installed version and the copy in the release source.
+The shell is pinned as `source/forge-shell-4.5.1.tgz`, and `scripts/check-release.mjs` verifies the archive, the installed version and the copy in the release source.

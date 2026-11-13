@@ -18,7 +18,7 @@ class Element extends EventTarget {
   attributes = new Map<string, string>();
   setAttribute(name: string, value: string) { this.attributes.set(name, value); }
   append(...elements: Element[]) { for (const e of elements) { e.parent = this; this.children.push(e); } }
-  replaceChildren() { for (const e of this.children) e.parent = null; this.children = []; }
+  replaceChildren(...elements: Element[]) { for (const e of this.children) e.parent = null; this.children = []; this.append(...elements); }
   remove() { if (this.parent) this.parent.children = this.parent.children.filter(e => e !== this); this.parent = null; }
   getBoundingClientRect() { return { left: 0, right: 100, top: 0, bottom: 20, width: 100, height: 20 }; }
 }

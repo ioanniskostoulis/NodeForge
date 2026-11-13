@@ -6,9 +6,9 @@
 import { app, BrowserWindow, dialog, ipcMain, Menu, type MenuItemConstructorOptions, net, protocol, shell } from "electron";
 import { execFile, type ChildProcess } from "node:child_process";
 import { existsSync, mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
-import { readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join, resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import type { ModelCheckResult, OpenedFile } from "../app/bridge";
 import type { MenuNode } from "../app/menus";
@@ -19,6 +19,8 @@ import { DARK_WINDOW_BACKGROUND, registerTitleBarIpc, usesNativeMenu, windowChro
 import { documentArguments, readOpenedFiles } from "forge-shell/desktop/files";
 import { registerShellMainIpc } from "forge-shell/desktop/ipc-main";
 import { registerUpdater } from "forge-shell/desktop/updater";
+import { registerExportIpc } from "forge-shell/desktop/export-main";
+import { EXPORT_FORMATS } from "../app/export-formats";
 import forgeConfig from "../../forge.config.json";
 
 const isMac = process.platform === "darwin";
@@ -100,6 +102,7 @@ function openWindow(files: OpenedFile[] = []): void {
   });
   win.on("closed", () => {
     allowedWrites.delete(id);
+    exportIpc.forget(id);
     if (windows.closed(id, BrowserWindow.getAllWindows().length)) app.quit();
     for (const child of checks.get(id) ?? []) child.kill();
   });
@@ -156,9 +159,31 @@ const shellIpcOptions = {
   addRecentDocument: (path: string) => app.addRecentDocument(path),
 };
 registerShellMainIpc(ipcMain, shellIpcOptions);
-// One-click updates from the releases of the repository named in the profile (Help › Check for updates…).
+// Exports (CircuitJS XML and text, SPICE, scope CSV): the shell's export dialog, folder dialog and guarded binary
+// writes; an export never writes a circuit file or an original.
+const exportIpc = registerExportIpc(ipcMain, {
+  formats: EXPORT_FORMATS,
+  ignoreCase: process.platform !== "linux",
+  saveDialog: async (event, options) => {
+    const win = BrowserWindow.fromWebContents(event.sender as Electron.WebContents);
+    const result = win ? await dialog.showSaveDialog(win, options) : await dialog.showSaveDialog(options);
+    return result.canceled || !result.filePath ? null : result.filePath;
+  },
+  folderDialog: async (event, options) => {
+    const win = BrowserWindow.fromWebContents(event.sender as Electron.WebContents);
+    const settings = { ...options, properties: ["openDirectory", "createDirectory"] as ("openDirectory" | "createDirectory")[] };
+    const result = win ? await dialog.showOpenDialog(win, settings) : await dialog.showOpenDialog(settings);
+    return result.canceled ? null : result.filePaths[0] ?? null;
+  },
+  readdir: (folder) => readdir(folder),
+  writeFile: (path, bytes, flag) => writeFile(path, bytes, { flag }),
+  resolve: (path) => resolve(path),
+  dirname: (path) => dirname(path),
+});
+// One-click updates from the releases of the repository named in the profile (Settings › Updates); never while a
+// window has unsaved work.
 const { repository } = forgeConfig.identity;
-if (repository && app.isPackaged) registerUpdater(ipcMain, { repository, executable: process.execPath, platform: process.platform, quit: () => app.quit(), openPath: (path) => shell.openPath(path) });
+if (repository && app.isPackaged) registerUpdater(ipcMain, { repository, executable: process.execPath, platform: process.platform, quit: () => app.quit(), hasUnsavedWork: () => windows.hasEdited(), openPath: (path) => shell.openPath(path) });
 // The colours of the Windows window controls follow the page's appearance.
 registerTitleBarIpc(ipcMain, (event) => BrowserWindow.fromWebContents(event.sender as Electron.WebContents));
 ipcMain.handle("openFileDialog", async (e) => {
@@ -173,19 +198,16 @@ ipcMain.handle("openFileDialog", async (e) => {
   allowWrites(e.sender.id, files.map((file) => file.path));
   return files;
 });
-ipcMain.handle("saveDialog", async (e, defaultName: string, format?: "nfg" | "xml" | "txt" | "spice" | "csv") => {
+// Save (and `export nfg`): circuits are saved as .nfg; every other format is an export, through the export IPC above.
+ipcMain.handle("saveDialog", async (e, defaultName: string) => {
   const win = BrowserWindow.fromWebContents(e.sender) ?? undefined;
-  const nfg = { name: "NodeForge Circuit", extensions: ["nfg"] };
-  const xml = { name: "CircuitJS XML", extensions: ["xml"] };
-  const text = { name: "CircuitJS Text", extensions: ["txt"] };
   const r = await dialog.showSaveDialog(win!, {
-    title: format === "csv" ? "Export scope data" : "Save Circuit",
+    title: "Save Circuit",
     defaultPath: defaultName,
-    // circuits are saved as .nfg; CircuitJS XML and text are exports
-    filters: format === "csv" ? [{ name: "CSV data", extensions: ["csv"] }] : format === "spice" ? [{ name: "SPICE netlist", extensions: ["cir"] }] : format === "xml" ? [xml] : format === "txt" ? [text] : [nfg],
+    filters: [{ name: "NodeForge Circuit", extensions: ["nfg"] }],
   });
   if (r.canceled || !r.filePath) return null;
-  const extension = format === "csv" ? ".csv" : format === "spice" ? ".cir" : format === "xml" ? ".xml" : format === "txt" ? ".txt" : ".nfg";
+  const extension = ".nfg";
   const path = r.filePath.toLowerCase().endsWith(extension) ? r.filePath : `${r.filePath}${extension}`;
   const approved = allowedWrites.get(e.sender.id) ?? new Set<string>();
   approved.add(path);

@@ -21,7 +21,7 @@ for (const item of welcome) {
   assert.equal(item.enabled === false, !availableWithoutDocument(item.id), `${item.id} on the welcome screen`);
 }
 const byId = (list, id) => list.find((item) => item.id === id);
-for (const id of ["file.new", "file.open", "file.recent.0", "file.recent.clear", "file.autosave.off", "view.inspector", "appearance.dark", "about.licenses", "about.updates"]) assert.notEqual(byId(welcome, id).enabled, false, id);
+for (const id of ["file.new", "file.open", "file.recent.0", "file.recent.clear", "file.autosave.off", "view.inspector", "appearance.dark", "app.settings", "about.licenses"]) assert.notEqual(byId(welcome, id).enabled, false, id);
 for (const id of ["file.save", "file.close", "edit.undo", "edit.cut", "sim.toggle", "scopes.stack", "tab.next"]) assert.equal(byId(welcome, id).enabled, false, id);
 assert.ok(welcome.filter((item) => item.id.startsWith("tool:")).every((item) => item.enabled === false), "part tools");
 assert.notEqual(byId(open, "file.save").enabled, false);

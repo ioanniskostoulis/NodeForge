@@ -39,7 +39,7 @@ export function buildToolStrip(root: HTMLElement, draw: DrawItem[], run: (id: st
     action("edit.rotateCW", actionIcons.rotate),
     action("edit.delete", actionIcons.trash),
   ], "", "clipboard");
-  group([action("view.fit", TOOL_ICONS.fit), action("view.zoomIn", TOOL_ICONS.zoomIn), action("view.zoomOut", TOOL_ICONS.zoomOut)], "", "view");
+  group([action("view.fit", TOOL_ICONS.fit), action("view.zoomOut", TOOL_ICONS.zoomOut), action("view.zoomIn", TOOL_ICONS.zoomIn)], "", "view");
   group([action("tool.select", actionIcons.select, "drag components to move them or empty space to select.")]);
   const toolClasses = new Map<string, string>();
   const basicTools = new Map(partGroups.flat().map((t) => [t.id, t] as const));

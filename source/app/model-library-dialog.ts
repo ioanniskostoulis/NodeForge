@@ -4,6 +4,7 @@
 
 import { createButton } from "forge-shell/app/builders";
 import { setTip } from "forge-shell/app/tips";
+import { createSelectControl } from "forge-shell/app/select-control";
 import { desktop } from "./bridge";
 import { checkPercent, displayName, findModels, KIND_LABELS, type LibraryModel, type ModelKind } from "./model-catalog";
 import { MAKER_MODELS } from "./maker-models";
@@ -80,11 +81,13 @@ export function openModelLibrary(): void {
       query = search.value;
       renderRows();
     });
-    const kind = h("select");
-    for (const [v, t] of [["", "All kinds"], ...Object.entries(KIND_LABELS)] as [string, string][]) kind.append(new Option(t, v, false, v === kindFilter));
-    kind.addEventListener("change", () => {
-      kindFilter = kind.value as ModelKind | "";
-      renderRows();
+    const kind = createSelectControl({
+      label: "Kind", value: kindFilter,
+      choices: ([["", "All kinds"], ...Object.entries(KIND_LABELS)] as [string, string][]).map(([value, label]) => ({ value, label })),
+      onChange: (value) => {
+        kindFilter = value as ModelKind | "";
+        renderRows();
+      },
     });
     const importFile = createButton({ label: "Import file…" });
     importFile.addEventListener("click", () => void importFromFiles());
@@ -236,9 +239,11 @@ export function openModelLibrary(): void {
       box.type = "checkbox";
       box.checked = true;
       box.addEventListener("change", () => (item.take = box.checked));
-      const kind = h("select");
-      for (const [v, t] of Object.entries(KIND_LABELS)) kind.append(new Option(t, v, false, v === item.m.kind));
-      kind.addEventListener("change", () => (item.m.kind = kind.value as ModelKind));
+      const kind = createSelectControl({
+        label: `Kind of ${item.m.name}`, value: item.m.kind,
+        choices: Object.entries(KIND_LABELS).map(([value, label]) => ({ value, label })),
+        onChange: (value) => (item.m.kind = value as ModelKind),
+      });
       const existing = modelLibrary.find(item.m.name);
       const name = h("div", "models-name", item.m.name);
       const specs = h("div", "models-specs", [item.m.manufacturer, ...Object.entries(item.m.specs).map(([k, v]) => `${k} ${v}`)].filter(Boolean).join("   "));

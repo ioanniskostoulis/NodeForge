@@ -119,9 +119,9 @@ for (const command of commands) {
   if (command.example) assert.ok(command.args.test(command.example.split(" ").slice(1).join(" ")), command.example);
 }
 // the shell's shared commands, with NodeForge's further forms of open, save, close and zoom
-for (const name of ["new", "open", "recent", "save", "close", "autosave", "undo", "redo", "fit", "zoom", "font", "about", "version", "changes", "shortcuts", "licenses", "updates"]) assert.ok(commands.some((c) => c.name === name), name);
+for (const name of ["new", "open", "recent", "save", "close", "settings", "autosave", "undo", "redo", "zoom", "terminal", "health", "about", "version", "changes", "shortcuts", "licenses"]) assert.ok(commands.some((c) => c.name === name), name);
 for (const valid of ["in", "out", "fit", "actual", "150%", ""]) assert.ok(commands.find((c) => c.name === "zoom").args.test(valid), `zoom ${valid}`);
-assert.ok(availableWithoutCircuit("version") && availableWithoutCircuit("font") && !availableWithoutCircuit("fit"));
+assert.ok(availableWithoutCircuit("version") && availableWithoutCircuit("terminal") && availableWithoutCircuit("health") && !commands.some((c) => c.name === "fit" || c.name === "font"));
 console.log("Console catalogue, validation and completion checks passed.");
 
 // The static menus and their accelerators must resolve from the same registry as terminal actions.

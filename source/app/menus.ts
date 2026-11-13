@@ -34,7 +34,7 @@ export interface MenuState {
 }
 
 /** Actions that run with no circuit open: they open one or change an app preference. */
-const WITHOUT_DOCUMENT = /^(file\.(new|newWindow|open|recent|autosave)|circuit:|toggle\.|current\.|solver\.|symbols\.|temperature\.|appearance\.|view\.(zoomIn|zoomOut|inspector|bottomPanel)$|about(?:\.|$))/;
+const WITHOUT_DOCUMENT = /^(file\.(new|newWindow|open|recent|autosave)|app\.settings|circuit:|toggle\.|current\.|solver\.|symbols\.|temperature\.|appearance\.|view\.(zoomIn|zoomOut|inspector|bottomPanel)$|about(?:\.|$))/;
 export const availableWithoutDocument = (id: string): boolean => WITHOUT_DOCUMENT.test(id);
 
 /** The welcome screen keeps every item of a menu, with the document-only ones disabled. */
@@ -91,6 +91,8 @@ export function buildMenus(draw: DrawItem[], library: Library, desktop: boolean,
         { label: "Export as", submenu: [item("file.exportNfg"), item("file.exportXml"), item("file.exportText"), item("file.exportSpice")] },
         sep,
         item("file.close"),
+        sep,
+        item("app.settings"),
       ],
     },
     {
@@ -195,9 +197,8 @@ export function buildMenus(draw: DrawItem[], library: Library, desktop: boolean,
         item("models.library"),
       ],
     },
-    // last, as on macOS (where About NodeForge is in the app menu instead); Check for updates… reads the releases of
-    // the repository named in the profile
-    helpMenu(forgeApp.identity.name, desktop && isMac, !!forgeApp.identity.repository),
+    // last, as on macOS (where About NodeForge is in the app menu instead); updates are offered in Settings › Updates
+    helpMenu(forgeApp.identity.name, desktop && isMac),
   ];
   return state.hasDocument ? menus : disableDocumentOnly(menus);
 }

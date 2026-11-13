@@ -11,9 +11,10 @@ export type { CommandSpec, MenuCommandSpec } from "forge-shell/app/command-spec"
 /** The shell's standard actions NodeForge has; their menu items, keys and Terminal commands come from the shell. */
 export const STANDARD: StandardAction[] = [
   "file.new", "file.newWindow", "file.open", "file.save", "file.saveAs", "file.close",
+  "app.settings",
   "edit.undo", "edit.redo", "edit.cut", "edit.copy", "edit.paste", "edit.duplicate", "edit.delete", "edit.selectAll",
   "view.zoomIn", "view.zoomOut", "view.fit", "view.actualSize", "view.inspector", "view.bottomPanel", "tab.next", "tab.prev",
-  "about", "about.whatsNew", "about.shortcuts", "about.licenses", ...(forgeApp.identity.repository ? ["about.updates" as const] : []),
+  "about", "about.whatsNew", "about.shortcuts", "about.licenses",
 ];
 export const isStandardAction = (id: string): id is StandardAction => (STANDARD_ACTIONS as readonly string[]).includes(id) && STANDARD.includes(id as StandardAction);
 /** The standard item's label and key, as the registry records them. */
@@ -25,7 +26,7 @@ const standardCommand = (action: StandardAction): MenuCommandSpec => {
 /** Shortcuts kept by a convention of other applications (`CONVENTIONAL_SHORTCUTS`), outside the tiers. */
 export const SHORTCUT_CONVENTIONS: Record<string, string> = { "sim.toggle": "run", "sim.reset": "reload" };
 
-/** The shell's shared Terminal commands for these actions (`new`, `undo`, `fit`, `zoom`, `about`, `font`…). */
+/** The shell's shared Terminal commands for these actions (`new`, `undo`, `zoom`, `settings`, `about`, `terminal`…). */
 export const SHARED = sharedCommands(STANDARD, { autosave: true });
 /** Shared commands NodeForge gives further forms: a library circuit or a path to open, a name to save as, a tab number
  * to close, and a magnification in percent. The shared forms are run by the shell. */
@@ -34,6 +35,7 @@ const EXTENDED: Record<string, Partial<CommandSpec>> = {
   save: { syntax: "save [action]", description: "Save a circuit (download in browser)", args: /^(as(?: .+)?)?$/ },
   close: { syntax: "close [number]", description: "Close a circuit tab", args: /^\d*$/ },
   zoom: { syntax: "zoom [choice]", description: "Zoom in or out, fit, show at actual size, or set a percentage", args: /^(?:in|out|fit|actual|\d+(?:\.\d+)?%)?$/, example: "zoom 150%" },
+  terminal: { description: "Show or set the Terminal's font, banner, caret, spacing or wrap" },
   panel: { syntax: "panel <action>", description: "Show, hide or switch the bottom panel", args: /^(on|off|terminal|scopes|messages)$/, choices: ["on", "off", "terminal", "scopes", "messages"] },
 };
 const SHARED_SPECS: CommandSpec[] = SHARED.map((entry) => ({ ...entry.spec, ...EXTENDED[entry.spec.name] }));
@@ -140,6 +142,7 @@ export const CONSOLE_COMMANDS: CommandSpec[] = [
   { name: "symbols", syntax: "symbols <style>", description: "Choose ANSI or IEC schematic symbols", args: /^(ansi|us|iec|eu)$/i, choices: ["ansi", "iec"] },
   { name: "electron", syntax: "electron [state]", description: "Toggle electron-flow direction", args: /^(on|off)?$/, choices: ["on", "off"] },
   { name: "wheel", syntax: "wheel <mode>", description: "Choose scroll-wheel behavior", args: /^(zoom|auto)$/, choices: ["zoom", "auto"] },
+  { name: "health", syntax: "health [reminder] [hours]", description: "Show or set the daily break reminder", args: /^(?:reminder(?: (?:off|[2-6]))?)?$/, example: "health reminder 3", choices: ["reminder"] },
   { name: "set", syntax: "set <part> [property] <value>", description: "Edit a part using inspector property names", args: /^\w+( .+)?$/, example: "set R1 4.7k" },
   { name: "slider", syntax: "slider [action]", description: "List, configure or remove adjustable part sliders", args: /^.*$/, example: "slider R1 Resistance 1k 10k 4.7k 100", choices: ["remove", "help"], subcommands: [
     { syntax: "slider", description: "List configured sliders" },
@@ -231,7 +234,7 @@ export const HELP_COMMANDS = CONSOLE_COMMANDS.filter((c) => !c.legacy).sort((a, 
 /** Commands usable on the welcome screen. Some commands only have an app-setting form there. */
 export const NO_CIRCUIT_COMMANDS = new Set([
   ...SHARED_WITHOUT_DOCUMENT.filter((name) => name !== "panel"),
-  "electron", "models", "reltol", "show", "solver", "symbols", "tabs", "wheel",
+  "electron", "models", "reltol", "show", "solver", "symbols", "tabs", "wheel", "health",
 ]);
 
 export function availableWithoutCircuit(name: string, arg = ""): boolean {

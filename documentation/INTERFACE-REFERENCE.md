@@ -39,7 +39,7 @@ The shortcut list of the dialog is generated from the registry and from the shor
 |---|---|
 | 1 | Undo, Redo |
 | 2 | Cut, Copy, Paste, Duplicate, Rotate, Delete |
-| 3 | Fit, Zoom in, Zoom out |
+| 3 | Fit, Zoom out, Zoom in |
 | 4 | Select |
 | 5 | Wire, Resistor, Capacitor, Inductor, Ground |
 | 6 | Flyouts: Switches and protection, Sources, Active parts, Transformers, Logic gates |
@@ -70,7 +70,7 @@ Part icons are schematic miniatures of 26 × 16 px, and action icons are line dr
 
 ## Terminal
 
-The commands of NodeForge are `ac`, `analyze`, `bench`, `clear`, `close`, `compare`, `dcsweep`, `delete`, `duplicate`, `electron`, `export`, `fit`, `help`, `history`, `info`, `inspector`, `list`, `maxstep`, `model`, `models`, `montecarlo`, `new`, `open`, `op`, `panel`, `pause`, `plot`, `power`, `ramp`, `redo`, `reltol`, `reset`, `rotate`, `run`, `save`, `scope`, `seed`, `select`, `selfheat`, `set`, `show`, `slider`, `solver`, `speed`, `spice`, `status`, `step`, `stepsweep`, `switch`, `symbols`, `tab`, `tabs`, `temp`, `theme`, `tolerance`, `undo`, `wheel` and `zoom`. The command `accuracy` is a hidden alias. [CONSOLE.md](CONSOLE.md) gives the syntax.
+The commands of NodeForge are `ac`, `analyze`, `bench`, `clear`, `close`, `compare`, `dcsweep`, `delete`, `duplicate`, `electron`, `export`, `health`, `help`, `history`, `info`, `inspector`, `list`, `maxstep`, `model`, `models`, `montecarlo`, `new`, `open`, `op`, `panel`, `pause`, `plot`, `power`, `ramp`, `redo`, `reltol`, `reset`, `rotate`, `run`, `save`, `scope`, `seed`, `select`, `selfheat`, `set`, `settings`, `show`, `slider`, `solver`, `speed`, `spice`, `status`, `step`, `stepsweep`, `switch`, `symbols`, `tab`, `tabs`, `temp`, `terminal`, `theme`, `tolerance`, `undo`, `wheel` and `zoom`. The command `accuracy` is a hidden alias. [CONSOLE.md](CONSOLE.md) gives the syntax.
 
 | State | Commands available |
 |---|---|

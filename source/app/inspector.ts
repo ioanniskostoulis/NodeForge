@@ -5,6 +5,7 @@ import { createButton, createField, createRow, setButtonBusy } from "forge-shell
 import type { RenameOptions } from "forge-shell/app/rename";
 import { createUnitField } from "forge-shell/app/unit-field";
 import { setTip } from "forge-shell/app/tips";
+import { createSelectControl, type SelectChoice } from "forge-shell/app/select-control";
 import { editableValue, makeSlider, sliderRow, type SliderExtras, type SliderStop } from "forge-shell/app/inspector-widgets";
 export { makeSlider } from "forge-shell/app/inspector-widgets";
 import {
@@ -442,14 +443,10 @@ export class Inspector {
   }
 
   private choiceField(label: string, options: [string, string][], selected: string, commit: (v: string) => void, undoable = true): HTMLElement {
-    const select = el("select");
-    for (const [value, text] of options) {
-      const o = el("option", "", text);
-      o.value = value;
-      o.selected = value === selected;
-      select.append(o);
-    }
-    select.addEventListener("change", () => (undoable ? this.host.edit(() => commit(select.value)) : commit(select.value)));
+    const select = createSelectControl({
+      label, value: selected, choices: options.map(([value, text]) => ({ value, label: text })),
+      onChange: (value) => (undoable ? this.host.edit(() => commit(value)) : commit(value)),
+    });
     return createField(label, select);
   }
 
@@ -653,12 +650,12 @@ export class Inspector {
     };
     heading.addEventListener("click", () => setOpen(!this.sliderConfigOpen));
     setOpen(this.sliderConfigOpen);
-    const property = el("select");
-    for (const field of fields) {
-      const option = el("option", "", field.name);
-      option.value = String(field.index);
-      property.append(option);
-    }
+    let propertyIndex = fields[0]?.index ?? 0;
+    const property = createSelectControl({
+      label: "Property", value: String(propertyIndex),
+      choices: fields.map((field) => ({ value: String(field.index), label: field.name })),
+      onChange: (value) => { propertyIndex = Number(value); populate(); },
+    });
     const chooser = createField("Property", property);
     const inputs = ["Minimum", "Maximum", "Value", "Step"].map((label) => {
       const input = el("input");
@@ -671,7 +668,7 @@ export class Inspector {
     const save = createButton({ label: "Add slider" });
     const remove = createButton({ label: "Remove" });
     actions.append(save, remove);
-    const selected = () => fields.find((field) => field.index === Number(property.value))!;
+    const selected = () => fields.find((field) => field.index === propertyIndex)!;
     const populate = () => {
       const field = selected(), slider = sliderFor(this.model, e, field.index);
       const span = Math.max(Math.abs(field.value), 1e-9);
@@ -682,7 +679,6 @@ export class Inspector {
       save.textContent = slider ? "Update slider" : "Add slider";
       remove.hidden = !slider;
     };
-    property.addEventListener("change", populate);
     save.addEventListener("click", () => {
       let before: ReturnType<SimulationModel["snapshot"]> | null = null;
       try {
@@ -732,14 +728,7 @@ export class Inspector {
 
     // Custom, then the models by manufacturer: CircuitJS's own, Generic (NodeForge's), the makers
     // of imported parts alphabetically, then any without one
-    const select = el("select");
-    const option = (value: string, text: string, parent: HTMLElement) => {
-      const o = el("option", "", text);
-      o.value = value;
-      o.selected = value === current;
-      parent.append(o);
-    };
-    option("custom", "Custom", select);
+    const choices: SelectChoice[] = [{ value: "custom", label: "Custom" }];
     const groups = new Map<string, [string, string][]>();
     const add = (maker: string | undefined, value: string, text: string) => {
       const k = maker || "Other";
@@ -751,20 +740,21 @@ export class Inspector {
     if (libName && !custom && !library.some((m) => m.name.toLowerCase() === libName.toLowerCase())) {
       add(modelLibrary.describe(libName)?.manufacturer, `lib:${libName}`, modelLabel(libName));
     }
+    // the shell's select has no group headings, so a separator divides the makers (the field's tip names the maker)
     const rank = (k: string) => (k === "CircuitJS" ? 0 : k === "Generic" ? 1 : k === "Other" ? 3 : 2);
     for (const k of [...groups.keys()].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))) {
-      const g = el("optgroup");
-      g.label = k;
-      for (const [value, text] of groups.get(k)!.sort((a, b) => a[1].localeCompare(b[1], undefined, { numeric: true }))) option(value, text, g);
-      select.append(g);
+      choices.push({ value: `-${k}`, label: "", separator: true });
+      for (const [value, text] of groups.get(k)!.sort((a, b) => a[1].localeCompare(b[1], undefined, { numeric: true }))) {
+        choices.push({ value, label: text });
+      }
     }
-    select.addEventListener("change", () => {
-      const v = select.value;
-      this.host.edit(() => {
+    const select = createSelectControl({
+      label: "Model", value: current, choices,
+      onChange: (v) => this.host.edit(() => {
         if (v === "custom") this.model.useCustomModel(e);
         else if (v.startsWith("cjs:")) this.model.useCircuitJSModel(e, v.slice(4));
         else this.model.setSpiceModel(e, v.slice(4));
-      });
+      }),
     });
     const field = createField("Model", select);
     // what the model is and how it was checked

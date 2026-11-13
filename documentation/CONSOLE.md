@@ -197,7 +197,11 @@ wheel <mode>
 
 - `zoom` reports magnification without arguments. Choices: `in`, `out`, `fit`, `actual` (View › Zoom in, Zoom
   out, Fit and Actual size); a percentage such as `150%` sets the magnification.
-- `font` shows or sets the Terminal text size, 10 to 24 px; `bigger` and `smaller` step it by 1 px.
+- `terminal font [size|bigger|smaller]` shows or sets the Terminal text size, 10 to 24 px; `terminal banner on|off`,
+  `terminal caret blink|steady`, `terminal spacing comfortable|compact` and `terminal wrap on|off` set the other
+  Terminal preferences, and `history limit 25|50|100` how many commands are kept (Settings › Terminal).
+- `settings [page]` opens Settings, or one of its pages: `general`, `terminal`, `health`, `updates`.
+- `health reminder <off|2|3|4|5|6>` sets the daily break reminder (Settings › Health).
 - Inspector actions: `on`, `off`, `left`, `right`. No argument toggles visibility.
 - Appearances: `dark`, `light`. Panel actions: `on`, `off`, `terminal`, `scopes`, `messages`.
 - Display settings: `current`, `voltage`, `values`, `readout`, `jumps`. States: `on`, `off`.

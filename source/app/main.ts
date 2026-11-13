@@ -60,10 +60,16 @@ import { createTextInputState } from "forge-shell/app/text-input";
 import { drawsMenubar, shortcutText, titleBarColors, type MenuNode } from "forge-shell/app/menus";
 import { installWorkspaceKeys } from "forge-shell/app/workspace-keys";
 import type { InfoOptions } from "forge-shell/app/about";
-import { checkForUpdate, showUpdateCheck, updateCheckDue, updateMessage } from "forge-shell/app/updates";
 import { askToRecover, createAutosave, createRecentFiles, createRecovery, parseAutosave } from "forge-shell/app/saving";
 import { moveItem } from "forge-shell/app/content-selection";
 import { runSharedCommand } from "forge-shell/app/shared-commands";
+import { installScrollbars } from "forge-shell/app/scrollbars";
+import { exportFiles } from "forge-shell/app/export-files";
+import { EXPORT_FORMATS } from "./export-formats";
+import { createHealthTracker, healthCommand, healthPage } from "forge-shell/app/health";
+import { createTerminalPreferences } from "forge-shell/app/terminal-preferences";
+import { terminalPreferencesStorageKey } from "forge-shell/app/profile";
+import { generalPage, showSettings, terminalPage, updatesPage, visiblePages, type SettingsPage } from "forge-shell/app/settings-dialog";
 import { partNamed, partsForList, prepareProperty, prepareModel, prepareTolerance, settableName, settableProperties, tokenizeConsole } from "./console-edit";
 import { formatPartInfo, formatVerification, numberedTable } from "./console-format";
 import { findModels } from "./model-catalog";
@@ -81,6 +87,7 @@ const PART_KEYS = new Map(partGroups.flat().filter((t) => t.shortcut).map((t) =>
 
 async function main(): Promise<void> {
   applyDesktopClasses(desktop);
+  installScrollbars();
   const [list, drawJson, logo] = await Promise.all([
     loadText("circuits/setuplist.txt"),
     loadText("drawmenu.json"),
@@ -92,8 +99,18 @@ async function main(): Promise<void> {
   const collect = (items: DrawItem[]) => items.forEach((d) => (d.class ? drawNames.set(d.class, drawLabel(d.label)) : collect(d.items ?? [])));
   collect(draw);
   const info: InfoOptions = { productName: forgeApp.identity.name, purpose: forgeApp.identity.purpose, logo: logo.trimEnd(), version: VERSION };
-  // the public GitHub repository whose releases Help › Check for updates… reads
+  // active use and the daily break reminder (Settings › Health, `health reminder`); kept in this app's local storage
+  // the Terminal's history limit, banner, caret, spacing and wrap, shared by the Terminal and Settings › Terminal
+  const terminalPreferences = createTerminalPreferences(terminalPreferencesStorageKey(forgeApp));
+  const health = createHealthTracker({ storageKey: `${forgeApp.identity.id}.health` });
+  // the public GitHub repository whose releases Settings › Updates reads
   const { repository } = forgeApp.identity;
+  const settingsUpdateOptions = {
+    platform: desktop?.platform ?? "browser",
+    install: desktop ? (asset: Parameters<NonNullable<typeof desktop>["installUpdate"]>[0]) => desktop!.installUpdate(asset) : undefined,
+    onProgress: desktop ? (listener: (progress: { done: number; total: number }) => void) => desktop!.onUpdateProgress(listener) : undefined,
+    storageKey: `${forgeApp.identity.id}.updates`,
+  };
   // File › Open recent (desktop: the browser has no paths to reopen)
   const recent = createRecentFiles(`${forgeApp.identity.id}.recent`);
 
@@ -339,6 +356,10 @@ async function main(): Promise<void> {
     }
     // no tabs: only commands that open a circuit or change app options
     if (!docs.length && !availableWithoutDocument(id)) return;
+    if (id === "app.settings") {
+      showSettings({ pages: settingsPages() });
+      return;
+    }
     if (id.startsWith("temperature.")) {
       updateSettings({ temperatureUnit: id.slice(12) as Settings["temperatureUnit"] });
       if (docs.length) inspector.setModel(doc.model);
@@ -421,8 +442,6 @@ async function main(): Promise<void> {
       showWhatsNew: () => { void showWhatsNew(info); },
       showShortcuts: () => showShortcuts(info, shortcutGroups(nodeforgeRuntime.menus.build(draw, library, !!desktop, menuState()))),
       showLicenses: () => { void showLicenses(info); },
-      // on the desktop, Update and restart installs the release; in the browser the release page is offered
-      checkForUpdates: repository ? () => { void showUpdateCheck(info, repository, { platform: desktop?.platform ?? "browser", install: desktop ? (asset) => desktop!.installUpdate(asset) : undefined }); } : undefined,
     })) {
       refreshStatus(true);
       return;
@@ -1380,16 +1399,37 @@ async function main(): Promise<void> {
     },
   }, clearMessages);
 
+  // one Terminal per window: calls made while the module loads wait for the same panel instead of building another
+  let terminalLoad: Promise<void> | null = null;
   async function showTerminal(): Promise<void> {
-    const pane = $("terminal-pane");
-    if (!terminal) {
-      const { TerminalPanel } = await import("./terminal");
-      terminal = new TerminalPanel(pane, logo.trimEnd(), VERSION, {
+    terminalLoad ??= import("./terminal").then(({ TerminalPanel }) => {
+      terminal = new TerminalPanel($("terminal-pane"), logo.trimEnd(), VERSION, {
         execute: consoleCommand,
         complete: consoleComplete,
-      });
-    }
-    terminal.show();
+      }, terminalPreferences);
+    });
+    await terminalLoad;
+    terminal!.show();
+  }
+
+  /** Export one text file through the shell's export dialog (desktop); never a circuit file or an open original. */
+  async function exportText(name: string, format: string, text: string, cancelled = "Export cancelled."): Promise<import("./terminal").ConsoleResult> {
+    const result = await exportFiles({
+      bridge: desktop ?? null, formats: EXPORT_FORMATS, overwrite: "ask",
+      protectedPaths: () => docs.flatMap((d) => (d.path ? [d.path] : [])),
+    }, [{ name, format: EXPORT_FORMATS.find((f) => f.id === format)!, bytes: () => new TextEncoder().encode(text) }]);
+    if (!result) return { lines: [cancelled] };
+    return { lines: [`Exported ${result.written.map((path) => path.split(/[\\/]/).pop()).join(", ")}.`] };
+  }
+
+  /** Settings pages supplied by the shell and the application's repository profile. */
+  function settingsPages(): SettingsPage[] {
+    return [
+      generalPage({ settings, update: updateSettings, subscribe: onSettingsChange }),
+      terminalPage({ fontSize: () => settings.terminalFontSize, setFontSize: (size) => updateSettings({ terminalFontSize: size }), preferences: terminalPreferences, subscribe: onSettingsChange }),
+      healthPage(health),
+      ...(repository ? [updatesPage({ info, repository, ...settingsUpdateOptions })] : []),
+    ];
   }
 
   async function consoleCommand(line: string, signal?: AbortSignal): Promise<import("./terminal").ConsoleResult> {
@@ -1427,7 +1467,8 @@ async function main(): Promise<void> {
       run: (action) => { void run(action, true); }, actions: STANDARD, hasDocument: docs.length > 0, noun: forgeApp.document.noun,
       productName: forgeApp.identity.name, version: VERSION,
       recent: () => (desktop ? recent.list() : []), openPath: (path) => { void openRecent(String(recent.list().indexOf(path))); },
-      fontSize: () => settings.terminalFontSize, setFontSize: (size) => updateSettings({ terminalFontSize: size }),
+      openSettings: (page) => showSettings({ pages: settingsPages(), page }),
+      settingsPages: () => visiblePages(settingsPages()).map((page) => page.id),
     });
     if (shared) return shared;
     if (command === "status") {
@@ -1579,10 +1620,14 @@ async function main(): Promise<void> {
       if (command === "spice") return { lines: text.trimEnd().split("\n") };
       const name = doc.name.replace(/\.[^.]+$/, "") + (spice ? ".cir" : `.${kind}`);
       if (!desktop) return { download: { name, text } };
-      const path = await desktop.saveDialog(name, kind);
-      if (!path) return { lines: ["Export cancelled."] };
-      await desktop.writeFile(path, text);
-      return { lines: [`Exported ${name}.`] };
+      if (kind === "nfg") {
+        // a circuit file is saved, never exported
+        const path = await desktop.saveDialog(name, kind);
+        if (!path) return { lines: ["Export cancelled."] };
+        await desktop.writeFile(path, text);
+        return { lines: [`Exported ${name}.`] };
+      }
+      return exportText(name, kind, text);
     }
     if (command === "compare" || (command === "accuracy" && (!arg || arg === "check"))) {
       if (!docs.length) throw new Error("Open a circuit first.");
@@ -1706,6 +1751,7 @@ async function main(): Promise<void> {
       return { lines: [`${style === "us" ? "ANSI" : "IEC"} symbols selected.`] };
     }
     if (command === "electron") { const before = !settings.conventionalCurrent; updateSettings({ conventionalCurrent: arg ? arg !== "on" : !settings.conventionalCurrent }); return { lines: [switchStatus("electron flow", before, !settings.conventionalCurrent)] }; }
+    if (command === "health") return healthCommand(arg, health);
     if (command === "wheel" && (arg === "zoom" || arg === "auto")) { updateSettings({ wheelZooms: arg === "zoom" }); return { lines: [`Wheel mode set to ${arg}.`] }; }
     // plot <expression> [vs <expression>] / plot fft <expression>: a new scope of them
     if (command === "plot") {
@@ -1789,10 +1835,7 @@ async function main(): Promise<void> {
         if (doc !== owner || owner.revision !== revision || owner.model.running) throw new Error("Circuit changed during export. Run the export again.");
         const name = `${owner.name.replace(/\.[^.]+$/, "")}-scope-${args[1]}.csv`;
         if (!desktop) return { download: { name, text, mimeType: "text/csv" } };
-        const path = await desktop.saveDialog(name, "csv");
-        if (!path) return { lines: ["CSV export cancelled."] };
-        await desktop.writeFile(path, text);
-        return { lines: [`Exported ${name}.`] };
+        return exportText(name, "csv", text, "CSV export cancelled.");
       }
       if (args[0] === "list") {
         if (!doc.model.scopes.length) return { lines: ["No scopes."] };
@@ -2146,12 +2189,6 @@ async function main(): Promise<void> {
 
   // after a crash: offer the circuits it left unsaved
   void offerRecovery();
-  // once a day at launch, a newer release is noted in Messages; Help › Check for updates… installs it
-  if (repository && updateCheckDue(`${forgeApp.identity.id}.updateCheck`)) {
-    void checkForUpdate(repository, VERSION).then((result) => {
-      if (result.status === "available") note(`${updateMessage(result, forgeApp.identity.name)} Help › Check for updates… installs it.`);
-    });
-  }
 }
 
 /** Keyboard shortcuts window: the menu shortcuts (from the command registry), then part keys. */

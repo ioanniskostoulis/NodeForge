@@ -154,8 +154,10 @@ export class CanvasView {
     this.ownViewport().zoom(factor, ax, ay);
   }
 
+  /** Fit: frame the selection, or keep the whole circuit fitted when nothing is selected (`fitBounds`). */
   zoomToFit(): void {
-    this.doc.viewport = null;
+    const b = this.model.selection.size ? this.model.boundsOf(this.model.selection) : null;
+    this.doc.viewport = b ? Viewport.fit(b, this.width, this.height) : null;
   }
 
   zoomTo(scale: number): void {
