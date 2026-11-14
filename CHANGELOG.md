@@ -1,16 +1,12 @@
 # Changelog
 
-## 2.9.2
-
-- Part handles keep their proportions when zoomed in: the edge thickens with the handle, as it did before 2.9.1, instead of staying a hairline.
-- Uses forge-shell 4.5.3.
-
 ## 2.9.1
 
-- Selected parts show the shared handles: hollow squares edged in the selection cyan, 7 px at any zoom and growing with the parts when zoomed in.
+- Selected parts show the shared handles: hollow squares edged in the selection cyan, 7 px at any zoom, growing with the parts when zoomed in, their edge thickening with them.
 - A scope's box zoom is drawn as the shared selection box.
 - An untitled circuit that was emptied again closes the window without asking to save and keeps no recovery draft.
-- Uses forge-shell 4.5.2: Settings Terminal commands stay on one line and copy on a click, File › Open recent tells apart files with the same name, and buttons show the arrow cursor.
+- Settings checkbox rows toggle only on the box; the label is plain text.
+- Uses forge-shell 4.5.4: Settings Terminal commands stay on one line and copy on a click, File › Open recent tells apart files with the same name, and buttons show the arrow cursor.
 
 ## 2.9.0
 

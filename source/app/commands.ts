@@ -35,7 +35,6 @@ const EXTENDED: Record<string, Partial<CommandSpec>> = {
   save: { syntax: "save [action]", description: "Save a circuit (download in browser)", args: /^(as(?: .+)?)?$/ },
   close: { syntax: "close [number]", description: "Close a circuit tab", args: /^\d*$/ },
   zoom: { syntax: "zoom [choice]", description: "Zoom in or out, fit, show at actual size, or set a percentage", args: /^(?:in|out|fit|actual|\d+(?:\.\d+)?%)?$/, example: "zoom 150%" },
-  terminal: { description: "Show or set the Terminal's font, banner, caret, spacing or wrap" },
   panel: { syntax: "panel <action>", description: "Show, hide or switch the bottom panel", args: /^(on|off|terminal|scopes|messages)$/, choices: ["on", "off", "terminal", "scopes", "messages"] },
 };
 const SHARED_SPECS: CommandSpec[] = SHARED.map((entry) => ({ ...entry.spec, ...EXTENDED[entry.spec.name] }));
