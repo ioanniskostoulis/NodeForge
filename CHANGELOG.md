@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.2
+
+- Uses forge-shell 4.5.6: in Settings, a row whose edit changes other rows redraws the page at once, and Terminal commands such as `terminal spacing comfortable` show in full beside their row.
+
 ## 2.9.1
 
 - Selected parts show the shared handles: hollow squares edged in the selection cyan, 7 px at any zoom, growing with the parts when zoomed in, their edge thickening with them.
